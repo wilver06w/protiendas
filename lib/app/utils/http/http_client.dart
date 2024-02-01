@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:yugioh/app/utils/http/dio.dart';
+import 'package:protiendas/app/utils/http/dio.dart';
 
 export 'package:dio/dio.dart';
 export 'package:flutter_modular/flutter_modular.dart';

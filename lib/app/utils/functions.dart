@@ -1,6 +1,6 @@
 import 'package:url_launcher/url_launcher.dart';
-import 'package:yugioh/app/models/archetype.dart';
-import 'package:yugioh/app/models/list_yugioh.dart';
+import 'package:protiendas/app/models/archetype.dart';
+import 'package:protiendas/app/models/list_yugioh.dart';
 
 class Functions {
   static Future<void> launchInBrowser({required String url}) async {

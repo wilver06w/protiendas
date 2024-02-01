@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:yugioh/app/config/app.dart';
-import 'package:yugioh/app/config/module.dart';
-import 'package:yugioh/app/utils/config/client_config.dart';
-import 'package:yugioh/app/utils/http/http_client.dart';
-import 'package:yugioh/app/utils/preferences.dart';
+import 'package:protiendas/app/config/app.dart';
+import 'package:protiendas/app/config/module.dart';
+import 'package:protiendas/app/utils/config/client_config.dart';
+import 'package:protiendas/app/utils/http/http_client.dart';
+import 'package:protiendas/app/utils/preferences.dart';
 
 class AppModule extends Module {
   @override

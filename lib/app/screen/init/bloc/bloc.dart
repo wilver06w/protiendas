@@ -4,8 +4,8 @@ import 'package:bloc/bloc.dart' as bloc;
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yugioh/app/utils/config/client_config.dart';
-import 'package:yugioh/app/utils/preferences.dart';
+import 'package:protiendas/app/utils/config/client_config.dart';
+import 'package:protiendas/app/utils/preferences.dart';
 
 part 'event.dart';
 part 'state.dart';

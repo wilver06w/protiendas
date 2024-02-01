@@ -1,4 +1,4 @@
-part of 'package:yugioh/app/screen/detail/page.dart';
+part of 'package:protiendas/app/screen/detail/page.dart';
 
 class Header extends StatelessWidget {
   const Header({

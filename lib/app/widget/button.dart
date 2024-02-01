@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yugioh/app/utils/colors.dart';
-import 'package:yugioh/app/utils/responsive.dart';
-import 'package:yugioh/app/utils/spacing.dart';
-import 'package:yugioh/app/utils/text/text.dart';
+import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/responsive.dart';
+import 'package:protiendas/app/utils/spacing.dart';
+import 'package:protiendas/app/utils/text/text.dart';
 
 class Button extends StatelessWidget {
   const Button({

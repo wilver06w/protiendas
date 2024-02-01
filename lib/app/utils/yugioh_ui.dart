@@ -1,4 +1,7 @@
 class YuGiOhUiValues {
+  static const String acacomproLogo = 'assets/image/logogi.gif';
+
+  
   static const String siiLogo =
       'https://sii-group.com/themes/custom/sii/logo.svg';
   static const String archetypes = 'arquetipos';

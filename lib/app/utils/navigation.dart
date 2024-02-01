@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yugioh/app/models/list_yugioh.dart';
+import 'package:protiendas/app/models/list_yugioh.dart';
 
 class YuGiOhRoute {
   static Future<Object?> navHome() async {

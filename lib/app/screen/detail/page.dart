@@ -5,20 +5,20 @@ import 'package:flutter_modular/flutter_modular.dart'
 import 'package:fullscreen_image_viewer/fullscreen_image_viewer.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:yugioh/app/models/list_yugioh.dart';
-import 'package:yugioh/app/screen/detail/bloc/bloc.dart';
-import 'package:yugioh/app/utils/colors.dart';
-import 'package:yugioh/app/utils/config/client_config.dart';
-import 'package:yugioh/app/utils/functions.dart';
-import 'package:yugioh/app/utils/spacing.dart';
-import 'package:yugioh/app/utils/text/text.dart';
-import 'package:yugioh/app/utils/yugioh_ui.dart';
-import 'package:yugioh/app/widget/button.dart';
+import 'package:protiendas/app/models/list_yugioh.dart';
+import 'package:protiendas/app/screen/detail/bloc/bloc.dart';
+import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/config/client_config.dart';
+import 'package:protiendas/app/utils/functions.dart';
+import 'package:protiendas/app/utils/spacing.dart';
+import 'package:protiendas/app/utils/text/text.dart';
+import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/widget/button.dart';
 
-part 'package:yugioh/app/screen/detail/_sections/body.dart';
-part 'package:yugioh/app/screen/detail/_sections/bottom.dart';
-part 'package:yugioh/app/screen/detail/_sections/header.dart';
-part 'package:yugioh/app/screen/detail/_sections/item_card_detail.dart';
+part 'package:protiendas/app/screen/detail/_sections/body.dart';
+part 'package:protiendas/app/screen/detail/_sections/bottom.dart';
+part 'package:protiendas/app/screen/detail/_sections/header.dart';
+part 'package:protiendas/app/screen/detail/_sections/item_card_detail.dart';
 
 class Page extends StatelessWidget {
   const Page({

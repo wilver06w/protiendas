@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:yugioh/app/screen/detail/page.dart' as detail;
-import 'package:yugioh/app/screen/home/page.dart' as home;
-import 'package:yugioh/app/screen/init/page.dart' as init;
+import 'package:protiendas/app/screen/detail/page.dart' as detail;
+import 'package:protiendas/app/screen/home/page.dart' as home;
+import 'package:protiendas/app/screen/init/page.dart' as init;
 
 class GlobalModule extends Module {
   @override

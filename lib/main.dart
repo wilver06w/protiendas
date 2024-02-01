@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:yugioh/app/config/app.dart';
-import 'package:yugioh/app/module.dart';
+import 'package:protiendas/app/config/app.dart';
+import 'package:protiendas/app/module.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

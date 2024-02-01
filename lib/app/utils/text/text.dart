@@ -1,5 +1,5 @@
-import 'package:yugioh/app/utils/colors.dart';
-import 'package:yugioh/app/utils/text/typography.dart';
+import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/text/typography.dart';
 import 'package:flutter/material.dart';
 
 enum YuGiOhTextType {

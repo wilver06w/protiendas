@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yugioh/app/models/archetype.dart';
-import 'package:yugioh/app/models/list_yugioh.dart';
-import 'package:yugioh/app/screen/home/repository.dart';
-import 'package:yugioh/app/utils/functions.dart';
+import 'package:protiendas/app/models/archetype.dart';
+import 'package:protiendas/app/models/list_yugioh.dart';
+import 'package:protiendas/app/screen/home/repository.dart';
+import 'package:protiendas/app/utils/functions.dart';
 
 part 'event.dart';
 part 'state.dart';

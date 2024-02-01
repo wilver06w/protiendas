@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:yugioh/app/screen/init/bloc/bloc.dart' as bloc;
-import 'package:yugioh/app/utils/colors.dart';
-import 'package:yugioh/app/utils/config/client_config.dart';
-import 'package:yugioh/app/utils/navigation.dart';
-import 'package:yugioh/app/utils/preferences.dart';
-import 'package:yugioh/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/screen/init/bloc/bloc.dart' as bloc;
+import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/config/client_config.dart';
+import 'package:protiendas/app/utils/navigation.dart';
+import 'package:protiendas/app/utils/preferences.dart';
+import 'package:protiendas/app/utils/yugioh_ui.dart';
 
-part 'package:yugioh/app/screen/init/listeners/core.dart';
+part 'package:protiendas/app/screen/init/listeners/core.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -18,7 +18,6 @@ class Page extends StatelessWidget {
   Widget build(BuildContext context) {
     final app = Modular.get<AppConfig>();
     final prefs = Modular.get<Preferences>();
-    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: YuGiOhColors.backgroundColor,
       body: BlocProvider(
@@ -32,14 +31,8 @@ class Page extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.network(
-                  YuGiOhUiValues.siiLogo,
-                  height: size.height * 0.2,
-                  width: size.width * 0.2,
-                  colorFilter: const ColorFilter.mode(
-                    Colors.blue,
-                    BlendMode.srcIn,
-                  ),
+                Image.asset(
+                  YuGiOhUiValues.acacomproLogo,
                 ),
               ],
             ),

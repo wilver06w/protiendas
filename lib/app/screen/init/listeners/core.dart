@@ -1,4 +1,4 @@
-part of 'package:yugioh/app/screen/init/page.dart';
+part of 'package:protiendas/app/screen/init/page.dart';
 
 void listener(BuildContext context, bloc.State state) {
   if (state is bloc.LoadedState) {

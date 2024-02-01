@@ -1,4 +1,4 @@
-part of 'package:yugioh/app/screen/home/page.dart';
+part of 'package:protiendas/app/screen/home/page.dart';
 
 class SearchArchetype extends StatelessWidget {
   const SearchArchetype({

@@ -1,6 +1,6 @@
-import 'package:yugioh/app/models/archetype.dart';
-import 'package:yugioh/app/models/list_yugioh.dart';
-import 'package:yugioh/app/utils/http/http_client.dart';
+import 'package:protiendas/app/models/archetype.dart';
+import 'package:protiendas/app/models/list_yugioh.dart';
+import 'package:protiendas/app/utils/http/http_client.dart';
 
 class Repository {
   Repository({

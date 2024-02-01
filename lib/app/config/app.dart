@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:yugioh/app/utils/preferences.dart';
+import 'package:protiendas/app/utils/preferences.dart';
 
 class App {
   static final instance = App._();

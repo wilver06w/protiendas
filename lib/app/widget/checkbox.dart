@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yugioh/app/utils/colors.dart';
+import 'package:protiendas/app/utils/colors.dart';
 
 class YuGiOhCheckbox extends StatelessWidget {
   const YuGiOhCheckbox({

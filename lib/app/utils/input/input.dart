@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:yugioh/app/utils/colors.dart';
-import 'package:yugioh/app/utils/spacing.dart';
-import 'package:yugioh/app/utils/text/text.dart';
-import 'package:yugioh/app/utils/text/typography.dart';
+import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/spacing.dart';
+import 'package:protiendas/app/utils/text/text.dart';
+import 'package:protiendas/app/utils/text/typography.dart';
 
 part 'types/check_input.dart';
 part 'types/code_input.dart';
