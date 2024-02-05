@@ -10,14 +10,12 @@ class AppModule extends Module {
   List<Bind> get binds {
     return [
       Bind((i) => Preferences()),
-      Bind<YuGiOhHttpClient>(
-        (i) => YuGiOhHttpClient().getInstance(),
+      Bind<XigoHttpClient>(
+        (i) => XigoHttpClient().getInstance(i<AppConfig>()),
       ),
       Bind(
         (i) {
-          return AppConfig()
-            ..version = App.instance.version
-            ..infoDevice = App.instance.infoDevice;
+          return AppConfig()..version = App.instance.version;
         },
         isLazy: false,
       ),

@@ -12,6 +12,24 @@ import 'package:flutter/material.dart';
 class YuGiOhColors {
   const YuGiOhColors._();
 
+  /// pigmentGreen = #23A942
+  static const Color pigmentGreen = Color(0xff23A942);
+
+  ///white  = #ffffff
+  static const Color white = Color(0xffffffff);
+
+  /// lemonLight = #95EBBD
+  static const Color lemonLight = Color(0xff95EBBD);
+
+  /// informationDark = #7DA4FF (cuando el fondo es oscuro)
+  static const Color informationDark = Color(0xff7DA4FF);
+
+  /// Philippine Yellow = #FFC800
+  static const Color philippineYellow = Color(0xffFFC800);
+
+  /// deepSaffron = #F59535
+  static const Color deepSaffron = Color(0xffF59535);
+
   ///brightTurquoise
   static const Color brightTurquoise = Color(0xff00ecd2);
 

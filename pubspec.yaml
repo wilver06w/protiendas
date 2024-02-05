@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   cupertino_icons: ^1.0.2
   flutter_modular: ^5.0.3
@@ -31,6 +33,18 @@ dependencies:
   bloc_test: ^9.1.5
   dio: ^5.4.0
   fullscreen_image_viewer: ^0.0.6
+  android_id: ^0.3.3
+  dart_ipify: ^1.1.1
+
+
+  dio_smart_retry: ^6.0.0
+  dio_cache_interceptor: ^3.5.0
+  meta: ^1.10.0
+
+
+flutter_intl:
+  main_locale: es
+  enabled: true
 
 dev_dependencies:
   flutter_test:

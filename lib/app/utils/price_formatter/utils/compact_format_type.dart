@@ -1,0 +1,1 @@
+enum CompactFormatType { short, long }

@@ -32,7 +32,7 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final app = Modular.get<AppConfig>();
-    final yuGiOhHttpClient = Modular.get<YuGiOhHttpClient>();
+    final yuGiOhHttpClient = Modular.get<XigoHttpClient>();
     return BlocProvider<BlocHome>(
       create: (context) => BlocHome(
         repository: Repository(

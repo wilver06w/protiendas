@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:protiendas/app/config/app.dart';
 import 'package:protiendas/app/module.dart';
+import 'package:protiendas/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await App.instance.init();
+  await App.instance.init(config: {});
 
   runApp(
     ModularApp(
@@ -36,7 +38,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return OKToast(
       child: MaterialApp.router(
-        title: 'Yu-Gi-Oh!',
+        title: 'ProTiendas!',
         theme: ThemeData(
           textTheme: GoogleFonts.nunitoSansTextTheme(
             Theme.of(context).textTheme,
@@ -44,6 +46,14 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         ),
         routeInformationParser: Modular.routeInformationParser,
         routerDelegate: Modular.routerDelegate,
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
+        localeResolutionCallback: localeCallBack,
         builder: (context, child) {
           return MediaQuery(
             data: MediaQuery.of(context).copyWith(
@@ -55,4 +65,17 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       ),
     );
   }
+}
+
+Locale localeCallBack(Locale? locale, Iterable<Locale> supportedLocales) {
+  if (locale == null) return supportedLocales.first;
+
+  for (var supportedLocale in supportedLocales) {
+    if (supportedLocale.languageCode == locale.languageCode &&
+        supportedLocale.countryCode == locale.countryCode) {
+      return supportedLocale;
+    }
+  }
+
+  return supportedLocales.first;
 }

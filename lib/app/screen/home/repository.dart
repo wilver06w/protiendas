@@ -6,7 +6,7 @@ class Repository {
   Repository({
     required this.yuGiOhHttpClient,
   });
-  final YuGiOhHttpClient yuGiOhHttpClient;
+  final XigoHttpClient yuGiOhHttpClient;
 
   final listYuGiOh = '/api/v7/cardinfo.php';
   final archetypes = '/api/v7/archetypes.php';

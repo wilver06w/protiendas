@@ -1,7 +1,15 @@
+import 'package:protiendas/generated/l10n.dart';
+
 class YuGiOhUiValues {
   static const String acacomproLogo = 'assets/image/logogi.gif';
 
-  
+
+  static String weHaveAErrorContactSuport(Object fieldName) {
+    return S.current.weHaveAErrorContactSuport(fieldName);
+  }
+
+
+
   static const String siiLogo =
       'https://sii-group.com/themes/custom/sii/logo.svg';
   static const String archetypes = 'arquetipos';
