@@ -16,5 +16,7 @@
     "register":"Registrate",
     "userRegisterSuccesful":"Usuario registrado correctamente",
     "nowYouCanLogIn":"Ahora puedes iniciar sesión",
-    "sigIn":"Iniciar sesión"
+    "sigIn":"Iniciar sesión",
+    "name":"Nombre",
+    "lastName":"Apellido"
 }

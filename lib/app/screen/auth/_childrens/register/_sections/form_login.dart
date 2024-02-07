@@ -17,6 +17,48 @@ class FormLogin extends StatelessWidget {
         children: [
           XigoTextField(
             controller: null,
+            hintText: ProTiendasUiValues.name,
+            title: ProTiendasUiValues.name,
+            fillColor: Colors.white,
+            filled: true,
+            validator: (value) {
+              if ((value ?? '').isEmpty) {
+                return '${ProTiendasUiValues.name} ${ProTiendasUiValues.onRequired}';
+              }
+              return null;
+            },
+            onChanged: (value) {
+              context.read<BlocRegister>().add(
+                    ChangeNameEvent(
+                      name: value,
+                    ),
+                  );
+            },
+          ),
+          const Gap(YuGiOhSpacing.md),
+          XigoTextField(
+            controller: null,
+            hintText: ProTiendasUiValues.lastName,
+            title: ProTiendasUiValues.lastName,
+            fillColor: Colors.white,
+            filled: true,
+            validator: (value) {
+              if ((value ?? '').isEmpty) {
+                return '${ProTiendasUiValues.lastName} ${ProTiendasUiValues.onRequired}';
+              }
+              return null;
+            },
+            onChanged: (value) {
+              context.read<BlocRegister>().add(
+                    ChangeLastNameEvent(
+                      lastName: value,
+                    ),
+                  );
+            },
+          ),
+          const Gap(YuGiOhSpacing.md),
+          XigoTextField(
+            controller: null,
             hintText: ProTiendasUiValues.email,
             title: ProTiendasUiValues.email,
             fillColor: Colors.white,

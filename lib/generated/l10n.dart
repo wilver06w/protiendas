@@ -219,6 +219,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Nombre`
+  String get name {
+    return Intl.message(
+      'Nombre',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apellido`
+  String get lastName {
+    return Intl.message(
+      'Apellido',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

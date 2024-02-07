@@ -19,6 +19,8 @@ class ProTiendasUiValues {
   static final String userRegisterSuccesful = S.current.userRegisterSuccesful;
   static final String nowYouCanLogIn = S.current.nowYouCanLogIn;
   static final String sigIn = S.current.sigIn;
+  static final String name = S.current.name;
+  static final String lastName = S.current.lastName;
 
   static String weHaveAErrorContactSuport(Object fieldName) {
     return S.current.weHaveAErrorContactSuport(fieldName);

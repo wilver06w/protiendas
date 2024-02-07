@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Correo Electronico"),
         "iAmNotRegistered":
             MessageLookupByLibrary.simpleMessage("No estoy registrado"),
+        "lastName": MessageLookupByLibrary.simpleMessage("Apellido"),
+        "name": MessageLookupByLibrary.simpleMessage("Nombre"),
         "next": MessageLookupByLibrary.simpleMessage("Siguiente"),
         "nowYouCanLogIn":
             MessageLookupByLibrary.simpleMessage("Ahora puedes iniciar sesión"),
