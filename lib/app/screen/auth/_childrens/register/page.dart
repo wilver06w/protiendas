@@ -13,6 +13,7 @@ import 'package:protiendas/app/utils/http/http_client.dart'
 import 'package:protiendas/app/utils/input/input.dart';
 import 'package:protiendas/app/utils/loading.dart';
 import 'package:protiendas/app/utils/navigation.dart';
+import 'package:protiendas/app/utils/preferences.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/validations_inputs.dart';
@@ -30,9 +31,12 @@ class Page extends StatelessWidget {
     final app = Modular.get<AppConfig>();
     return BlocProvider<BlocRegister>(
       create: (context) => BlocRegister(
+        prefs: Modular.get<Preferences>(),
         repository: Repository(
           xigoHttpClient: Modular.get<XigoHttpClient>(),
         ),
+        appConfig: app,
+        httpClient: Modular.get<XigoHttpClient>(),
       ),
       child: BlocListener<BlocRegister, RegisterState>(
         listener: _listener,
@@ -53,24 +57,16 @@ Future<void> _listener(BuildContext context, RegisterState state) async {
     YuGiOhLoading.show(context);
   } else if (state is LoadedRegisterState) {
     Navigator.pop(context);
-
     showToast(
-      '${ProTiendasUiValues.userRegisterSuccesful}\n${ProTiendasUiValues.nowYouCanLogIn}',
+      '${state.model.dataLogin?.message ?? ''}\n${ProTiendasUiValues.nowYouCanLogIn}',
       backgroundColor: ProTiendasUiColors.rybBlue,
       textStyle: const TextStyle(
         color: Colors.white,
       ),
       duration: const Duration(seconds: 10),
     );
-    YuGiOhRoute.navLogin();
+    YuGiOhRoute.navHome();
   } else if (state is ErrorRegisterState) {
     Navigator.pop(context);
-    showToast(
-      state.message,
-      backgroundColor: ProTiendasUiColors.rybBlue,
-      textStyle: const TextStyle(
-        color: Colors.white,
-      ),
-    );
   }
 }

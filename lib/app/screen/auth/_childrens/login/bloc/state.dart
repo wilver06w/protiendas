@@ -38,25 +38,24 @@ class Model extends Equatable {
   const Model({
     this.email = '',
     this.password = '',
-    // this.userCredential,
+    this.dataLogin,
   });
 
   final String email;
   final String password;
-  //TODO: revisar
-  // final UserCredential? userCredential;
+  final DataLogin? dataLogin;
 
   bool get isFormFilledLogin => (email.isNotEmpty) && (password.isNotEmpty);
 
   Model copyWith({
     String? email,
     String? password,
-    // UserCredential? userCredential,
+    DataLogin? dataLogin,
   }) {
     return Model(
       email: email ?? this.email,
       password: password ?? this.password,
-      // userCredential: userCredential ?? this.userCredential,
+      dataLogin: dataLogin ?? this.dataLogin,
     );
   }
 
@@ -65,7 +64,7 @@ class Model extends Equatable {
     return [
       email,
       password,
-      // userCredential,
+      dataLogin,
     ];
   }
 }

@@ -9,8 +9,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     final formKeyLogin = GlobalKey<FormState>();
     final size = MediaQuery.of(context).size;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return ListView(
       children: [
         const Gap(YuGiOhSpacing.md),
         XigoText.body(
@@ -37,32 +36,35 @@ class Body extends StatelessWidget {
             formKey: formKeyLogin,
           ),
         ),
-        BlocBuilder<BlocRegister, RegisterState>(
-          builder: (context, state) {
-            bool isFormValidate = state.model.isFormFilledLogin;
-            return XigoBtnPrimary(
-              backgroundColor: ProTiendasUiColors.primaryColor,
-              onTap: isFormValidate
-                  ? () {
-                      final formState = formKeyLogin.currentState;
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: YuGiOhSpacing.md),
+          child: BlocBuilder<BlocRegister, RegisterState>(
+            builder: (context, state) {
+              bool isFormValidate = state.model.isFormFilledLogin;
+              return XigoBtnPrimary(
+                backgroundColor: ProTiendasUiColors.primaryColor,
+                onTap: isFormValidate
+                    ? () {
+                        final formState = formKeyLogin.currentState;
 
-                      if (isFormValidate && (formState?.validate() ?? true)) {
-                        context.read<BlocRegister>().add(SendRegisterEvent());
-                      } else {
-                        showToast(
-                          ProTiendasUiValues.completeTheData,
-                          backgroundColor: ProTiendasUiColors.rybBlue,
-                          textStyle: const TextStyle(
-                            color: Colors.white,
-                          ),
-                        );
-                        return;
+                        if (isFormValidate && (formState?.validate() ?? true)) {
+                          context.read<BlocRegister>().add(SendRegisterEvent());
+                        } else {
+                          showToast(
+                            ProTiendasUiValues.completeTheData,
+                            backgroundColor: ProTiendasUiColors.rybBlue,
+                            textStyle: const TextStyle(
+                              color: Colors.white,
+                            ),
+                          );
+                          return;
+                        }
                       }
-                    }
-                  : null,
-              label: ProTiendasUiValues.save,
-            );
-          },
+                    : null,
+                label: ProTiendasUiValues.save,
+              );
+            },
+          ),
         ),
       ],
     );

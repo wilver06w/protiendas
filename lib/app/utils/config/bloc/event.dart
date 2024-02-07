@@ -11,6 +11,11 @@ class ChangeClientEvent extends Event {
   ChangeClientEvent(this.client);
 }
 
+class ChangeClienEvent extends Event {
+  final Clien? clien;
+
+  ChangeClienEvent(this.clien);
+}
 
 class ChangeCountryEvent extends Event {
   final Country country;

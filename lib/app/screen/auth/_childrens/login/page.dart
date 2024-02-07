@@ -57,20 +57,6 @@ Future<void> _listener(BuildContext context, LoginState state) async {
     YuGiOhLoading.show(context);
   } else if (state is LoadedLoginState) {
     Navigator.pop(context);
-    // if (!(state.model.userCredential?.user?.emailVerified ?? true)) {
-    //   state.model.userCredential?.user?.sendEmailVerification();
-    //   showToast(
-    //     ProTiendasUiValues.verifyEmail,
-    //     backgroundColor: ProTiendasUiColors.rybBlue,
-    //     textStyle: const TextStyle(
-    //       color: Colors.white,
-    //     ),
-    //     duration: const Duration(
-    //       seconds: 7,
-    //     ),
-    //   );
-    //   return;
-    // }
     YuGiOhRoute.navHome();
   } else if (state is ErrorLoginState) {
     Navigator.pop(context);

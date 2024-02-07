@@ -1,6 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:protiendas/app/models/data_login.dart';
+import 'package:protiendas/app/models/token.dart';
 import 'package:protiendas/app/screen/auth/_childrens/login/repository.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';
 import 'package:protiendas/app/utils/preferences.dart';
@@ -60,24 +62,37 @@ class BlocLogin extends Bloc<LoginEvent, LoginState> {
         'password': state.model.password,
       };
 
-      final token = await repository.sendLogin(data);
+      final dataLogin = await repository.sendLogin(data);
 
+      final token = Token.fromJson(
+        {'accessToken': dataLogin.data.accessToken},
+      );
+      prefs.isLogged = true;
       prefs.msToken = token;
+
       httpClient.updateHeadersWithToken(token);
 
       emit(
         LoadedLoginState(
           state.model.copyWith(
-              //TODO: revisar.
-              // userCredential: userCredential,
-              ),
+            dataLogin: dataLogin,
+          ),
         ),
       );
-    } catch (error) {
+    } catch (e) {
+      if (e is DioException) {
+        emit(
+          ErrorLoginState(
+            model: state.model,
+            message: e.response?.data['message'] ?? '',
+          ),
+        );
+        return;
+      }
       emit(
         ErrorLoginState(
           model: state.model,
-          message: error.toString(),
+          message: e.toString(),
         ),
       );
     }

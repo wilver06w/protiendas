@@ -21,6 +21,10 @@ class ErrorState extends State {
   const ErrorState(Model model) : super(model);
 }
 
+class UnLoggedState extends State {
+  const UnLoggedState(Model model) : super(model);
+}
+
 class Model extends Equatable {
   const Model();
   Model copyWith({

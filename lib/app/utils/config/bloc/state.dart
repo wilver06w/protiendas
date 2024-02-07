@@ -27,19 +27,23 @@ class ChangedBusinessBuilderState extends AppConfigState {
 
 class Model extends Equatable {
   final Client? client;
+  final Clien? clien;
   final Country country;
 
   const Model({
     this.client,
+    this.clien,
     required this.country,
   });
 
   Model copyWith({
     Client? client,
+    Clien? clien,
     Country? country,
   }) {
     return Model(
       client: client ?? this.client,
+      clien: clien ?? this.clien,
       country: country ?? this.country,
     );
   }
@@ -48,6 +52,7 @@ class Model extends Equatable {
   List<Object?> get props {
     return [
       client,
+      clien,
       country,
     ];
   }

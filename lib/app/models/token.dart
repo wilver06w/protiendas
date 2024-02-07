@@ -7,13 +7,13 @@ class Token {
 
   factory Token.fromJson(Map<String, dynamic> json) {
     return Token(
-      accessToken: json['access_token'] as String?,
+      accessToken: json['accessToken'] as String?,
     );
   }
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
-      'access_token': accessToken,
+      'accessToken': accessToken,
     };
   }
 }

@@ -3,6 +3,7 @@ library mobile_client_config;
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:protiendas/app/models/clien.dart';
 import 'package:protiendas/app/models/client.dart';
 import 'package:protiendas/app/models/country/country.dart';
 import 'package:protiendas/app/utils/config/bloc/bloc.dart';
@@ -62,6 +63,7 @@ class AppConfig {
 
   String? cellphoneProvisional;
   Client? _client;
+  Clien? _clien;
   late Country _country;
   bool hasActiveOrders = false;
   bool hasAddress = false;
@@ -96,6 +98,15 @@ class AppConfig {
     _client = client;
     blocProvider.add(
       ChangeClientEvent(client),
+    );
+  }
+
+  Clien? get clien => _clien;
+
+  set clien(Clien? clien) {
+    _clien = clien;
+    blocProvider.add(
+      ChangeClienEvent(clien),
     );
   }
 

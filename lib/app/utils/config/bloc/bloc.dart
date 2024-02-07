@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart' as bloc;
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:protiendas/app/models/clien.dart';
 import 'package:protiendas/app/models/client.dart';
 import 'package:protiendas/app/models/country/country.dart';
 
@@ -13,6 +14,7 @@ class AppConfigBloc extends bloc.Bloc<Event, AppConfigState> {
 
   AppConfigBloc(this.country) : super(InitialState(Model(country: country))) {
     on<ChangeClientEvent>(_changeClientEvent);
+    on<ChangeClienEvent>(_changeClienEvent);
     on<ChangeCountryEvent>(_changeCountryEvent);
   }
 
@@ -24,6 +26,19 @@ class AppConfigBloc extends bloc.Bloc<Event, AppConfigState> {
       ChangedClientState(
         state.model.copyWith(
           client: event.client,
+        ),
+      ),
+    );
+  }
+
+  void _changeClienEvent(
+    ChangeClienEvent event,
+    Emitter<AppConfigState> emit,
+  ) async {
+    emit(
+      ChangedClientState(
+        state.model.copyWith(
+          clien: event.clien,
         ),
       ),
     );
