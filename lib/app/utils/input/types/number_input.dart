@@ -40,7 +40,7 @@ class XigoNumberTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return YuGiOhTextField(
+    return XigoTextField(
       controller: controller,
       initialValue: initialValue,
       title: title,

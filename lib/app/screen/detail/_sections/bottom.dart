@@ -17,12 +17,12 @@ class BodyBottom extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            YuGiOhText.small(
-              label: YuGiOhUiValues.textFooter,
+            XigoText.small(
+              label: ProTiendasUiValues.textFooter,
               textStyle: GoogleFonts.lato(),
             ),
-            YuGiOhText.xSmall(
-              label: '${YuGiOhUiValues.version} ${app.version}',
+            XigoText.xSmall(
+              label: '${ProTiendasUiValues.version} ${app.version}',
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:protiendas/app/screen/auth/module.dart';
 import 'package:protiendas/app/screen/detail/page.dart' as detail;
 import 'package:protiendas/app/screen/home/page.dart' as home;
 import 'package:protiendas/app/screen/init/page.dart' as init;
@@ -27,6 +28,8 @@ class GlobalModule extends Module {
         ),
         transition: TransitionType.fadeIn,
       ),
+      ModuleRoute('/auth', module: AuthModule()),
+
     ];
   }
 }

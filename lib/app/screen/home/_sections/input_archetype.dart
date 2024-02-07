@@ -9,14 +9,14 @@ class SearchArchetype extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<BlocHome, HomeState>(
       builder: (context, state) {
-        return YuGiOhTextField(
+        return XigoTextField(
           controller: null,
-          hintText: YuGiOhUiValues.searchArchetype,
+          hintText: ProTiendasUiValues.searchArchetype,
           fillColor: Colors.white,
           filled: true,
           validator: (value) {
             if ((value ?? '').isEmpty) {
-              return '${YuGiOhUiValues.searchArchetype} ${YuGiOhUiValues.onRequired}';
+              return '${ProTiendasUiValues.searchArchetype} ${ProTiendasUiValues.onRequired}';
             }
             return null;
           },

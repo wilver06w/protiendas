@@ -1,17 +1,18 @@
 import 'package:dart_ipify/dart_ipify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:intl/intl.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:protiendas/app/utils/config/client_config.dart';
+import 'package:protiendas/app/utils/config/environment.dart';
+import 'package:protiendas/app/utils/http/http_client.dart';
 import 'package:protiendas/app/utils/preferences.dart';
 
 class App {
   static final instance = App._();
 
   final navigatorKey = GlobalKey<NavigatorState>();
-  // late Environment environment;
+  late Environment environment;
 
   Map<String, dynamic> config = {};
   String version = '';
@@ -20,14 +21,15 @@ class App {
 
   Future<void> init({
     required Map<String, dynamic> config,
+    required Environment environment,
   }) async {
-    // this.config = config;
-    // this.environment = environment;
+    this.config = config;
+    this.environment = environment;
 
     Intl.defaultLocale = 'es';
 
-    // XigoHttpClient.env = environment;
-    // await XigoHttpClient().initAsyncData();
+    XigoHttpClient.env = environment;
+    await XigoHttpClient().initAsyncData();
 
     final prefs = Preferences();
 

@@ -26,13 +26,13 @@ class ItemDetailCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          YuGiOhText.labelText(
+          XigoText.labelText(
             label: title,
             color: Colors.white,
             textStyle: GoogleFonts.lato(),
           ),
           const Gap(YuGiOhSpacing.xs),
-          YuGiOhText.small(
+          XigoText.small(
             label: desc,
             color: Colors.white,
             textOverflow: TextOverflow.ellipsis,

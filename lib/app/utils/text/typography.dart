@@ -1,5 +1,5 @@
-class YuGiOhTypography {
-  const YuGiOhTypography._();
+class XigoTypography {
+  const XigoTypography._();
 
   static const String nunitoSans = 'NunitoSans';
 
@@ -70,7 +70,7 @@ class YuGiOhTypography {
   static const double medium = 12;
 
   ///Small = 10
-  static const double yuGiOhSmall = 10;
+  static const double xigoSmall = 10;
 
   ///captionSmall = 12
   static const double captionSmall = 12;

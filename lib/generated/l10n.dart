@@ -59,6 +59,166 @@ class S {
       args: [code],
     );
   }
+
+  /// `No estoy registrado`
+  String get iAmNotRegistered {
+    return Intl.message(
+      'No estoy registrado',
+      name: 'iAmNotRegistered',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quiero registrarme.`
+  String get wantRegister {
+    return Intl.message(
+      'Quiero registrarme.',
+      name: 'wantRegister',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Producto de MOTAXI S.A.S.`
+  String get productBy {
+    return Intl.message(
+      'Producto de MOTAXI S.A.S.',
+      name: 'productBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Celular`
+  String get cellPhone {
+    return Intl.message(
+      'Celular',
+      name: 'cellPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Numero de teléfono no es válido`
+  String get numberPhoneNoValid {
+    return Intl.message(
+      'Numero de teléfono no es válido',
+      name: 'numberPhoneNoValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Siguiente`
+  String get next {
+    return Intl.message(
+      'Siguiente',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Correo Electronico`
+  String get email {
+    return Intl.message(
+      'Correo Electronico',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bienvenido`
+  String get welcome {
+    return Intl.message(
+      'Bienvenido',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completa los datos`
+  String get completeTheData {
+    return Intl.message(
+      'Completa los datos',
+      name: 'completeTheData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guardar`
+  String get save {
+    return Intl.message(
+      'Guardar',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verificar correo electrónico`
+  String get verifyEmail {
+    return Intl.message(
+      'Verificar correo electrónico',
+      name: 'verifyEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contraseña`
+  String get password {
+    return Intl.message(
+      'Contraseña',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registrate`
+  String get register {
+    return Intl.message(
+      'Registrate',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Usuario registrado correctamente`
+  String get userRegisterSuccesful {
+    return Intl.message(
+      'Usuario registrado correctamente',
+      name: 'userRegisterSuccesful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ahora puedes iniciar sesión`
+  String get nowYouCanLogIn {
+    return Intl.message(
+      'Ahora puedes iniciar sesión',
+      name: 'nowYouCanLogIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Iniciar sesión`
+  String get sigIn {
+    return Intl.message(
+      'Iniciar sesión',
+      name: 'sigIn',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

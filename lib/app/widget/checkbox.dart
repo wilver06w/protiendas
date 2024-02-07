@@ -3,7 +3,7 @@ import 'package:protiendas/app/utils/colors.dart';
 
 class YuGiOhCheckbox extends StatelessWidget {
   const YuGiOhCheckbox({
-    this.activeColor = YuGiOhColors.primaryColor,
+    this.activeColor = ProTiendasUiColors.primaryColor,
     this.disabled = false,
     Key? key,
     this.onChanged,
@@ -36,7 +36,7 @@ class YuGiOhCheckbox extends StatelessWidget {
             border: value
                 ? null
                 : Border.all(
-                    color: YuGiOhColors.disabledColor.withOpacity(0.50),
+                    color: ProTiendasUiColors.disabledColor.withOpacity(0.50),
                   ),
           ),
           clipBehavior: Clip.hardEdge,

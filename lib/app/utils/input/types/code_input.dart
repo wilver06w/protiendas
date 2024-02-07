@@ -46,7 +46,7 @@ class XigoCodeInput extends StatelessWidget {
               charactersFocus[character]!
                   .addListener(() => _handleFocusInputListener(character));
               return Expanded(
-                child: YuGiOhTextField(
+                child: XigoTextField(
                   key: Key('Xigo_tds-Xigocode-input-$character'),
                   fillColor: boxColor,
                   filled: boxColor != null,
@@ -62,7 +62,7 @@ class XigoCodeInput extends StatelessWidget {
                   inputTextStyle: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
-                    fontSize: YuGiOhTypography.h6,
+                    fontSize: XigoTypography.h6,
                   ),
                   validator: (String? value) {
                     if (value != null && value.isEmpty) {

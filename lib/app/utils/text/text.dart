@@ -1,23 +1,20 @@
-import 'package:protiendas/app/utils/colors.dart';
-import 'package:protiendas/app/utils/text/typography.dart';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/letter_spacing.dart';
+import 'package:protiendas/app/utils/text/typography.dart';
+import 'package:styled_text/tags/styled_text_tag_action.dart';
+import 'package:styled_text/widgets/styled_text.dart';
 
-enum YuGiOhTextType {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  body,
-  title,
-  label,
-  small,
-  xSmall
-}
+import 'text_rich.dart';
 
-class YuGiOhText {
-  YuGiOhText._();
+part 'xigo_text.dart';
+
+enum XigoTextType { h1, h2, h3, h4, h5, h6, body, title, label, small, xSmall }
+
+class XigoText {
+  XigoText._();
 
   ///h1 Text widget - fontSize 96
   static Widget h1({
@@ -35,8 +32,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.h1,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.h1,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -63,8 +60,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.h2,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.h2,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -91,8 +88,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.h3,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.h3,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -119,7 +116,7 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.h4,
+        fontSize: XigoTypography.h4,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -146,8 +143,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.h5,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.h5,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -174,8 +171,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.h6,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.h6,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.bold,
         textAlign: textAlign,
@@ -202,8 +199,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.body,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.body,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -229,8 +226,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.title,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.title,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -256,14 +253,42 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.label,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.label,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
         textOverflow: textOverflow,
         maxLines: maxLines,
         letterSpacing: letterSpacing,
+        textStyle: textStyle,
+        decoration: decoration,
+      );
+
+  ///backofficeLabel Text widget - fontSize 14
+  static Widget backofficeLabel({
+    required String label,
+    Key? key,
+    TextAlign? textAlign,
+    FontWeight? fontWeight,
+    Color? color,
+    TextOverflow? textOverflow,
+    double? letterSpacing,
+    int? maxLines,
+    TextStyle? textStyle,
+    TextDecoration? decoration,
+  }) =>
+      _TextGeneric(
+        key: key,
+        label: label,
+        fontSize: XigoTypography.label,
+        color: color ?? ProTiendasUiColors.tertiaryColor,
+        fontStyle: FontStyle.normal,
+        fontWeight: fontWeight ?? FontWeight.bold,
+        textAlign: textAlign,
+        letterSpacing: XigoLetterSpacing.label,
+        textOverflow: textOverflow,
+        maxLines: maxLines,
         textStyle: textStyle,
         decoration: decoration,
       );
@@ -284,8 +309,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.xSmall,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.xSmall,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -312,8 +337,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.small,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.small,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -323,6 +348,58 @@ class YuGiOhText {
         textStyle: textStyle,
         decoration: decoration,
       );
+
+  ///rich Text widget - fontSize 14
+  static Widget rich({
+    required String label,
+    Key? key,
+    TextAlign? textAlign,
+    FontWeight? fontWeight,
+    Color? color,
+    TextOverflow? textOverflow,
+    int? maxLines,
+    double? letterSpacing,
+    double? fontSize,
+    FontStyle? fontStyle,
+    List<XigoRichTag>? tags,
+    TextDecoration? decoration,
+  }) {
+    String locaLabel = label;
+
+    for (XigoRichTag item in tags ?? []) {
+      final tag = _generateTag(6);
+
+      locaLabel = locaLabel.replaceAll(
+        item.tag,
+        '<$tag>${item.tag}</$tag>',
+      );
+      item.tag = tag;
+    }
+
+    return StyledText(
+      text: locaLabel,
+      tags: {
+        for (XigoRichTag item in tags ?? [])
+          item.tag: StyledTextActionTag(
+            (_, __) => (item.onTap != null) ? item.onTap!() : null,
+            style: item.style,
+          )
+      },
+      textAlign: textAlign,
+      style: TextStyle(
+        package: 'mobile_tds',
+        color: color ?? ProTiendasUiColors.raisinBlack,
+        fontFamily: XigoTypography.inter,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle ?? FontStyle.normal,
+        letterSpacing: letterSpacing,
+        decoration: decoration,
+      ),
+      overflow: textOverflow,
+      maxLines: maxLines,
+    );
+  }
 
   ///small Text widget - fontSize 12
   static Widget fontBold({
@@ -340,8 +417,8 @@ class YuGiOhText {
       _TextGeneric(
         key: key,
         label: label,
-        fontSize: YuGiOhTypography.body,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        fontSize: XigoTypography.body,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: FontStyle.normal,
         fontWeight: fontWeight ?? FontWeight.w600,
         textAlign: textAlign,
@@ -371,7 +448,7 @@ class YuGiOhText {
         key: key,
         label: label,
         fontSize: fontSize,
-        color: color ?? YuGiOhColors.textColorSecondary,
+        color: color ?? ProTiendasUiColors.raisinBlack,
         fontStyle: fontStyle,
         fontWeight: fontWeight ?? FontWeight.normal,
         textAlign: textAlign,
@@ -395,7 +472,7 @@ class YuGiOhText {
   }) =>
       TextStyle(
         height: lineHeight,
-        fontFamily: YuGiOhTypography.inter,
+        fontFamily: XigoTypography.inter,
         color: color,
         fontSize: fontSize,
         fontWeight: fontWeight,
@@ -404,13 +481,22 @@ class YuGiOhText {
         decoration: decoration ?? TextDecoration.none,
         shadows: shadows,
       ).merge(textStyle);
+
+  static String _generateTag(int len) {
+    final random = Random();
+    final result = String.fromCharCodes(
+      List.generate(len, (index) => random.nextInt(33) + 89),
+    );
+
+    return result;
+  }
 }
 
 class _TextGeneric extends StatelessWidget {
   const _TextGeneric({
-    Key? key,
     required this.label,
     required this.fontSize,
+    Key? key,
     this.color,
     this.fontStyle,
     this.fontWeight,
@@ -420,6 +506,8 @@ class _TextGeneric extends StatelessWidget {
     this.maxLines,
     this.textStyle,
     this.decoration,
+    this.fontFamily,
+    this.shadows,
   }) : super(key: key);
 
   final String label;
@@ -433,6 +521,8 @@ class _TextGeneric extends StatelessWidget {
   final int? maxLines;
   final TextStyle? textStyle;
   final TextDecoration? decoration;
+  final String? fontFamily;
+  final List<Shadow>? shadows;
 
   @override
   Widget build(BuildContext context) {
@@ -441,7 +531,7 @@ class _TextGeneric extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       style: TextStyle(
-        fontFamily: YuGiOhTypography.inter,
+        fontFamily: fontFamily ?? XigoTypography.inter,
         color: color,
         fontSize: fontSize,
         fontWeight: fontWeight,
@@ -449,6 +539,7 @@ class _TextGeneric extends StatelessWidget {
         letterSpacing: letterSpacing,
         decoration: decoration ?? TextDecoration.none,
         overflow: textOverflow,
+        shadows: shadows,
       ).merge(textStyle),
     );
   }

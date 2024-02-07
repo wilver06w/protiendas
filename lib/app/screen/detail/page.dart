@@ -36,7 +36,7 @@ class Page extends StatelessWidget {
         itemYuGiOh: itemYuGiOh,
       ),
       child: Scaffold(
-        backgroundColor: YuGiOhColors.backgroundColor,
+        backgroundColor: ProTiendasUiColors.backgroundColor,
         bottomNavigationBar: BodyBottom(app: app),
         body: const SafeArea(
           child: Body(),

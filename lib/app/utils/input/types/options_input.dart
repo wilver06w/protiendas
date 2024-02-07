@@ -53,7 +53,7 @@ class _XigoOptionsFieldState extends State<XigoOptionsField> {
         color: widget.fillColor ?? Colors.white,
         border: widget.showBorder
             ? Border.all(
-                color: YuGiOhColors.antiFlashWhite,
+                color: ProTiendasUiColors.antiFlashWhite,
               )
             : null,
         borderRadius: widget.showBorder
@@ -66,9 +66,9 @@ class _XigoOptionsFieldState extends State<XigoOptionsField> {
         value: _value,
         icon: widget.icon,
         iconSize: widget.iconSize ?? 24.0,
-        hint: YuGiOhText.body(
+        hint: XigoText.body(
           label: widget.placeholder ?? '',
-          color: widget.hintColor ?? YuGiOhColors.chineseSilver,
+          color: widget.hintColor ?? ProTiendasUiColors.chineseSilver,
           fontWeight: FontWeight.w400,
         ),
         borderRadius: widget.showDropdownRadius
@@ -78,7 +78,7 @@ class _XigoOptionsFieldState extends State<XigoOptionsField> {
           (option) {
             return DropdownMenuItem<String>(
               value: option,
-              child: YuGiOhText.body(
+              child: XigoText.body(
                 label: option,
                 fontWeight: FontWeight.w400,
                 color: widget.itemLabelColor != null

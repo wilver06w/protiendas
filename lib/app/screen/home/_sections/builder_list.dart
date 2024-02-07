@@ -16,8 +16,8 @@ class BuilderList extends StatelessWidget {
         builder: (context, state) {
           if (state.model.getListYuGiOhWithoutBan.isEmpty) {
             return Center(
-              child: YuGiOhText.body(
-                label: YuGiOhUiValues.selectArchetype,
+              child: XigoText.body(
+                label: ProTiendasUiValues.selectArchetype,
               ),
             );
           }

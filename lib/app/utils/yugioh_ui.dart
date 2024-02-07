@@ -1,14 +1,28 @@
 import 'package:protiendas/generated/l10n.dart';
 
-class YuGiOhUiValues {
+class ProTiendasUiValues {
   static const String acacomproLogo = 'assets/image/logogi.gif';
 
+  static final String iAmNotRegistered = S.current.iAmNotRegistered;
+  static final String wantRegister = S.current.wantRegister;
+  static final String productBy = S.current.productBy;
+  static final String cellPhone = S.current.cellPhone;
+  static final String numberPhoneNoValid = S.current.numberPhoneNoValid;
+  static final String next = S.current.next;
+  static final String email = S.current.email;
+  static final String welcome = S.current.welcome;
+  static final String save = S.current.save;
+  static final String completeTheData = S.current.completeTheData;
+  static final String verifyEmail = S.current.verifyEmail;
+  static final String password = S.current.password;
+  static final String register = S.current.register;
+  static final String userRegisterSuccesful = S.current.userRegisterSuccesful;
+  static final String nowYouCanLogIn = S.current.nowYouCanLogIn;
+  static final String sigIn = S.current.sigIn;
 
   static String weHaveAErrorContactSuport(Object fieldName) {
     return S.current.weHaveAErrorContactSuport(fieldName);
   }
-
-
 
   static const String siiLogo =
       'https://sii-group.com/themes/custom/sii/logo.svg';

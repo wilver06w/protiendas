@@ -48,14 +48,14 @@ class XigoTextArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return YuGiOhTextField(
+    return XigoTextField(
       counterStyle: counterStyle,
       controller: controller,
       title: title,
       maxLength: maxLength,
       titleStyle: const TextStyle(
-        fontFamily: YuGiOhTypography.inter,
-        color: YuGiOhColors.disabledColor,
+        fontFamily: XigoTypography.inter,
+        color: ProTiendasUiColors.disabledColor,
         fontSize: 12,
         fontWeight: FontWeight.w600,
         fontStyle: FontStyle.normal,
@@ -73,8 +73,8 @@ class XigoTextArea extends StatelessWidget {
           ),
       hintTextStyle: hintTextStyle ??
           TextStyle(
-            fontFamily: YuGiOhTypography.inter,
-            color: hintColor ?? YuGiOhColors.silver,
+            fontFamily: XigoTypography.inter,
+            color: hintColor ?? ProTiendasUiColors.silver,
             fontSize: 16,
             fontWeight: FontWeight.w400,
             fontStyle: FontStyle.normal,
@@ -87,35 +87,35 @@ class XigoTextArea extends StatelessWidget {
               Radius.circular(10),
             ),
             borderSide: BorderSide(
-              color: YuGiOhColors.information,
+              color: ProTiendasUiColors.information,
               width: 1.0,
             ),
           ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
         borderSide: const BorderSide(
-          color: YuGiOhColors.chineseSilver,
+          color: ProTiendasUiColors.chineseSilver,
           width: 1.0,
         ),
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
         borderSide: const BorderSide(
-          color: YuGiOhColors.dangerColor,
+          color: ProTiendasUiColors.dangerColor,
           width: 1.0,
         ),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
         borderSide: const BorderSide(
-          color: YuGiOhColors.dangerColor,
+          color: ProTiendasUiColors.dangerColor,
           width: 1.0,
         ),
       ),
       disabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
         borderSide: const BorderSide(
-          color: YuGiOhColors.dividerColor,
+          color: ProTiendasUiColors.dividerColor,
           width: 1.0,
         ),
       ),

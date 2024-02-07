@@ -15,7 +15,10 @@ class AppModule extends Module {
       ),
       Bind(
         (i) {
-          return AppConfig()..version = App.instance.version;
+          return AppConfig(
+            environment: App.instance.environment,
+            config: App.instance.config,
+          )..version = App.instance.version;
         },
         isLazy: false,
       ),

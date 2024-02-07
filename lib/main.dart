@@ -5,12 +5,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:protiendas/app/config/app.dart';
 import 'package:protiendas/app/module.dart';
+import 'package:protiendas/app/utils/load_file.dart';
 import 'package:protiendas/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await App.instance.init(config: {});
+  final env = LoadConfigFile.getEnv();
+  final configFile = await LoadConfigFile.load(env);
+
+  await App.instance.init(
+    config: configFile,
+    environment: env,
+  );
+
 
   runApp(
     ModularApp(

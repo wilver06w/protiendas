@@ -23,6 +23,31 @@ class MessageLookup extends MessageLookupByLibrary {
       "Error ${code} \nSi el error persiste, contacta a soporte";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) =>
-      <String, Function>{"weHaveAErrorContactSuport": m0};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "cellPhone": MessageLookupByLibrary.simpleMessage("Celular"),
+        "completeTheData":
+            MessageLookupByLibrary.simpleMessage("Completa los datos"),
+        "email": MessageLookupByLibrary.simpleMessage("Correo Electronico"),
+        "iAmNotRegistered":
+            MessageLookupByLibrary.simpleMessage("No estoy registrado"),
+        "next": MessageLookupByLibrary.simpleMessage("Siguiente"),
+        "nowYouCanLogIn":
+            MessageLookupByLibrary.simpleMessage("Ahora puedes iniciar sesión"),
+        "numberPhoneNoValid": MessageLookupByLibrary.simpleMessage(
+            "Numero de teléfono no es válido"),
+        "password": MessageLookupByLibrary.simpleMessage("Contraseña"),
+        "productBy":
+            MessageLookupByLibrary.simpleMessage("Producto de MOTAXI S.A.S."),
+        "register": MessageLookupByLibrary.simpleMessage("Registrate"),
+        "save": MessageLookupByLibrary.simpleMessage("Guardar"),
+        "sigIn": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
+        "userRegisterSuccesful": MessageLookupByLibrary.simpleMessage(
+            "Usuario registrado correctamente"),
+        "verifyEmail": MessageLookupByLibrary.simpleMessage(
+            "Verificar correo electrónico"),
+        "wantRegister":
+            MessageLookupByLibrary.simpleMessage("Quiero registrarme."),
+        "weHaveAErrorContactSuport": m0,
+        "welcome": MessageLookupByLibrary.simpleMessage("Bienvenido")
+      };
 }

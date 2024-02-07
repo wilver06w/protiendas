@@ -12,8 +12,8 @@ part 'types/number_input.dart';
 part 'types/obscure_input.dart';
 part 'types/options_input.dart';
 
-class YuGiOhTextField extends StatelessWidget {
-  const YuGiOhTextField({
+class XigoTextField extends StatelessWidget {
+  const XigoTextField({
     Key? key,
     this.controller,
     this.counterStyle,
@@ -138,7 +138,7 @@ class YuGiOhTextField extends StatelessWidget {
             toolTipRequiredOptionalText: toolTipRequiredOptionalText,
           ),
         TextFormField(
-          cursorColor: cursorColor ?? YuGiOhColors.ufoGreen,
+          cursorColor: cursorColor ?? ProTiendasUiColors.ufoGreen,
           obscureText: obscureText,
           initialValue: initialValue,
           controller: controller,
@@ -155,7 +155,7 @@ class YuGiOhTextField extends StatelessWidget {
           textAlign: textAlign ?? TextAlign.start,
           validator: validator,
           autovalidateMode: autovalidateMode,
-          style: inputTextStyle ?? YuGiOhText.style(),
+          style: inputTextStyle ?? XigoText.style(),
           onChanged: onChanged,
           onTap: onTap as void Function()?,
           onFieldSubmitted: onFieldSubmitted,
@@ -178,14 +178,14 @@ class YuGiOhTextField extends StatelessWidget {
             hintText: hintText,
             hintMaxLines: hintMaxLines,
             hintStyle: hintTextStyle ??
-                YuGiOhText.style().copyWith(
-                  color: YuGiOhColors.silver,
+                XigoText.style().copyWith(
+                  color: ProTiendasUiColors.silver,
                 ),
             border: OutlineInputBorder(
               borderRadius:
                   borderRadius ?? const BorderRadius.all(Radius.circular(10.0)),
               borderSide: const BorderSide(
-                color: YuGiOhColors.primaryColor,
+                color: ProTiendasUiColors.primaryColor,
               ),
             ),
             focusedBorder: focusedBorder ??
@@ -193,7 +193,7 @@ class YuGiOhTextField extends StatelessWidget {
                   borderRadius: borderRadius ??
                       const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: const BorderSide(
-                    color: YuGiOhColors.primaryColor,
+                    color: ProTiendasUiColors.primaryColor,
                   ),
                 ),
             enabledBorder: enabledBorder ??
@@ -201,7 +201,7 @@ class YuGiOhTextField extends StatelessWidget {
                   borderRadius: borderRadius ??
                       const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: const BorderSide(
-                    color: YuGiOhColors.whiteSecundary,
+                    color: ProTiendasUiColors.whiteSecundary,
                   ),
                 ),
             disabledBorder: disabledBorder,
@@ -212,22 +212,22 @@ class YuGiOhTextField extends StatelessWidget {
                         Radius.circular(10.0),
                       ),
                   borderSide: const BorderSide(
-                    color: YuGiOhColors.dangerColor,
+                    color: ProTiendasUiColors.dangerColor,
                   ),
                 ),
             focusedErrorBorder: focusedErrorBorder,
             labelStyle: labelTextStyle ??
                 TextStyle(
-                  fontFamily: YuGiOhTypography.inter,
+                  fontFamily: XigoTypography.inter,
                   color: Theme.of(context).textSelectionTheme.selectionColor,
                   fontSize: YuGiOhSpacing.md,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                 ),
             errorStyle: errorStyle ??
-                YuGiOhText.style(
-                  color: YuGiOhColors.dangerColor,
-                  fontSize: YuGiOhTypography.yuGiOhSmall,
+                XigoText.style(
+                  color: ProTiendasUiColors.dangerColor,
+                  fontSize: XigoTypography.xigoSmall,
                   fontWeight: FontWeight.w400,
                 ),
           ),
@@ -252,14 +252,15 @@ class _TextFieldTitle extends StatelessWidget {
   final bool? isRequired;
   final String? toolTipRequiredOptionalText;
 
-  Color titleColor() =>
-      errorText != null ? YuGiOhColors.dangerColor : YuGiOhColors.sonicSilver;
+  Color titleColor() => errorText != null
+      ? ProTiendasUiColors.dangerColor
+      : ProTiendasUiColors.sonicSilver;
 
   TextSpan getSpamRequired() {
     return isRequired!
         ? TextSpan(
             text: toolTipRequiredOptionalText ?? '',
-            style: const TextStyle(color: YuGiOhColors.dangerColor),
+            style: const TextStyle(color: ProTiendasUiColors.dangerColor),
           )
         : TextSpan(
             text: toolTipRequiredOptionalText ?? '',
@@ -282,8 +283,8 @@ class _TextFieldTitle extends StatelessWidget {
                 style: titleStyle ??
                     TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: YuGiOhTypography.medium,
-                      fontFamily: YuGiOhTypography.inter,
+                      fontSize: XigoTypography.medium,
+                      fontFamily: XigoTypography.inter,
                       color: titleColor(),
                     ),
                 children: [

@@ -54,8 +54,8 @@ class _XigoObscureInputState extends State<XigoObscureInput> {
                     const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 12,
-                      fontFamily: YuGiOhTypography.inter,
-                      color: YuGiOhColors.disabledColor,
+                      fontFamily: XigoTypography.inter,
+                      color: ProTiendasUiColors.disabledColor,
                     ),
                 children: const [],
               ),
@@ -67,7 +67,7 @@ class _XigoObscureInputState extends State<XigoObscureInput> {
           keyboardType: widget.keyboardType,
           textAlign: TextAlign.start,
           validator: widget.validator,
-          style: YuGiOhText.style(),
+          style: XigoText.style(),
           onChanged: widget.onChanged,
           decoration: InputDecoration(
             suffixIcon: InkWell(
@@ -82,8 +82,8 @@ class _XigoObscureInputState extends State<XigoObscureInput> {
             filled: widget.filled,
             fillColor: widget.fillColor ?? Colors.white,
             hintText: widget.hintText ?? widget.title,
-            hintStyle: YuGiOhText.style().copyWith(
-              color: YuGiOhColors.silver,
+            hintStyle: XigoText.style().copyWith(
+              color: ProTiendasUiColors.silver,
             ),
             border: OutlineInputBorder(
               borderRadius: const BorderRadius.all(Radius.circular(10.0)),
@@ -94,24 +94,24 @@ class _XigoObscureInputState extends State<XigoObscureInput> {
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(
-                color: YuGiOhColors.whiteSecundary,
+                color: ProTiendasUiColors.whiteSecundary,
               ),
             ),
             errorBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(
-                color: YuGiOhColors.error,
+                color: ProTiendasUiColors.error,
               ),
             ),
             labelStyle: TextStyle(
-              fontFamily: YuGiOhTypography.inter,
+              fontFamily: XigoTypography.inter,
               color: Theme.of(context).textSelectionTheme.selectionColor,
               fontSize: YuGiOhSpacing.md,
               fontWeight: FontWeight.w400,
               fontStyle: FontStyle.normal,
             ),
             errorStyle: const TextStyle(
-              color: YuGiOhColors.error,
+              color: ProTiendasUiColors.error,
             ),
           ),
         ),

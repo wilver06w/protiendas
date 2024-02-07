@@ -9,6 +9,17 @@ class YuGiOhRoute {
     );
   }
 
+  static Future<Object?> navLogin() async {
+    return Modular.to.pushNamedAndRemoveUntil(
+      '/auth',
+      (_) => false,
+    );
+  }
+
+  static Future<Object?> navRegister() async {
+    return Modular.to.pushNamed('/auth/register');
+  }
+
   static Future<Object?> navDetail({
     YuGiOh? yuGiOh,
   }) async {

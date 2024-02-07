@@ -10,7 +10,7 @@ class Button extends StatelessWidget {
     required this.title,
     this.onPressed,
     this.colorText = Colors.white,
-    this.borderColor = YuGiOhColors.majorelleBlue,
+    this.borderColor = ProTiendasUiColors.majorelleBlue,
     this.backgroundColor,
   });
   final String title;
@@ -46,7 +46,7 @@ class Button extends StatelessWidget {
             pixels: YuGiOhSpacing.sm,
           ),
         ),
-        child: YuGiOhText.labelText(
+        child: XigoText.labelText(
           label: title,
           color: colorText,
         ),

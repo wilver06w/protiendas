@@ -44,13 +44,13 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                YuGiOhText.body(
+                XigoText.body(
                   label: item.desc,
                   textStyle: GoogleFonts.lato(),
                 ),
                 const Gap(YuGiOhSpacing.md),
-                YuGiOhText.body(
-                  label: YuGiOhUiValues.atribute,
+                XigoText.body(
+                  label: ProTiendasUiValues.atribute,
                   textStyle: GoogleFonts.lato(),
                 ),
                 const Gap(YuGiOhSpacing.sm),
@@ -58,38 +58,38 @@ class Body extends StatelessWidget {
                   spacing: YuGiOhSpacing.xs,
                   children: [
                     ItemDetailCard(
-                      title: YuGiOhUiValues.type,
+                      title: ProTiendasUiValues.type,
                       desc: item.type,
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.archetype,
+                      title: ProTiendasUiValues.archetype,
                       desc: item.archetype ?? '',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.atk,
+                      title: ProTiendasUiValues.atk,
                       desc: '${item.atk ?? 0}',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.def,
+                      title: ProTiendasUiValues.def,
                       desc: '${item.def ?? 0}',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.level,
+                      title: ProTiendasUiValues.level,
                       desc: '${item.level ?? 0}',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.race,
+                      title: ProTiendasUiValues.race,
                       desc: item.race,
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.atribute,
+                      title: ProTiendasUiValues.atribute,
                       desc: item.attribute ?? '',
                     ),
                   ],
                 ),
                 const Gap(YuGiOhSpacing.md),
-                YuGiOhText.body(
-                  label: YuGiOhUiValues.prices,
+                XigoText.body(
+                  label: ProTiendasUiValues.prices,
                   textStyle: GoogleFonts.lato(),
                 ),
                 const Gap(YuGiOhSpacing.sm),
@@ -97,23 +97,23 @@ class Body extends StatelessWidget {
                   spacing: YuGiOhSpacing.xs,
                   children: [
                     ItemDetailCard(
-                      title: YuGiOhUiValues.cardMarket,
+                      title: ProTiendasUiValues.cardMarket,
                       desc: itemCardPrices?.cardmarketPrice ?? '',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.tcgPlayer,
+                      title: ProTiendasUiValues.tcgPlayer,
                       desc: itemCardPrices?.tcgplayerPrice ?? '',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.ebayPrice,
+                      title: ProTiendasUiValues.ebayPrice,
                       desc: itemCardPrices?.ebayPrice ?? '',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.amazon,
+                      title: ProTiendasUiValues.amazon,
                       desc: itemCardPrices?.amazonPrice ?? '',
                     ),
                     ItemDetailCard(
-                      title: YuGiOhUiValues.coolStuffinc,
+                      title: ProTiendasUiValues.coolStuffinc,
                       desc: itemCardPrices?.coolstuffincPrice ?? '',
                     ),
                   ],
@@ -121,8 +121,8 @@ class Body extends StatelessWidget {
                 const Gap(YuGiOhSpacing.md),
                 Center(
                   child: Button(
-                    title: YuGiOhUiValues.seeMore,
-                    backgroundColor: YuGiOhColors.primaryColor,
+                    title: ProTiendasUiValues.seeMore,
+                    backgroundColor: ProTiendasUiColors.primaryColor,
                     onPressed: () {
                       Functions.launchInBrowser(
                         url: item.ygoprodeckUrl,

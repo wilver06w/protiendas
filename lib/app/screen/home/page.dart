@@ -44,7 +44,7 @@ class Page extends StatelessWidget {
       child: BlocListener<BlocHome, HomeState>(
         listener: _listener,
         child: Scaffold(
-          backgroundColor: YuGiOhColors.backgroundColor,
+          backgroundColor: ProTiendasUiColors.backgroundColor,
           bottomNavigationBar: BodyBottom(app: app),
           body: const SafeArea(
             child: Body(),
@@ -63,7 +63,7 @@ Future<void> _listener(BuildContext context, HomeState state) async {
     Navigator.pop(context);
     showToast(
       state.message,
-      backgroundColor: YuGiOhColors.rybBlue,
+      backgroundColor: ProTiendasUiColors.rybBlue,
       textStyle: const TextStyle(
         color: Colors.white,
       ),
@@ -72,7 +72,7 @@ Future<void> _listener(BuildContext context, HomeState state) async {
     Navigator.pop(context);
     showToast(
       state.message,
-      backgroundColor: YuGiOhColors.rybBlue,
+      backgroundColor: ProTiendasUiColors.rybBlue,
       textStyle: const TextStyle(
         color: Colors.white,
       ),

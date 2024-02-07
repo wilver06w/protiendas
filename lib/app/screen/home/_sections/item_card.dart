@@ -44,7 +44,7 @@ class ItemCard extends StatelessWidget {
           child: Stack(
             children: [
               Image.asset(
-                YuGiOhUiValues.backBlueImg,
+                ProTiendasUiValues.backBlueImg,
               ),
               Positioned.fill(
                 child: Row(
@@ -64,29 +64,29 @@ class ItemCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          YuGiOhText.fontSizeCustom(
+                          XigoText.fontSizeCustom(
                             label: itemYuGiOh?.name ?? '',
                             fontSize: 20,
                             textStyle: GoogleFonts.lateef(),
                             color: Colors.white,
                             textOverflow: TextOverflow.ellipsis,
                           ),
-                          YuGiOhText.body(
+                          XigoText.body(
                             label: itemYuGiOh?.race ?? '',
                             color: Colors.white,
                             textStyle: GoogleFonts.lateef(),
                             textOverflow: TextOverflow.ellipsis,
                           ),
-                          YuGiOhText.body(
+                          XigoText.body(
                             label:
-                                '${YuGiOhUiValues.type}: ${itemYuGiOh?.type ?? 0}',
+                                '${ProTiendasUiValues.type}: ${itemYuGiOh?.type ?? 0}',
                             color: Colors.white,
                             textStyle: GoogleFonts.lateef(),
                             textOverflow: TextOverflow.ellipsis,
                           ),
-                          YuGiOhText.body(
+                          XigoText.body(
                             label:
-                                '${YuGiOhUiValues.atk}: ${itemYuGiOh?.atk ?? 0}',
+                                '${ProTiendasUiValues.atk}: ${itemYuGiOh?.atk ?? 0}',
                             color: Colors.white,
                             textStyle: GoogleFonts.lateef(),
                             textOverflow: TextOverflow.ellipsis,

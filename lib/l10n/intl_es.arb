@@ -1,4 +1,20 @@
 {
 
-    "weHaveAErrorContactSuport": "Error {code} \nSi el error persiste, contacta a soporte"
+    "weHaveAErrorContactSuport": "Error {code} \nSi el error persiste, contacta a soporte",
+    "iAmNotRegistered":"No estoy registrado",
+    "wantRegister":"Quiero registrarme.",
+    "productBy":"Producto de MOTAXI S.A.S.",
+    "cellPhone":"Celular",
+    "numberPhoneNoValid": "Numero de teléfono no es válido",
+    "next":"Siguiente",
+    "email":"Correo Electronico",
+    "welcome":"Bienvenido",
+    "completeTheData":"Completa los datos",
+    "save":"Guardar",
+    "verifyEmail": "Verificar correo electrónico",
+    "password":"Contraseña",
+    "register":"Registrate",
+    "userRegisterSuccesful":"Usuario registrado correctamente",
+    "nowYouCanLogIn":"Ahora puedes iniciar sesión",
+    "sigIn":"Iniciar sesión"
 }

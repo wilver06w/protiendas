@@ -62,7 +62,7 @@ class Header extends StatelessWidget {
                                 },
                               ),
                               const Gap(YuGiOhSpacing.md),
-                              YuGiOhText.labelText(
+                              XigoText.labelText(
                                 label: itemArchetype.archetypeName,
                                 color: Colors.white,
                                 textOverflow: TextOverflow.ellipsis,

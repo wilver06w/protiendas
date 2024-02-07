@@ -1,4 +1,4 @@
-enum Environment { dev, prod, devProd }
+enum Environment { dev, prod }
 
 extension EnvironmentExtension on Environment {
   String get value {
@@ -7,8 +7,6 @@ extension EnvironmentExtension on Environment {
         return 'dev';
       case Environment.prod:
         return 'prod';
-      case Environment.devProd:
-        return 'devProd';
     }
   }
 }

@@ -18,7 +18,7 @@ class Page extends StatelessWidget {
     final app = Modular.get<AppConfig>();
     final prefs = Modular.get<Preferences>();
     return Scaffold(
-      backgroundColor: YuGiOhColors.backgroundColor,
+      backgroundColor: ProTiendasUiColors.backgroundColor,
       body: BlocProvider(
         create: (context) => bloc.Bloc(
           app: app,
@@ -31,7 +31,7 @@ class Page extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  YuGiOhUiValues.acacomproLogo,
+                  ProTiendasUiValues.acacomproLogo,
                 ),
               ],
             ),

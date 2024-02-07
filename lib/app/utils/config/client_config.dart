@@ -17,11 +17,12 @@ class AppConfig {
   factory AppConfig({
     void Function(Country)? onUpdateCountry,
     Map<String, dynamic>? config,
+    Environment? environment,
   }) {
     return _singleton ??
         AppConfig._(
           config: config ?? {},
-          environment: Environment.dev,
+          environment: environment ?? Environment.dev,
           uc: onUpdateCountry,
         );
   }

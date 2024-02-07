@@ -58,7 +58,7 @@ class ErrorsInterceptor extends Interceptor {
 
       if (statusCode >= 500 && isMethodValid && showMessage) {
         ProTToast.showShortError(
-          YuGiOhUiValues.weHaveAErrorContactSuport(traceId),
+          ProTiendasUiValues.weHaveAErrorContactSuport(traceId),
         );
       }
     } catch (_) {}

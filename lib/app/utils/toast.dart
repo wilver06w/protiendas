@@ -10,7 +10,7 @@ class ProTToast {
   static ToastFuture showToast({
     required String message,
     Color? backgroundColor,
-    Color textColor = YuGiOhColors.white,
+    Color textColor = ProTiendasUiColors.white,
     int? seconds,
     void Function()? onDimiss,
     required double positionOffset,
@@ -20,8 +20,8 @@ class ProTToast {
       _showToast(
         title: message,
         icon: null,
-        borderColor: backgroundColor ?? YuGiOhColors.pigmentGreen,
-        backgroundColor: backgroundColor ?? YuGiOhColors.pigmentGreen,
+        borderColor: backgroundColor ?? ProTiendasUiColors.pigmentGreen,
+        backgroundColor: backgroundColor ?? ProTiendasUiColors.pigmentGreen,
         seconds: seconds,
         onDimiss: onDimiss,
         positionOffset: positionOffset,
@@ -44,8 +44,8 @@ class ProTToast {
         title: title,
         description: description,
         fontSize: 16.0,
-        borderColor: YuGiOhColors.lemonLight,
-        backgroundColor: YuGiOhColors.pigmentGreen,
+        borderColor: ProTiendasUiColors.lemonLight,
+        backgroundColor: ProTiendasUiColors.pigmentGreen,
         icon: (showSuccessIcon || showIcons) ? 'success_text_long.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -66,8 +66,8 @@ class ProTToast {
   }) =>
       _showToast(
         title: title,
-        borderColor: YuGiOhColors.lemonLight,
-        backgroundColor: YuGiOhColors.pigmentGreen,
+        borderColor: ProTiendasUiColors.lemonLight,
+        backgroundColor: ProTiendasUiColors.pigmentGreen,
         icon: (showSuccessIcon || showIcons) ? 'success_text_short.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -91,8 +91,8 @@ class ProTToast {
         title: title,
         description: description,
         fontSize: 16.0,
-        borderColor: YuGiOhColors.dangerColor,
-        backgroundColor: YuGiOhColors.dangerColor,
+        borderColor: ProTiendasUiColors.dangerColor,
+        backgroundColor: ProTiendasUiColors.dangerColor,
         icon: (showErrorIcon || showIcons) ? 'error_text_long.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -113,8 +113,8 @@ class ProTToast {
   }) =>
       _showToast(
         title: title,
-        borderColor: YuGiOhColors.dangerColor,
-        backgroundColor: YuGiOhColors.dangerColor,
+        borderColor: ProTiendasUiColors.dangerColor,
+        backgroundColor: ProTiendasUiColors.dangerColor,
         icon: (showErrorIcon || showIcons) ? 'error_text_short.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -138,8 +138,8 @@ class ProTToast {
         title: title,
         description: description,
         fontSize: 16.0,
-        borderColor: YuGiOhColors.informationDark,
-        backgroundColor: YuGiOhColors.information,
+        borderColor: ProTiendasUiColors.informationDark,
+        backgroundColor: ProTiendasUiColors.information,
         icon: (showInfoIcon || showIcons) ? 'info_text_long.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -160,8 +160,8 @@ class ProTToast {
   }) =>
       _showToast(
         title: title,
-        borderColor: YuGiOhColors.informationDark,
-        backgroundColor: YuGiOhColors.information,
+        borderColor: ProTiendasUiColors.informationDark,
+        backgroundColor: ProTiendasUiColors.information,
         icon: (showInfoIcon || showIcons) ? 'info_text_short.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -185,8 +185,8 @@ class ProTToast {
         title: title,
         description: description,
         fontSize: 16.0,
-        borderColor: YuGiOhColors.philippineYellow,
-        backgroundColor: YuGiOhColors.deepSaffron,
+        borderColor: ProTiendasUiColors.philippineYellow,
+        backgroundColor: ProTiendasUiColors.deepSaffron,
         icon: (showWarningIcon || showIcons) ? 'warning_text_long.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -207,8 +207,8 @@ class ProTToast {
   }) =>
       _showToast(
         title: title,
-        borderColor: YuGiOhColors.philippineYellow,
-        backgroundColor: YuGiOhColors.deepSaffron,
+        borderColor: ProTiendasUiColors.philippineYellow,
+        backgroundColor: ProTiendasUiColors.deepSaffron,
         icon: (showWarningIcon || showIcons) ? 'warning_text_short.svg' : null,
         showCloseIcon: (showCloseIcon || showIcons),
         seconds: seconds,
@@ -270,10 +270,10 @@ class ProTToast {
                     Row(
                       children: [
                         Expanded(
-                          child: YuGiOhText.fontSizeCustom(
+                          child: XigoText.fontSizeCustom(
                             label: title,
                             fontWeight: FontWeight.w400,
-                            color: YuGiOhColors.white,
+                            color: ProTiendasUiColors.white,
                             fontSize: fontSize,
                             letterSpacing: -0.6,
                             textAlign: textAlign,
@@ -292,7 +292,7 @@ class ProTToast {
                         padding: const EdgeInsets.only(
                           top: 7.0,
                         ),
-                        child: YuGiOhText.labelText(
+                        child: XigoText.labelText(
                           label: description,
                           fontWeight: FontWeight.w400,
                           color: Colors.white,

@@ -23,7 +23,7 @@ class Header extends StatelessWidget {
         Flexible(
           child: BlocBuilder<BlocDetail, DetailState>(
             builder: (context, state) {
-              return YuGiOhText.fontSizeCustom(
+              return XigoText.fontSizeCustom(
                 label: state.model.itemYugiOh.name,
                 fontSize: 22,
                 textStyle: GoogleFonts.lato(),

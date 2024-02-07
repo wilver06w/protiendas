@@ -9,14 +9,35 @@
 
 import 'package:flutter/material.dart';
 
-class YuGiOhColors {
-  const YuGiOhColors._();
+class ProTiendasUiColors {
+  const ProTiendasUiColors._();
+
+  ///graySecondary  = #e5e5e5
+  static const Color graySecondary = Color(0xffe5e5e5);
+
+  /// castletonGreen = #00533D
+  static const Color castletonGreen = Color(0xff00533D);
+
+  //Black Olive = #3B3B3B
+  static const Color blackOlive = Color(0xff3B3B3B);
+
+  ///contrastColor  = #ffdd17
+  static const Color contrastColor = Color(0xffffdd17);
+
+  ///tertiaryColor  = #00533D
+  static const Color tertiaryColor = ufoGreen;
 
   /// pigmentGreen = #23A942
   static const Color pigmentGreen = Color(0xff23A942);
 
   ///white  = #ffffff
   static const Color white = Color(0xffffffff);
+
+  ///black = #000000
+  static const Color black = Color(0xff000000);
+
+  /// raisinBlack = #222222
+  static const Color raisinBlack = Color(0xff222222);
 
   /// lemonLight = #95EBBD
   static const Color lemonLight = Color(0xff95EBBD);

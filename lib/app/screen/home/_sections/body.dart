@@ -12,8 +12,8 @@ class Body extends StatelessWidget {
       children: [
         const Gap(YuGiOhSpacing.md),
         Center(
-          child: YuGiOhText.title(
-            label: YuGiOhUiValues.archetypes.toUpperCase(),
+          child: XigoText.title(
+            label: ProTiendasUiValues.archetypes.toUpperCase(),
             color: Colors.black,
             textStyle: GoogleFonts.lato(),
           ),

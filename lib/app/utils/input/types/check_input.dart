@@ -34,7 +34,7 @@ class XigoCheckField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return YuGiOhTextField(
+    return XigoTextField(
       controller: controller,
       focusNode: focusNode,
       title: title,
@@ -46,17 +46,16 @@ class XigoCheckField extends StatelessWidget {
       fillColor: Colors.white,
       textAlignVertical: TextAlignVertical.center,
       hintTextStyle: const TextStyle(
-        color: YuGiOhColors.azureishWhite,
+        color: ProTiendasUiColors.azureishWhite,
       ),
       inputTextStyle: TextStyle(
-        fontFamily: isNumber
-            ? YuGiOhTypography.robotoMono
-            : YuGiOhTypography.nunitoSans,
+        fontFamily:
+            isNumber ? XigoTypography.robotoMono : XigoTypography.nunitoSans,
       ),
       prefixIcon: Icon(
         preffixIcon,
         size: 20,
-        color: YuGiOhColors.sonicSilver,
+        color: ProTiendasUiColors.sonicSilver,
       ),
       focusedBorder: focusedBorderColor != null
           ? OutlineInputBorder(
@@ -69,7 +68,7 @@ class XigoCheckField extends StatelessWidget {
       suffixIcon: Padding(
         padding: const EdgeInsets.all(YuGiOhSpacing.sm),
         child: Material(
-          color: buttonColor ?? YuGiOhColors.primaryColor,
+          color: buttonColor ?? ProTiendasUiColors.primaryColor,
           borderRadius: BorderRadius.circular(5.0),
           child: InkWell(
             onTap: onCheckTap,
