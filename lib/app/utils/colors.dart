@@ -12,6 +12,12 @@ import 'package:flutter/material.dart';
 class ProTiendasUiColors {
   const ProTiendasUiColors._();
 
+  ///primaryColor
+  static const Color primaryColor = Color(0xFF23343E);
+
+  ///secondaryColor
+  static const Color secondaryColor = Color(0xFF18DD98);
+
   ///graySecondary  = #e5e5e5
   static const Color graySecondary = Color(0xffe5e5e5);
 
@@ -86,9 +92,6 @@ class ProTiendasUiColors {
 
   /// sonicSilver = #767676
   static const Color sonicSilver = Color(0xff767676);
-
-  ///primaryColor
-  static const Color primaryColor = Color(0xFF01236d);
 
   ///silver = #aaaaaa
   static const Color silver = Color(0xffaaaaaa);

@@ -7,7 +7,7 @@ abstract class HomeEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadListArchetypeEvent extends HomeEvent {}
+class LoadBannerEvent extends HomeEvent {}
 
 class LoadListYugiOhByArchetypeEvent extends HomeEvent {
   const LoadListYugiOhByArchetypeEvent({

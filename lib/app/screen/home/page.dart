@@ -1,5 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
@@ -17,6 +19,7 @@ import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/widget/banner.dart';
 import 'package:protiendas/app/widget/checkbox.dart';
 
 part 'package:protiendas/app/screen/home/_sections/body.dart';
@@ -39,13 +42,36 @@ class Page extends StatelessWidget {
           yuGiOhHttpClient: yuGiOhHttpClient,
         ),
       )
-        ..add(LoadListArchetypeEvent())
+        ..add(LoadBannerEvent())
         ..add(LoadBanItemsEvent()),
       child: BlocListener<BlocHome, HomeState>(
         listener: _listener,
         child: Scaffold(
           backgroundColor: ProTiendasUiColors.backgroundColor,
           bottomNavigationBar: BodyBottom(app: app),
+          appBar: AppBar(
+            toolbarHeight: 65,
+            backgroundColor: ProTiendasUiColors.primaryColor,
+            title: Center(
+              child: SvgPicture.asset(
+                ProTiendasUiValues.logoHomeSvg,
+              ),
+            ),
+            actions: [
+              SvgPicture.asset(
+                ProTiendasUiValues.iconSearch,
+              ),
+              const Gap(YuGiOhSpacing.md),
+              SvgPicture.asset(
+                ProTiendasUiValues.iconNotification,
+              ),
+              const Gap(YuGiOhSpacing.md),
+            ],
+            leading: const Icon(
+              Icons.menu_outlined,
+              color: ProTiendasUiColors.secondaryColor,
+            ),
+          ),
           body: const SafeArea(
             child: Body(),
           ),
@@ -56,10 +82,10 @@ class Page extends StatelessWidget {
 }
 
 Future<void> _listener(BuildContext context, HomeState state) async {
-  if (state is LoadingListArchetypeState ||
+  if (state is LoadingBannerState ||
       state is LoadingListYuGiOhByArchetypeState) {
     YuGiOhLoading.show(context);
-  } else if (state is ErrorListArchetypeState) {
+  } else if (state is ErrorBannerState) {
     Navigator.pop(context);
     showToast(
       state.message,
@@ -77,7 +103,7 @@ Future<void> _listener(BuildContext context, HomeState state) async {
         color: Colors.white,
       ),
     );
-  } else if (state is LoadedListArchetypeState ||
+  } else if (state is LoadedBannerState ||
       state is LoadedListYuGiOhByArchetypeState) {
     Navigator.pop(context);
   }

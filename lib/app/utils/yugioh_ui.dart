@@ -2,6 +2,10 @@ import 'package:protiendas/generated/l10n.dart';
 
 class ProTiendasUiValues {
   static const String acacomproLogo = 'assets/image/logogi.gif';
+  static const String logoHomeSvg = 'assets/svg/logo_home.svg';
+  static const String iconSearch = 'assets/svg/ic_search.svg';
+  static const String iconNotification = 'assets/svg/ic_notification.svg';
+  static const String bannerTest = 'assets/image/banner_test.png';
 
   static final String iAmNotRegistered = S.current.iAmNotRegistered;
   static final String wantRegister = S.current.wantRegister;

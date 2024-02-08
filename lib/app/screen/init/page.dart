@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:protiendas/app/screen/init/bloc/bloc.dart' as bloc;
 import 'package:protiendas/app/screen/init/repository.dart';
 import 'package:protiendas/app/utils/colors.dart';

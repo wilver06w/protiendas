@@ -12,16 +12,16 @@ class InitialState extends HomeState {
   const InitialState(Model model) : super(model);
 }
 
-class LoadingListArchetypeState extends HomeState {
-  const LoadingListArchetypeState(Model model) : super(model);
+class LoadingBannerState extends HomeState {
+  const LoadingBannerState(Model model) : super(model);
 }
 
-class LoadedListArchetypeState extends HomeState {
-  const LoadedListArchetypeState(Model model) : super(model);
+class LoadedBannerState extends HomeState {
+  const LoadedBannerState(Model model) : super(model);
 }
 
-class ErrorListArchetypeState extends HomeState {
-  const ErrorListArchetypeState({
+class ErrorBannerState extends HomeState {
+  const ErrorBannerState({
     required Model model,
     this.message = '',
   }) : super(model);
@@ -83,7 +83,7 @@ class ErrorDeleteByArchetypeState extends HomeState {
 class Model extends Equatable {
   const Model({
     this.listYuGiOh,
-    this.listArchetype = const [],
+    this.dataBanner,
     this.listArchetypeSelected,
     this.searchArchetype,
     this.listYuGiOhBanned = const [],
@@ -91,20 +91,20 @@ class Model extends Equatable {
 
   final List<YuGiOh>? listYuGiOh;
   final List<int> listYuGiOhBanned;
-  final List<Archetype> listArchetype;
+  final DataBanner? dataBanner;
   final List<Archetype>? listArchetypeSelected;
   final Archetype? searchArchetype;
 
   Model copyWith({
     List<YuGiOh>? listYuGiOh,
     List<int>? listYuGiOhBanned,
-    List<Archetype>? listArchetype,
+    DataBanner? dataBanner,
     List<Archetype>? listArchetypeSelected,
     Archetype? searchArchetype,
   }) {
     return Model(
       listYuGiOh: listYuGiOh ?? this.listYuGiOh,
-      listArchetype: listArchetype ?? this.listArchetype,
+      dataBanner: dataBanner ?? this.dataBanner,
       listArchetypeSelected:
           listArchetypeSelected ?? this.listArchetypeSelected,
       searchArchetype: searchArchetype ?? this.searchArchetype,
@@ -112,16 +112,7 @@ class Model extends Equatable {
     );
   }
 
-  List<Archetype> get getListArchetypeFilter =>
-      (searchArchetype?.archetypeName ?? '').isEmpty
-          ? listArchetype
-          : Functions.getListFilter(
-              listArchetype: listArchetype,
-              search: searchArchetype ??
-                  Archetype(
-                    archetypeName: '',
-                  ),
-            );
+  List<Archetype> get getListArchetypeFilter => [];
 
   List<YuGiOh> get getListYuGiOhWithoutBan => Functions.getListWithOutBan(
         listYuGiOhActually: listYuGiOh ?? [],
@@ -132,7 +123,7 @@ class Model extends Equatable {
   List<Object?> get props {
     return [
       listYuGiOh,
-      listArchetype,
+      dataBanner,
       listArchetypeSelected,
       searchArchetype,
       listYuGiOhBanned,

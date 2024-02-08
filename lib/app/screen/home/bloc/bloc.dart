@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:protiendas/app/models/archetype.dart';
+import 'package:protiendas/app/models/data_banner.dart';
 import 'package:protiendas/app/models/list_yugioh.dart';
 import 'package:protiendas/app/screen/home/repository.dart';
 import 'package:protiendas/app/utils/functions.dart';
@@ -13,7 +14,7 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
   BlocHome({
     required this.repository,
   }) : super(const InitialState(Model())) {
-    on<LoadListArchetypeEvent>(_onLoadListArchetypeEvent);
+    on<LoadBannerEvent>(_onLoadBannerEvent);
     on<LoadListYugiOhByArchetypeEvent>(_onLoadListYugiOhByArchetypeEvent);
     on<OnChangeSelectedArchetypeEvent>(_onOnChangeSelectedArchetypeEvent);
     on<DeletedByArchetypeEvent>(_onDeletedByArchetypeEvent);
@@ -22,25 +23,25 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
   }
   final Repository repository;
 
-  Future<void> _onLoadListArchetypeEvent(
-    LoadListArchetypeEvent event,
+  Future<void> _onLoadBannerEvent(
+    LoadBannerEvent event,
     Emitter<HomeState> emit,
   ) async {
     try {
-      emit(LoadingListArchetypeState(state.model));
+      emit(LoadingBannerState(state.model));
 
-      final listArchetype = await repository.getArchetypes();
+      final dataBanner = await repository.getBanner();
 
       emit(
-        LoadedListArchetypeState(
+        LoadedBannerState(
           state.model.copyWith(
-            listArchetype: listArchetype,
+            dataBanner: dataBanner,
           ),
         ),
       );
     } catch (error) {
       emit(
-        ErrorListArchetypeState(
+        ErrorBannerState(
           model: state.model,
           message: error.toString(),
         ),
