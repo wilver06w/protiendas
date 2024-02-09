@@ -9,13 +9,7 @@ abstract class HomeEvent extends Equatable {
 
 class LoadBannerEvent extends HomeEvent {}
 
-class LoadListYugiOhByArchetypeEvent extends HomeEvent {
-  const LoadListYugiOhByArchetypeEvent({
-    required this.archetype,
-  });
-
-  final Archetype archetype;
-}
+class LoadDataCategoriasEvent extends HomeEvent {}
 
 class OnChangeSelectedArchetypeEvent extends HomeEvent {
   const OnChangeSelectedArchetypeEvent({

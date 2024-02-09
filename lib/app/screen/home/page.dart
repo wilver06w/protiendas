@@ -42,7 +42,7 @@ class Page extends StatelessWidget {
         ),
       )
         ..add(LoadBannerEvent())
-        ..add(LoadBanItemsEvent()),
+        ..add(LoadDataCategoriasEvent()),
       child: BlocListener<BlocHome, HomeState>(
         listener: _listener,
         child: Scaffold(
@@ -81,8 +81,7 @@ class Page extends StatelessWidget {
 }
 
 Future<void> _listener(BuildContext context, HomeState state) async {
-  if (state is LoadingBannerState ||
-      state is LoadingListYuGiOhByArchetypeState) {
+  if (state is LoadingBannerState || state is LoadingDataCategoriasState) {
     YuGiOhLoading.show(context);
   } else if (state is ErrorBannerState) {
     Navigator.pop(context);
@@ -93,7 +92,7 @@ Future<void> _listener(BuildContext context, HomeState state) async {
         color: Colors.white,
       ),
     );
-  } else if (state is ErrorListYuGiOhByArchetypeState) {
+  } else if (state is ErrorDataCategoriasState) {
     Navigator.pop(context);
     showToast(
       state.message,
@@ -102,8 +101,7 @@ Future<void> _listener(BuildContext context, HomeState state) async {
         color: Colors.white,
       ),
     );
-  } else if (state is LoadedBannerState ||
-      state is LoadedListYuGiOhByArchetypeState) {
+  } else if (state is LoadedBannerState || state is LoadedDataCategoriasState) {
     Navigator.pop(context);
   }
 }

@@ -1,4 +1,5 @@
 import 'package:protiendas/app/models/data_banner.dart';
+import 'package:protiendas/app/models/data_categoria.dart';
 import 'package:protiendas/app/models/list_yugioh.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';
 
@@ -9,7 +10,7 @@ class Repository {
   final XigoHttpClient yuGiOhHttpClient;
 
   final banners = '/utils/banners';
-  final archetypes = '/api/v7/archetypes.php';
+  final categorias = '/categorias';
   final banList = '/api/v7/cardinfo.php';
 
   Future<DataBanner> getBanner() async {
@@ -18,14 +19,10 @@ class Repository {
     return DataBanner.fromJson(response.data);
   }
 
-  Future<List<YuGiOh>> getListYugiOhByArchetype(String archetype) async {
-    final response = await yuGiOhHttpClient.msDio.get(banners);
+  Future<DataCategoria> getCategorias() async {
+    final response = await yuGiOhHttpClient.msDio.get(categorias);
 
-    final List<dynamic> rawListData = response.data['data'] as List<dynamic>;
-
-    final list = rawListData.map((p) => YuGiOh.fromJson(p)).toList();
-
-    return list;
+    return DataCategoria.fromJson(response.data);
   }
 
   Future<List<int>> getListBan() async {

@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:protiendas/app/models/archetype.dart';
 import 'package:protiendas/app/models/data_banner.dart';
+import 'package:protiendas/app/models/data_categoria.dart';
 import 'package:protiendas/app/models/list_yugioh.dart';
 import 'package:protiendas/app/screen/home/repository.dart';
 import 'package:protiendas/app/utils/functions.dart';
@@ -15,7 +16,7 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
     required this.repository,
   }) : super(const InitialState(Model())) {
     on<LoadBannerEvent>(_onLoadBannerEvent);
-    on<LoadListYugiOhByArchetypeEvent>(_onLoadListYugiOhByArchetypeEvent);
+    on<LoadDataCategoriasEvent>(_onLoadDataCategoriasEvent);
     on<OnChangeSelectedArchetypeEvent>(_onOnChangeSelectedArchetypeEvent);
     on<DeletedByArchetypeEvent>(_onDeletedByArchetypeEvent);
     on<SearchItemEvent>(_onSearchItemEvent);
@@ -49,31 +50,25 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
     }
   }
 
-  Future<void> _onLoadListYugiOhByArchetypeEvent(
-    LoadListYugiOhByArchetypeEvent event,
+  Future<void> _onLoadDataCategoriasEvent(
+    LoadDataCategoriasEvent event,
     Emitter<HomeState> emit,
   ) async {
     try {
-      emit(LoadingListYuGiOhByArchetypeState(state.model));
+      emit(LoadingDataCategoriasState(state.model));
 
-      final listYuGiOh = await repository.getListYugiOhByArchetype(
-        event.archetype.archetypeName,
-      );
+      final dataCategoria = await repository.getCategorias();
 
       emit(
-        LoadedListYuGiOhByArchetypeState(
+        LoadedDataCategoriasState(
           state.model.copyWith(
-            listYuGiOh: (state.model.listYuGiOh ?? [])..addAll(listYuGiOh),
-            listArchetypeSelected: (state.model.listArchetypeSelected ?? [])
-              ..add(
-                event.archetype,
-              ),
+            dataCategoria: dataCategoria,
           ),
         ),
       );
     } catch (error) {
       emit(
-        ErrorListYuGiOhByArchetypeState(
+        ErrorDataCategoriasState(
           model: state.model,
           message: error.toString(),
         ),
@@ -86,7 +81,7 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
     Emitter<HomeState> emit,
   ) async {
     try {
-      emit(LoadingListYuGiOhBannedState(state.model));
+      emit(LoadingDataCategoriasState(state.model));
 
       final listYuGiOhBanned = await repository.getListBan();
 
@@ -112,7 +107,6 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
     Emitter<HomeState> emit,
   ) async {
     if (event.value) {
-      add(LoadListYugiOhByArchetypeEvent(archetype: event.archetype));
     } else {
       add(DeletedByArchetypeEvent(archetype: event.archetype));
     }
@@ -125,23 +119,9 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
     try {
       emit(LoadingDeleteByArchetypeState(state.model));
 
-      final listYuGiOhActualy = state.model.listYuGiOh;
-      listYuGiOhActualy?.removeWhere(
-        (element) => (element.archetype ?? '').contains(
-          event.archetype.archetypeName,
-        ),
-      );
-      final listArchetypeActualy = state.model.listArchetypeSelected;
-      listArchetypeActualy?.removeWhere(
-        (element) => element == event.archetype,
-      );
-
       emit(
         LoadedDeleteByArchetypeState(
-          state.model.copyWith(
-            listYuGiOh: listYuGiOhActualy,
-            listArchetypeSelected: listArchetypeActualy,
-          ),
+          state.model.copyWith(),
         ),
       );
     } catch (error) {

@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
           ),
           BlocBuilder<BlocHome, HomeState>(
             builder: (context, state) {
-              if (state.model.dataBanner == null) {
+              if (state.model.dataCategoria == null) {
                 return const SizedBox.shrink();
               }
               return SizedBox(
@@ -34,23 +34,25 @@ class Body extends StatelessWidget {
                   builder: (context, state) {
                     return ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: 20,
+                      itemCount: (state.model.dataCategoria?.data ?? []).length,
                       itemBuilder: (context, index) {
-                        return const Padding(
-                          padding: EdgeInsets.symmetric(
+                        final item =
+                            (state.model.dataCategoria?.data ?? [])[index];
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: YuGiOhSpacing.sm,
                           ),
                           child: Column(
                             children: [
-                              CircleAvatar(
+                              const CircleAvatar(
                                 radius: 35,
                                 backgroundImage: NetworkImage(
                                   'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
                                 ),
                               ),
-                              Gap(YuGiOhSpacing.sl),
+                              const Gap(YuGiOhSpacing.sl),
                               XigoTextSmall(
-                                ProTiendasUiValues.amazon,
+                                item.nombre,
                                 color: ProTiendasUiColors.primaryColor,
                               ),
                             ],
