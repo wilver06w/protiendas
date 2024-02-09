@@ -47,7 +47,7 @@ class Page extends StatelessWidget {
       child: BlocListener<BlocHome, HomeState>(
         listener: _listener,
         child: Scaffold(
-          backgroundColor: ProTiendasUiColors.backgroundColor,
+          backgroundColor: Colors.white,
           bottomNavigationBar: BodyBottom(app: app),
           appBar: AppBar(
             toolbarHeight: 65,

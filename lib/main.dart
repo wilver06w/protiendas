@@ -19,7 +19,6 @@ void main() async {
     environment: env,
   );
 
-
   runApp(
     ModularApp(
       module: AppModule(),
@@ -48,7 +47,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       child: MaterialApp.router(
         title: 'ProTiendas!',
         theme: ThemeData(
-          textTheme: GoogleFonts.nunitoSansTextTheme(
+          textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme,
           ),
         ),

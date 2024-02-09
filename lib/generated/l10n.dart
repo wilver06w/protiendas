@@ -239,6 +239,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Lo Nuevo`
+  String get theNew {
+    return Intl.message(
+      'Lo Nuevo',
+      name: 'theNew',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Envio Gratis`
+  String get sendFree {
+    return Intl.message(
+      'Envio Gratis',
+      name: 'sendFree',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

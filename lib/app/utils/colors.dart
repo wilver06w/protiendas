@@ -18,6 +18,9 @@ class ProTiendasUiColors {
   ///secondaryColor
   static const Color secondaryColor = Color(0xFF18DD98);
 
+  ///silverFoil
+  static const Color silverFoil = Color(0xFFAEAEAE);
+
   ///graySecondary  = #e5e5e5
   static const Color graySecondary = Color(0xffe5e5e5);
 

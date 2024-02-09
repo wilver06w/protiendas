@@ -18,5 +18,7 @@
     "nowYouCanLogIn":"Ahora puedes iniciar sesión",
     "sigIn":"Iniciar sesión",
     "name":"Nombre",
-    "lastName":"Apellido"
+    "lastName":"Apellido",
+    "theNew":"Lo Nuevo",
+    "sendFree":"Envio Gratis"
 }

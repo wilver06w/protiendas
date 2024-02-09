@@ -58,7 +58,7 @@ Future<void> _listener(BuildContext context, RegisterState state) async {
   } else if (state is LoadedRegisterState) {
     Navigator.pop(context);
     showToast(
-      '${state.model.dataLogin?.message ?? ''}\n${ProTiendasUiValues.nowYouCanLogIn}',
+      state.model.dataLogin?.message ?? '',
       backgroundColor: ProTiendasUiColors.rybBlue,
       textStyle: const TextStyle(
         color: Colors.white,

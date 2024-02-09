@@ -42,7 +42,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Producto de MOTAXI S.A.S."),
         "register": MessageLookupByLibrary.simpleMessage("Registrate"),
         "save": MessageLookupByLibrary.simpleMessage("Guardar"),
+        "sendFree": MessageLookupByLibrary.simpleMessage("Envio Gratis"),
         "sigIn": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
+        "theNew": MessageLookupByLibrary.simpleMessage("Lo Nuevo"),
         "userRegisterSuccesful": MessageLookupByLibrary.simpleMessage(
             "Usuario registrado correctamente"),
         "verifyEmail": MessageLookupByLibrary.simpleMessage(

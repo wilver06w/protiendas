@@ -5,10 +5,12 @@ class ProTiendasUiValues {
   static const String logoHomeSvg = 'assets/svg/logo_home.svg';
   static const String iconSearch = 'assets/svg/ic_search.svg';
   static const String iconNotification = 'assets/svg/ic_notification.svg';
+  static const String iconHeartSvg = 'assets/svg/heart.svg';
   static const String bannerTest = 'assets/image/banner_test.png';
 
   static final String iAmNotRegistered = S.current.iAmNotRegistered;
   static final String wantRegister = S.current.wantRegister;
+  static final String theNew = S.current.theNew;
   static final String productBy = S.current.productBy;
   static final String cellPhone = S.current.cellPhone;
   static final String numberPhoneNoValid = S.current.numberPhoneNoValid;
@@ -25,6 +27,7 @@ class ProTiendasUiValues {
   static final String sigIn = S.current.sigIn;
   static final String name = S.current.name;
   static final String lastName = S.current.lastName;
+  static final String sendFree = S.current.sendFree;
 
   static String weHaveAErrorContactSuport(Object fieldName) {
     return S.current.weHaveAErrorContactSuport(fieldName);
@@ -36,6 +39,7 @@ class ProTiendasUiValues {
   static const String archetype = 'Arquetipo';
   static const String selectArchetype = 'Selecciona algun arquetipo';
 
+  static const String balonFutbol = 'Balon futbol VANTAGIO';
   static const String atk = 'ATK';
   static const String def = 'DEF';
   static const String level = 'Level';
