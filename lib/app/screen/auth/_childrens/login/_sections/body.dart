@@ -8,35 +8,38 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formKeyLogin = GlobalKey<FormState>();
-    final size = MediaQuery.of(context).size;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return ListView(
+      padding: const EdgeInsets.symmetric(
+        horizontal: YuGiOhSpacing.md,
+        vertical: YuGiOhSpacing.md,
+      ),
       children: [
-        const Gap(YuGiOhSpacing.md),
-        XigoText.body(
-          label: ProTiendasUiValues.welcome,
+        const Gap(YuGiOhSpacing.xxl),
+        XigoTextXl(
+          ProTiendasUiValues.enterEmailUsername,
           color: Colors.black,
-          textStyle: GoogleFonts.lato(),
         ),
-        const Gap(YuGiOhSpacing.md),
-        Image.asset(
-          ProTiendasUiValues.acacomproLogo,
-          height: size.height * 0.1,
-          width: size.width * 0.1,
+        const Gap(YuGiOhSpacing.xxl),
+        FormLogin(
+          formKey: formKeyLogin,
         ),
-        const Gap(YuGiOhSpacing.md),
-        Padding(
-          padding: const EdgeInsets.all(YuGiOhSpacing.md),
-          child: FormLogin(
-            formKey: formKeyLogin,
+        const Gap(YuGiOhSpacing.sl),
+        Center(
+          child: XigoTextSmall(
+            ProTiendasUiValues.didForgetPassword,
+            color: ProTiendasUiColors.secondaryColor,
+            weight: FontWeight.w500,
           ),
         ),
+        const Gap(YuGiOhSpacing.xxl),
         BlocBuilder<BlocLogin, LoginState>(
           builder: (context, state) {
             bool isFormValidate = state.model.isFormFilledLogin;
             return XigoBtnPrimary(
-              label: ProTiendasUiValues.sigIn,
-              backgroundColor: ProTiendasUiColors.primaryColor,
+              label: ProTiendasUiValues.continu,
+              backgroundColor: ProTiendasUiColors.secondaryColor,
+              btnSize: XigoBtnSize.big,
+              labelColor: ProTiendasUiColors.primaryColor,
               onTap: isFormValidate
                   ? () {
                       final formState = formKeyLogin.currentState;
@@ -58,16 +61,18 @@ class Body extends StatelessWidget {
             );
           },
         ),
-        const Gap(YuGiOhSpacing.xxl),
-        InkWell(
+        const Gap(YuGiOhSpacing.lg),
+        XigoBtnOutline(
+          label: ProTiendasUiValues.createAccount,
+          borderColor: ProTiendasUiColors.secondaryColor,
+          labelColor: ProTiendasUiColors.secondaryColor,
+          btnSize: XigoBtnSize.big,
           onTap: () {
             YuGiOhRoute.navRegister();
           },
-          child: XigoText.title(
-            label: ProTiendasUiValues.register,
-            textStyle: GoogleFonts.lato(),
-          ),
         ),
+        const Gap(YuGiOhSpacing.xxl),
+        const Footer(),
       ],
     );
   }

@@ -8,33 +8,25 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formKeyLogin = GlobalKey<FormState>();
-    final size = MediaQuery.of(context).size;
     return ListView(
+      padding: const EdgeInsets.all(
+        YuGiOhSpacing.md,
+      ),
       children: [
-        const Gap(YuGiOhSpacing.md),
-        XigoText.body(
-          label: ProTiendasUiValues.welcome,
+        const Gap(YuGiOhSpacing.xl),
+        XigoTextCustom(
+          ProTiendasUiValues.almostThere,
+          color: ProTiendasUiColors.primaryColor,
+          fontSize: 22,
+        ),
+        const Gap(YuGiOhSpacing.sm),
+        XigoTextXl(
+          ProTiendasUiValues.completeDetailsCreateAccount,
           color: Colors.black,
-          textStyle: GoogleFonts.lato(),
-        ),
-        const Gap(YuGiOhSpacing.sl),
-        XigoText.small(
-          label: ProTiendasUiValues.register,
-          color: Colors.black,
-          textStyle: GoogleFonts.lato(),
         ),
         const Gap(YuGiOhSpacing.md),
-        Image.asset(
-          ProTiendasUiValues.acacomproLogo,
-          height: size.height * 0.1,
-          width: size.width * 0.1,
-        ),
-        const Gap(YuGiOhSpacing.md),
-        Padding(
-          padding: const EdgeInsets.all(YuGiOhSpacing.md),
-          child: FormLogin(
-            formKey: formKeyLogin,
-          ),
+        FormLogin(
+          formKey: formKeyLogin,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: YuGiOhSpacing.md),
@@ -42,7 +34,8 @@ class Body extends StatelessWidget {
             builder: (context, state) {
               bool isFormValidate = state.model.isFormFilledLogin;
               return XigoBtnPrimary(
-                backgroundColor: ProTiendasUiColors.primaryColor,
+                backgroundColor: ProTiendasUiColors.secondaryColor,
+                labelColor: ProTiendasUiColors.primaryColor,
                 onTap: isFormValidate
                     ? () {
                         final formState = formKeyLogin.currentState;
@@ -61,11 +54,13 @@ class Body extends StatelessWidget {
                         }
                       }
                     : null,
-                label: ProTiendasUiValues.save,
+                label: ProTiendasUiValues.createAccount,
               );
             },
           ),
         ),
+        const Gap(YuGiOhSpacing.xxl),
+        const Footer(),
       ],
     );
   }

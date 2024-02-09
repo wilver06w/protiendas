@@ -24,13 +24,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "almostThere": MessageLookupByLibrary.simpleMessage("Falta poco!"),
+        "buyEnterAccount": MessageLookupByLibrary.simpleMessage(
+            "Para comprar ingresa tu cuenta"),
         "cellPhone": MessageLookupByLibrary.simpleMessage("Celular"),
+        "completeDetailsCreateAccount": MessageLookupByLibrary.simpleMessage(
+            "Completa tus datos para crear tu cuenta"),
         "completeTheData":
             MessageLookupByLibrary.simpleMessage("Completa los datos"),
-        "email": MessageLookupByLibrary.simpleMessage("Correo Electronico"),
+        "continu": MessageLookupByLibrary.simpleMessage("Continuar"),
+        "createAccount": MessageLookupByLibrary.simpleMessage("Crear cuenta"),
+        "didForgetPassword":
+            MessageLookupByLibrary.simpleMessage("¿Olvidaste tu contraseña?"),
+        "email": MessageLookupByLibrary.simpleMessage("e-mail"),
+        "enterEmailUsername":
+            MessageLookupByLibrary.simpleMessage("Ingresa tu email o usuario"),
+        "hello": MessageLookupByLibrary.simpleMessage("Hola!"),
         "iAmNotRegistered":
             MessageLookupByLibrary.simpleMessage("No estoy registrado"),
+        "iNeedHelpEnter": MessageLookupByLibrary.simpleMessage(
+            "Necesito ayuda para ingresar"),
         "lastName": MessageLookupByLibrary.simpleMessage("Apellido"),
+        "logAccount":
+            MessageLookupByLibrary.simpleMessage("Ingresa a tu cuenta"),
+        "loginWith": MessageLookupByLibrary.simpleMessage("Ingresa con"),
         "name": MessageLookupByLibrary.simpleMessage("Nombre"),
         "next": MessageLookupByLibrary.simpleMessage("Siguiente"),
         "nowYouCanLogIn":

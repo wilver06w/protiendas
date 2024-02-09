@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:protiendas/app/screen/auth/_childrens/register/bloc/bloc.dart';
 import 'package:protiendas/app/screen/auth/_childrens/register/repository.dart';
@@ -18,10 +19,11 @@ import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/validations_inputs.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/widget/item_sigin_register.dart';
 
 part 'package:protiendas/app/screen/auth/_childrens/register/_sections/body.dart';
-part 'package:protiendas/app/screen/auth/_childrens/register/_sections/bottom.dart';
-part 'package:protiendas/app/screen/auth/_childrens/register/_sections/form_login.dart';
+part 'package:protiendas/app/screen/auth/_childrens/register/_sections/footer.dart';
+part 'package:protiendas/app/screen/auth/_childrens/register/_sections/form_register.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -41,8 +43,34 @@ class Page extends StatelessWidget {
       child: BlocListener<BlocRegister, RegisterState>(
         listener: _listener,
         child: Scaffold(
-          backgroundColor: ProTiendasUiColors.backgroundColor,
-          bottomNavigationBar: BodyBottom(app: app),
+          appBar: AppBar(
+            toolbarHeight: 65,
+            backgroundColor: ProTiendasUiColors.primaryColor,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(
+                  ProTiendasUiValues.icPersonSvg,
+                ),
+                const Gap(YuGiOhSpacing.md),
+                XigoTextLarge(
+                  ProTiendasUiValues.createAccount,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            leading: InkWell(
+              onTap: () {
+                Modular.to.pop();
+              },
+              child: const Icon(
+                Icons.arrow_back_ios_new_outlined,
+                color: ProTiendasUiColors.secondaryColor,
+                size: 20,
+              ),
+            ),
+          ),
+          backgroundColor: Colors.white,
           body: const SafeArea(
             child: Body(),
           ),

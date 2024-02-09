@@ -47,14 +47,14 @@ class Model extends Equatable {
     this.email = '',
     this.password = '',
     this.name = '',
-    this.lastName = '',
+    this.numberPhone = '',
     this.dataLogin,
   });
 
   final String email;
   final String password;
   final String name;
-  final String lastName;
+  final String numberPhone;
   final DataLogin? dataLogin;
 
   bool get isFormFilledLogin => (email.isNotEmpty) && (password.isNotEmpty);
@@ -63,14 +63,14 @@ class Model extends Equatable {
     String? email,
     String? password,
     String? name,
-    String? lastName,
+    String? numberPhone,
     DataLogin? dataLogin,
   }) {
     return Model(
       email: email ?? this.email,
       password: password ?? this.password,
       name: name ?? this.name,
-      lastName: lastName ?? this.lastName,
+      numberPhone: numberPhone ?? this.numberPhone,
       dataLogin: dataLogin ?? this.dataLogin,
     );
   }
@@ -81,7 +81,7 @@ class Model extends Equatable {
       email,
       password,
       name,
-      lastName,
+      numberPhone,
       dataLogin,
     ];
   }

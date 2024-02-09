@@ -7,7 +7,16 @@ class ProTiendasUiValues {
   static const String iconNotification = 'assets/svg/ic_notification.svg';
   static const String iconHeartSvg = 'assets/svg/heart.svg';
   static const String bannerTest = 'assets/image/banner_test.png';
+  static const String icPersonSvg = 'assets/svg/ic_person.svg';
+  static const String icFacebook = 'assets/image/ic_facebook.png';
+  static const String icGoogle = 'assets/image/ic_google.png';
+  static const String icIos = 'assets/image/ic_ios.png';
+  static const String icMicrosoft = 'assets/image/ic_microsoft.png';
 
+  static final String didForgetPassword = S.current.didForgetPassword;
+  static final String enterEmailUsername = S.current.enterEmailUsername;
+  static final String iNeedHelpEnter = S.current.iNeedHelpEnter;
+  static final String hello = S.current.hello;
   static final String iAmNotRegistered = S.current.iAmNotRegistered;
   static final String wantRegister = S.current.wantRegister;
   static final String theNew = S.current.theNew;
@@ -28,6 +37,14 @@ class ProTiendasUiValues {
   static final String name = S.current.name;
   static final String lastName = S.current.lastName;
   static final String sendFree = S.current.sendFree;
+  static final String createAccount = S.current.createAccount;
+  static final String continu = S.current.continu;
+  static final String logAccount = S.current.logAccount;
+  static final String almostThere = S.current.almostThere;
+  static final String completeDetailsCreateAccount =
+      S.current.completeDetailsCreateAccount;
+  static final String buyEnterAccount = S.current.buyEnterAccount;
+  static final String loginWith = S.current.loginWith;
 
   static String weHaveAErrorContactSuport(Object fieldName) {
     return S.current.weHaveAErrorContactSuport(fieldName);

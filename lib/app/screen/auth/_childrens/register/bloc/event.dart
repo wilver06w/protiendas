@@ -23,12 +23,12 @@ class ChangeNameEvent extends RegisterEvent {
   final String name;
 }
 
-class ChangeLastNameEvent extends RegisterEvent {
-  const ChangeLastNameEvent({
-    required this.lastName,
+class ChangeNumberPhone extends RegisterEvent {
+  const ChangeNumberPhone({
+    required this.numberPhone,
   });
 
-  final String lastName;
+  final String numberPhone;
 }
 
 class ChangePasswordEvent extends RegisterEvent {

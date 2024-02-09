@@ -34,7 +34,7 @@ dependencies:
   fullscreen_image_viewer: ^0.0.6
   android_id: ^0.3.3
   dart_ipify: ^1.1.1
-  
+
   dio_smart_retry: ^6.0.0
   dio_cache_interceptor: ^3.5.0
   meta: ^1.10.0

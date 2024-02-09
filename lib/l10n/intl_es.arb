@@ -7,7 +7,7 @@
     "cellPhone":"Celular",
     "numberPhoneNoValid": "Numero de teléfono no es válido",
     "next":"Siguiente",
-    "email":"Correo Electronico",
+    "email":"e-mail",
     "welcome":"Bienvenido",
     "completeTheData":"Completa los datos",
     "save":"Guardar",
@@ -20,5 +20,16 @@
     "name":"Nombre",
     "lastName":"Apellido",
     "theNew":"Lo Nuevo",
-    "sendFree":"Envio Gratis"
+    "sendFree":"Envio Gratis",
+    "createAccount":"Crear cuenta",
+    "almostThere":"Falta poco!",
+    "completeDetailsCreateAccount":"Completa tus datos para crear tu cuenta",
+    "loginWith":"Ingresa con",
+    "iNeedHelpEnter":"Necesito ayuda para ingresar",
+    "logAccount":"Ingresa a tu cuenta",
+    "hello":"Hola!",
+    "buyEnterAccount":"Para comprar ingresa tu cuenta",
+    "enterEmailUsername":"Ingresa tu email o usuario",
+    "didForgetPassword":"¿Olvidaste tu contraseña?",
+    "continu":"Continuar"
 }

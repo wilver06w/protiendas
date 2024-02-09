@@ -120,10 +120,10 @@ class S {
     );
   }
 
-  /// `Correo Electronico`
+  /// `e-mail`
   String get email {
     return Intl.message(
-      'Correo Electronico',
+      'e-mail',
       name: 'email',
       desc: '',
       args: [],
@@ -255,6 +255,116 @@ class S {
     return Intl.message(
       'Envio Gratis',
       name: 'sendFree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Crear cuenta`
+  String get createAccount {
+    return Intl.message(
+      'Crear cuenta',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Falta poco!`
+  String get almostThere {
+    return Intl.message(
+      'Falta poco!',
+      name: 'almostThere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completa tus datos para crear tu cuenta`
+  String get completeDetailsCreateAccount {
+    return Intl.message(
+      'Completa tus datos para crear tu cuenta',
+      name: 'completeDetailsCreateAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresa con`
+  String get loginWith {
+    return Intl.message(
+      'Ingresa con',
+      name: 'loginWith',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Necesito ayuda para ingresar`
+  String get iNeedHelpEnter {
+    return Intl.message(
+      'Necesito ayuda para ingresar',
+      name: 'iNeedHelpEnter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresa a tu cuenta`
+  String get logAccount {
+    return Intl.message(
+      'Ingresa a tu cuenta',
+      name: 'logAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hola!`
+  String get hello {
+    return Intl.message(
+      'Hola!',
+      name: 'hello',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Para comprar ingresa tu cuenta`
+  String get buyEnterAccount {
+    return Intl.message(
+      'Para comprar ingresa tu cuenta',
+      name: 'buyEnterAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ingresa tu email o usuario`
+  String get enterEmailUsername {
+    return Intl.message(
+      'Ingresa tu email o usuario',
+      name: 'enterEmailUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `¿Olvidaste tu contraseña?`
+  String get didForgetPassword {
+    return Intl.message(
+      '¿Olvidaste tu contraseña?',
+      name: 'didForgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continuar`
+  String get continu {
+    return Intl.message(
+      'Continuar',
+      name: 'continu',
       desc: '',
       args: [],
     );

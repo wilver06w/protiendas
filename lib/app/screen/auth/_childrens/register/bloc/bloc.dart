@@ -23,7 +23,7 @@ class BlocRegister extends Bloc<RegisterEvent, RegisterState> {
     on<ChangePasswordEvent>(_onChangePasswordEvent);
     on<SendRegisterEvent>(_onSendRegisterEvent);
     on<ChangeNameEvent>(_onChangeNameEvent);
-    on<ChangeLastNameEvent>(_onChangeLastNameEvent);
+    on<ChangeNumberPhone>(_onChangeNumberPhone);
   }
   final Repository repository;
   final XigoHttpClient httpClient;
@@ -69,14 +69,14 @@ class BlocRegister extends Bloc<RegisterEvent, RegisterState> {
     );
   }
 
-  void _onChangeLastNameEvent(
-    ChangeLastNameEvent event,
+  void _onChangeNumberPhone(
+    ChangeNumberPhone event,
     Emitter<RegisterState> emit,
   ) {
     emit(
       ChangedLastNameState(
         state.model.copyWith(
-          lastName: event.lastName,
+          numberPhone: event.numberPhone,
         ),
       ),
     );
@@ -91,7 +91,7 @@ class BlocRegister extends Bloc<RegisterEvent, RegisterState> {
 
       final data = {
         'nombre': state.model.name,
-        'apellido': state.model.lastName,
+        'apellido': state.model.numberPhone,
         'email': state.model.email,
         'password': state.model.password,
       };

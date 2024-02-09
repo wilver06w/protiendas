@@ -11,6 +11,7 @@ class XigoObscureInput extends StatefulWidget {
     this.keyboardType,
     this.validator,
     this.onChanged,
+    this.prefixIcon,
     this.hintText,
   }) : super(key: key);
 
@@ -18,6 +19,7 @@ class XigoObscureInput extends StatefulWidget {
   final String title;
   final bool filled;
   final Color? fillColor;
+  final Widget? prefixIcon;
   final TextStyle? titleStyle;
   final TextInputType? keyboardType;
   final FormFieldValidator<String>? validator;
@@ -70,6 +72,7 @@ class _XigoObscureInputState extends State<XigoObscureInput> {
           style: XigoText.style(),
           onChanged: widget.onChanged,
           decoration: InputDecoration(
+            prefixIcon: widget.prefixIcon,
             suffixIcon: InkWell(
               onTap: () {
                 setState(() {

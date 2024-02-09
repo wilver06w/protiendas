@@ -18,7 +18,10 @@ class FormLogin extends StatelessWidget {
           XigoTextField(
             controller: null,
             hintText: ProTiendasUiValues.email,
-            title: ProTiendasUiValues.email,
+            prefixIcon: const Icon(
+              Icons.email_outlined,
+              color: ProTiendasUiColors.silverFoil,
+            ),
             fillColor: Colors.white,
             filled: true,
             validator: (value) {
@@ -34,7 +37,7 @@ class FormLogin extends StatelessWidget {
                   );
             },
           ),
-          const Gap(YuGiOhSpacing.md),
+          const Gap(YuGiOhSpacing.lg),
           BlocBuilder<BlocLogin, LoginState>(
             builder: (context, state) {
               final controllers = TextEditingController(
@@ -49,7 +52,10 @@ class FormLogin extends StatelessWidget {
                     ),
                   ),
                 hintText: ProTiendasUiValues.password,
-                title: ProTiendasUiValues.password,
+                prefixIcon: const Icon(
+                  Icons.password,
+                  color: ProTiendasUiColors.silverFoil,
+                ),
                 fillColor: Colors.white,
                 filled: true,
                 validator: (value) {
@@ -68,7 +74,6 @@ class FormLogin extends StatelessWidget {
               );
             },
           ),
-          const Gap(YuGiOhSpacing.md),
         ],
       ),
     );
