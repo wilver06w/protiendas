@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart' as bloc;
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:protiendas/app/models/clien.dart';
 import 'package:protiendas/app/screen/init/repository.dart';
 import 'package:protiendas/app/utils/config/client_config.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';
@@ -47,8 +48,8 @@ class Bloc extends bloc.Bloc<Event, State> {
         );
         return;
       }
-      // Clien client = await repository.getClient();
-      // app.clien = client;
+      Clien client = await repository.getClient();
+      app.clien = client;
 
       emit(LoadedState(state.model));
     } catch (e) {

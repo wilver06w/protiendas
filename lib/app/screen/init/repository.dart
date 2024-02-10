@@ -9,11 +9,11 @@ class Repository {
   final XigoHttpClient xigoHttpClient;
 
   final register = '/registro';
-  final user = '/user';
+  final user = '/clientes';
 
   Future<Clien> getClient() async {
     final response = await xigoHttpClient.msDio.get(user);
 
-    return Clien.fromJson(response.data);
+    return Clien.fromJson(response.data["data"]);
   }
 }
