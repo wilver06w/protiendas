@@ -24,10 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addCart": MessageLookupByLibrary.simpleMessage("Añadir al carrito"),
         "almostThere": MessageLookupByLibrary.simpleMessage("Falta poco!"),
         "buyEnterAccount": MessageLookupByLibrary.simpleMessage(
             "Para comprar ingresa tu cuenta"),
+        "buyNow": MessageLookupByLibrary.simpleMessage("Comprar ahora"),
         "cellPhone": MessageLookupByLibrary.simpleMessage("Celular"),
+        "characteristics":
+            MessageLookupByLibrary.simpleMessage("Características"),
         "completeDetailsCreateAccount": MessageLookupByLibrary.simpleMessage(
             "Completa tus datos para crear tu cuenta"),
         "completeTheData":
@@ -45,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "iNeedHelpEnter": MessageLookupByLibrary.simpleMessage(
             "Necesito ayuda para ingresar"),
         "lastName": MessageLookupByLibrary.simpleMessage("Apellido"),
+        "leaveOpinion": MessageLookupByLibrary.simpleMessage("Deja tu opinión"),
         "logAccount":
             MessageLookupByLibrary.simpleMessage("Ingresa a tu cuenta"),
         "loginWith": MessageLookupByLibrary.simpleMessage("Ingresa con"),
@@ -54,11 +59,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ahora puedes iniciar sesión"),
         "numberPhoneNoValid": MessageLookupByLibrary.simpleMessage(
             "Numero de teléfono no es válido"),
+        "opinions": MessageLookupByLibrary.simpleMessage("Opiniones"),
         "password": MessageLookupByLibrary.simpleMessage("Contraseña"),
         "productBy":
             MessageLookupByLibrary.simpleMessage("Producto de MOTAXI S.A.S."),
+        "productDescription":
+            MessageLookupByLibrary.simpleMessage("Descripción del producto"),
+        "productSummary":
+            MessageLookupByLibrary.simpleMessage("Resumen del producto"),
         "register": MessageLookupByLibrary.simpleMessage("Registrate"),
         "save": MessageLookupByLibrary.simpleMessage("Guardar"),
+        "searchProtiendas":
+            MessageLookupByLibrary.simpleMessage("Buscar en Protiendas"),
         "sendFree": MessageLookupByLibrary.simpleMessage("Envio Gratis"),
         "sigIn": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
         "theNew": MessageLookupByLibrary.simpleMessage("Lo Nuevo"),

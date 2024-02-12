@@ -32,7 +32,7 @@ class BuilderList extends StatelessWidget {
                   size: size,
                   onTap: () {
                     YuGiOhRoute.navDetail(
-                      yuGiOh: itemYuGiOh,
+                      product: '1',
                     );
                   },
                 );

@@ -18,6 +18,15 @@ class ProTiendasUiColors {
   ///secondaryColor
   static const Color secondaryColor = Color(0xFF18DD98);
 
+  ///lightSilver
+  static const Color lightSilver = Color(0xFFD9D9D9);
+
+  ///crayolaGreen
+  static const Color crayolaGreen = Color(0xFF20A979);
+
+  ///aeroBlue
+  static const Color aeroBlue = Color(0xFFD3FAEC);
+
   ///silverFoil
   static const Color silverFoil = Color(0xFFAEAEAE);
 

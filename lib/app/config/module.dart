@@ -24,12 +24,11 @@ class GlobalModule extends Module {
       ChildRoute(
         '/detail',
         child: (_, args) => detail.Page(
-          itemYuGiOh: (args.data ?? {})['yugioh'] ?? {},
+          product: (args.data ?? {})['product'] ?? {},
         ),
         transition: TransitionType.fadeIn,
       ),
       ModuleRoute('/auth', module: AuthModule()),
-
     ];
   }
 }

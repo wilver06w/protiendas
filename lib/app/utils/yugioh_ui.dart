@@ -12,7 +12,19 @@ class ProTiendasUiValues {
   static const String icGoogle = 'assets/image/ic_google.png';
   static const String icIos = 'assets/image/ic_ios.png';
   static const String icMicrosoft = 'assets/image/ic_microsoft.png';
+  static const String icOpinions = 'assets/image/ic_opinions.png';
+  static const String starEmpty = 'assets/svg/star_empty.svg';
+  static const String startFilled = 'assets/svg/start_filled.svg';
+  static const String starFilled = 'assets/svg/star_filled.svg';
 
+  static final String leaveOpinion = S.current.leaveOpinion;
+  static final String opinions = S.current.opinions;
+  static final String productDescription = S.current.productDescription;
+  static final String productSummary = S.current.productSummary;
+  static final String characteristics = S.current.characteristics;
+  static final String buyNow = S.current.buyNow;
+  static final String addCart = S.current.addCart;
+  static final String searchProtiendas = S.current.searchProtiendas;
   static final String didForgetPassword = S.current.didForgetPassword;
   static final String enterEmailUsername = S.current.enterEmailUsername;
   static final String iNeedHelpEnter = S.current.iNeedHelpEnter;

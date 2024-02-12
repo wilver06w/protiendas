@@ -1,5 +1,4 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:protiendas/app/models/list_yugioh.dart';
 
 class YuGiOhRoute {
   static Future<Object?> navHome() async {
@@ -21,12 +20,12 @@ class YuGiOhRoute {
   }
 
   static Future<Object?> navDetail({
-    YuGiOh? yuGiOh,
+    String? product,
   }) async {
     return Modular.to.pushNamed(
       '/detail',
       arguments: {
-        'yugioh': yuGiOh,
+        'product': product,
       },
     );
   }

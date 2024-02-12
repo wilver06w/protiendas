@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
@@ -18,8 +17,12 @@ import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/banner.dart';
+import 'package:protiendas/app/widget/card_product_vertical.dart';
 import 'package:protiendas/app/widget/checkbox.dart';
+import 'package:protiendas/app/widget/imagen_widget.dart';
+import 'package:protiendas/app/widget/title_sections.dart';
 
 part 'package:protiendas/app/screen/home/_sections/body.dart';
 part 'package:protiendas/app/screen/home/_sections/bottom.dart';
@@ -48,28 +51,12 @@ class Page extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.white,
           bottomNavigationBar: BodyBottom(app: app),
-          appBar: AppBar(
-            toolbarHeight: 65,
-            backgroundColor: ProTiendasUiColors.primaryColor,
-            title: Center(
-              child: SvgPicture.asset(
-                ProTiendasUiValues.logoHomeSvg,
-              ),
-            ),
-            actions: [
-              SvgPicture.asset(
-                ProTiendasUiValues.iconSearch,
-              ),
-              const Gap(YuGiOhSpacing.md),
-              SvgPicture.asset(
-                ProTiendasUiValues.iconNotification,
-              ),
-              const Gap(YuGiOhSpacing.md),
-            ],
-            leading: const Icon(
+          appBar: AppBarGlobal(
+            icon: const Icon(
               Icons.menu_outlined,
               color: ProTiendasUiColors.secondaryColor,
             ),
+            onTapIcon: () {},
           ),
           body: const SafeArea(
             child: Body(),

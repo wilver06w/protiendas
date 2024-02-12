@@ -31,5 +31,13 @@
     "buyEnterAccount":"Para comprar ingresa tu cuenta",
     "enterEmailUsername":"Ingresa tu email o usuario",
     "didForgetPassword":"¿Olvidaste tu contraseña?",
-    "continu":"Continuar"
+    "continu":"Continuar",
+    "searchProtiendas":"Buscar en Protiendas",
+    "addCart":"Añadir al carrito",
+    "buyNow":"Comprar ahora",
+    "characteristics":"Características",
+    "productSummary":"Resumen del producto",
+    "productDescription":"Descripción del producto",
+    "opinions":"Opiniones",
+    "leaveOpinion":"Deja tu opinión"
 }

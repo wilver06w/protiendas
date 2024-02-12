@@ -67,7 +67,7 @@ class FormLogin extends StatelessWidget {
             controller: null,
             prefixIcon: const Icon(
               Icons.phone_android,
-              color: ProTiendasUiColors.primaryColor,
+              color: ProTiendasUiColors.silverFoil,
             ),
             hintText: '# ${ProTiendasUiValues.cellPhone}',
             maxLength: app.country.digits,

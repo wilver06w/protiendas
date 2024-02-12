@@ -369,6 +369,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Buscar en Protiendas`
+  String get searchProtiendas {
+    return Intl.message(
+      'Buscar en Protiendas',
+      name: 'searchProtiendas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Añadir al carrito`
+  String get addCart {
+    return Intl.message(
+      'Añadir al carrito',
+      name: 'addCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comprar ahora`
+  String get buyNow {
+    return Intl.message(
+      'Comprar ahora',
+      name: 'buyNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Características`
+  String get characteristics {
+    return Intl.message(
+      'Características',
+      name: 'characteristics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resumen del producto`
+  String get productSummary {
+    return Intl.message(
+      'Resumen del producto',
+      name: 'productSummary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Descripción del producto`
+  String get productDescription {
+    return Intl.message(
+      'Descripción del producto',
+      name: 'productDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Opiniones`
+  String get opinions {
+    return Intl.message(
+      'Opiniones',
+      name: 'opinions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Deja tu opinión`
+  String get leaveOpinion {
+    return Intl.message(
+      'Deja tu opinión',
+      name: 'leaveOpinion',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
