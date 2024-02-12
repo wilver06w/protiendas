@@ -449,6 +449,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Te puede interesar`
+  String get mayInterest {
+    return Intl.message(
+      'Te puede interesar',
+      name: 'mayInterest',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

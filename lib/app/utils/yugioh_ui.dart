@@ -17,6 +17,7 @@ class ProTiendasUiValues {
   static const String startFilled = 'assets/svg/start_filled.svg';
   static const String starFilled = 'assets/svg/star_filled.svg';
 
+  static final String mayInterest = S.current.mayInterest;
   static final String leaveOpinion = S.current.leaveOpinion;
   static final String opinions = S.current.opinions;
   static final String productDescription = S.current.productDescription;

@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "logAccount":
             MessageLookupByLibrary.simpleMessage("Ingresa a tu cuenta"),
         "loginWith": MessageLookupByLibrary.simpleMessage("Ingresa con"),
+        "mayInterest":
+            MessageLookupByLibrary.simpleMessage("Te puede interesar"),
         "name": MessageLookupByLibrary.simpleMessage("Nombre"),
         "next": MessageLookupByLibrary.simpleMessage("Siguiente"),
         "nowYouCanLogIn":

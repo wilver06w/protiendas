@@ -5,6 +5,7 @@ import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/widget/imagen_widget.dart';
 
 class CardProductHorizontal extends StatelessWidget {
   const CardProductHorizontal({
@@ -15,14 +16,18 @@ class CardProductHorizontal extends StatelessWidget {
     required this.price,
     required this.desct,
     required this.isFreeSend,
+    this.widthImage = 150,
+    this.heightImage = 120,
   });
-
   final String image;
   final String title;
   final String priceBefore;
   final String price;
   final String desct;
   final bool isFreeSend;
+
+  final double widthImage;
+  final double heightImage;
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +54,12 @@ class CardProductHorizontal extends StatelessWidget {
               width: 30,
             ),
             Hero(
-              tag: image,
-              child: Image.network(
-                image,
-                height: 120,
-                width: 150,
-              ),
-            ),
+                tag: image,
+                child: ImagenWidget(
+                  image: image,
+                  height: heightImage,
+                  width: widthImage,
+                )),
             const Gap(YuGiOhSpacing.sl),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

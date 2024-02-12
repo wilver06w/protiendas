@@ -1,6 +1,5 @@
 import 'package:protiendas/app/models/data_banner.dart';
 import 'package:protiendas/app/models/data_categoria.dart';
-import 'package:protiendas/app/models/list_yugioh.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';
 
 class Repository {
