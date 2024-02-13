@@ -5,7 +5,6 @@ import 'package:oktoast/oktoast.dart';
 import 'package:protiendas/app/screen/home/bloc/bloc.dart';
 import 'package:protiendas/app/screen/home/repository.dart';
 import 'package:protiendas/app/utils/colors.dart';
-import 'package:protiendas/app/utils/config/client_config.dart';
 import 'package:protiendas/app/utils/http/http_client.dart'
     hide ModularWatchExtension;
 import 'package:protiendas/app/utils/loading.dart';
