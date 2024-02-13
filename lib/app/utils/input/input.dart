@@ -201,7 +201,7 @@ class XigoTextField extends StatelessWidget {
                   borderRadius: borderRadius ??
                       const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: const BorderSide(
-                    color: ProTiendasUiColors.whiteSecundary,
+                    color: ProTiendasUiColors.silverFoil,
                   ),
                 ),
             disabledBorder: disabledBorder,

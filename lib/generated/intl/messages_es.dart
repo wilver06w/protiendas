@@ -25,26 +25,47 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addCart": MessageLookupByLibrary.simpleMessage("Añadir al carrito"),
+        "addShippingAddress":
+            MessageLookupByLibrary.simpleMessage("Agregar dirección de envío"),
+        "addressBuildingApartment": MessageLookupByLibrary.simpleMessage(
+            "Dirección, Edificio / Apartamento"),
+        "addressOffice": MessageLookupByLibrary.simpleMessage(
+            "Agencia Protiendas Calle 5ta con cra 21 esquina\nAguachica - Cesar"),
         "almostThere": MessageLookupByLibrary.simpleMessage("Falta poco!"),
+        "bankTransferWithPse": MessageLookupByLibrary.simpleMessage(
+            "Transferencia bancaria con PSE"),
+        "billingInformation":
+            MessageLookupByLibrary.simpleMessage("Datos de facturación"),
         "buyEnterAccount": MessageLookupByLibrary.simpleMessage(
             "Para comprar ingresa tu cuenta"),
         "buyNow": MessageLookupByLibrary.simpleMessage("Comprar ahora"),
         "cellPhone": MessageLookupByLibrary.simpleMessage("Celular"),
         "characteristics":
             MessageLookupByLibrary.simpleMessage("Características"),
+        "chooseDeliveryMethod":
+            MessageLookupByLibrary.simpleMessage("Elige la forma de entrega"),
+        "city": MessageLookupByLibrary.simpleMessage("Ciudad"),
         "completeDetailsCreateAccount": MessageLookupByLibrary.simpleMessage(
             "Completa tus datos para crear tu cuenta"),
         "completeTheData":
             MessageLookupByLibrary.simpleMessage("Completa los datos"),
         "continu": MessageLookupByLibrary.simpleMessage("Continuar"),
+        "continueShopping":
+            MessageLookupByLibrary.simpleMessage("Continuar compra"),
         "createAccount": MessageLookupByLibrary.simpleMessage("Crear cuenta"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Entrega"),
+        "department": MessageLookupByLibrary.simpleMessage("Departamento"),
         "didForgetPassword":
             MessageLookupByLibrary.simpleMessage("¿Olvidaste tu contraseña?"),
+        "editData": MessageLookupByLibrary.simpleMessage("Editar tus datos"),
+        "efecty": MessageLookupByLibrary.simpleMessage("Efecty"),
         "email": MessageLookupByLibrary.simpleMessage("e-mail"),
         "enterEmailUsername":
             MessageLookupByLibrary.simpleMessage("Ingresa tu email o usuario"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favoritos"),
         "hello": MessageLookupByLibrary.simpleMessage("Hola!"),
+        "howWantPay":
+            MessageLookupByLibrary.simpleMessage("¿Cómo quieres pagar?"),
         "iAmNotRegistered":
             MessageLookupByLibrary.simpleMessage("No estoy registrado"),
         "iNeedHelpEnter": MessageLookupByLibrary.simpleMessage(
@@ -58,37 +79,69 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Te puede interesar"),
         "myProfile": MessageLookupByLibrary.simpleMessage("Mi Perfil"),
         "name": MessageLookupByLibrary.simpleMessage("Nombre"),
+        "neighborhood": MessageLookupByLibrary.simpleMessage("Barrio"),
+        "newCreditCard":
+            MessageLookupByLibrary.simpleMessage("Nueva tarjeta de crédito"),
+        "newDebitCard":
+            MessageLookupByLibrary.simpleMessage("Nueva tarjeta de débito"),
         "next": MessageLookupByLibrary.simpleMessage("Siguiente"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notificaciones"),
         "nowYouCanLogIn":
             MessageLookupByLibrary.simpleMessage("Ahora puedes iniciar sesión"),
+        "number": MessageLookupByLibrary.simpleMessage("Número"),
         "numberPhoneNoValid": MessageLookupByLibrary.simpleMessage(
             "Numero de teléfono no es válido"),
+        "officeHours": MessageLookupByLibrary.simpleMessage(
+            "Lunes a sábado de 8 am a 6 pm"),
         "opinions": MessageLookupByLibrary.simpleMessage("Opiniones"),
         "password": MessageLookupByLibrary.simpleMessage("Contraseña"),
+        "paymentMethod": MessageLookupByLibrary.simpleMessage("Método de Pago"),
+        "pickUpDeliveryPoint": MessageLookupByLibrary.simpleMessage(
+            "Retirar en un punto de entrega"),
         "productBy":
             MessageLookupByLibrary.simpleMessage("Producto de MOTAXI S.A.S."),
         "productDescription":
             MessageLookupByLibrary.simpleMessage("Descripción del producto"),
         "productSummary":
             MessageLookupByLibrary.simpleMessage("Resumen del producto"),
+        "products": MessageLookupByLibrary.simpleMessage("Productos"),
         "register": MessageLookupByLibrary.simpleMessage("Registrate"),
         "save": MessageLookupByLibrary.simpleMessage("Guardar"),
+        "saveShippingAddress":
+            MessageLookupByLibrary.simpleMessage("Guardar dirección de envío"),
         "searchProtiendas":
             MessageLookupByLibrary.simpleMessage("Buscar en Protiendas"),
         "sendFree": MessageLookupByLibrary.simpleMessage("Envio Gratis"),
+        "sendHome":
+            MessageLookupByLibrary.simpleMessage("Enviar a tu domicilio"),
+        "shipment": MessageLookupByLibrary.simpleMessage("Envío"),
+        "shippingAddress":
+            MessageLookupByLibrary.simpleMessage("Dirección de envío"),
         "shoppingCart":
             MessageLookupByLibrary.simpleMessage("Carrito de Compras"),
         "sigIn": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
         "start": MessageLookupByLibrary.simpleMessage("Inicio"),
+        "theDataAnotherPersonCompany": MessageLookupByLibrary.simpleMessage(
+            "Los datos de otra persona o empresa"),
         "theNew": MessageLookupByLibrary.simpleMessage("Lo Nuevo"),
+        "theSameShippingInformation":
+            MessageLookupByLibrary.simpleMessage("Los mismos datos del envío"),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "type": MessageLookupByLibrary.simpleMessage("Tipo"),
         "userRegisterSuccesful": MessageLookupByLibrary.simpleMessage(
             "Usuario registrado correctamente"),
         "verifyEmail": MessageLookupByLibrary.simpleMessage(
             "Verificar correo electrónico"),
+        "viewMapChooseAnotherCollectionPoint":
+            MessageLookupByLibrary.simpleMessage(
+                "Ver en el mapa o elegir otro punto de recolección"),
         "wantRegister":
             MessageLookupByLibrary.simpleMessage("Quiero registrarme."),
         "weHaveAErrorContactSuport": m0,
-        "welcome": MessageLookupByLibrary.simpleMessage("Bienvenido")
+        "welcome": MessageLookupByLibrary.simpleMessage("Bienvenido"),
+        "whatInformationShouldAppearInvoice":
+            MessageLookupByLibrary.simpleMessage(
+                "¿Qué  datos desea que aparezcan en tu factura?"),
+        "yourData": MessageLookupByLibrary.simpleMessage("Tus datos")
       };
 }

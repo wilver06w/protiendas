@@ -509,6 +509,326 @@ class S {
       args: [],
     );
   }
+
+  /// `Productos`
+  String get products {
+    return Intl.message(
+      'Productos',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Envío`
+  String get shipment {
+    return Intl.message(
+      'Envío',
+      name: 'shipment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continuar compra`
+  String get continueShopping {
+    return Intl.message(
+      'Continuar compra',
+      name: 'continueShopping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Elige la forma de entrega`
+  String get chooseDeliveryMethod {
+    return Intl.message(
+      'Elige la forma de entrega',
+      name: 'chooseDeliveryMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Entrega`
+  String get delivery {
+    return Intl.message(
+      'Entrega',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enviar a tu domicilio`
+  String get sendHome {
+    return Intl.message(
+      'Enviar a tu domicilio',
+      name: 'sendHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agregar dirección de envío`
+  String get addShippingAddress {
+    return Intl.message(
+      'Agregar dirección de envío',
+      name: 'addShippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retirar en un punto de entrega`
+  String get pickUpDeliveryPoint {
+    return Intl.message(
+      'Retirar en un punto de entrega',
+      name: 'pickUpDeliveryPoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agencia Protiendas Calle 5ta con cra 21 esquina\nAguachica - Cesar`
+  String get addressOffice {
+    return Intl.message(
+      'Agencia Protiendas Calle 5ta con cra 21 esquina\nAguachica - Cesar',
+      name: 'addressOffice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lunes a sábado de 8 am a 6 pm`
+  String get officeHours {
+    return Intl.message(
+      'Lunes a sábado de 8 am a 6 pm',
+      name: 'officeHours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dirección de envío`
+  String get shippingAddress {
+    return Intl.message(
+      'Dirección de envío',
+      name: 'shippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ver en el mapa o elegir otro punto de recolección`
+  String get viewMapChooseAnotherCollectionPoint {
+    return Intl.message(
+      'Ver en el mapa o elegir otro punto de recolección',
+      name: 'viewMapChooseAnotherCollectionPoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tus datos`
+  String get yourData {
+    return Intl.message(
+      'Tus datos',
+      name: 'yourData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Editar tus datos`
+  String get editData {
+    return Intl.message(
+      'Editar tus datos',
+      name: 'editData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tipo`
+  String get type {
+    return Intl.message(
+      'Tipo',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Número`
+  String get number {
+    return Intl.message(
+      'Número',
+      name: 'number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Departamento`
+  String get department {
+    return Intl.message(
+      'Departamento',
+      name: 'department',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ciudad`
+  String get city {
+    return Intl.message(
+      'Ciudad',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dirección, Edificio / Apartamento`
+  String get addressBuildingApartment {
+    return Intl.message(
+      'Dirección, Edificio / Apartamento',
+      name: 'addressBuildingApartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Barrio`
+  String get neighborhood {
+    return Intl.message(
+      'Barrio',
+      name: 'neighborhood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guardar dirección de envío`
+  String get saveShippingAddress {
+    return Intl.message(
+      'Guardar dirección de envío',
+      name: 'saveShippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Datos de facturación`
+  String get billingInformation {
+    return Intl.message(
+      'Datos de facturación',
+      name: 'billingInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `¿Qué  datos desea que aparezcan en tu factura?`
+  String get whatInformationShouldAppearInvoice {
+    return Intl.message(
+      '¿Qué  datos desea que aparezcan en tu factura?',
+      name: 'whatInformationShouldAppearInvoice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Los mismos datos del envío`
+  String get theSameShippingInformation {
+    return Intl.message(
+      'Los mismos datos del envío',
+      name: 'theSameShippingInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Los datos de otra persona o empresa`
+  String get theDataAnotherPersonCompany {
+    return Intl.message(
+      'Los datos de otra persona o empresa',
+      name: 'theDataAnotherPersonCompany',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Método de Pago`
+  String get paymentMethod {
+    return Intl.message(
+      'Método de Pago',
+      name: 'paymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `¿Cómo quieres pagar?`
+  String get howWantPay {
+    return Intl.message(
+      '¿Cómo quieres pagar?',
+      name: 'howWantPay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nueva tarjeta de crédito`
+  String get newCreditCard {
+    return Intl.message(
+      'Nueva tarjeta de crédito',
+      name: 'newCreditCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nueva tarjeta de débito`
+  String get newDebitCard {
+    return Intl.message(
+      'Nueva tarjeta de débito',
+      name: 'newDebitCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transferencia bancaria con PSE`
+  String get bankTransferWithPse {
+    return Intl.message(
+      'Transferencia bancaria con PSE',
+      name: 'bankTransferWithPse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Efecty`
+  String get efecty {
+    return Intl.message(
+      'Efecty',
+      name: 'efecty',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

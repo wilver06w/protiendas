@@ -26,6 +26,23 @@ class YuGiOhRoute {
     );
   }
 
+  static Future<Object?> navAddresses() async {
+    return Modular.to.pushNamed('/address/');
+  }
+
+  static Future<Object?> navPayment() async {
+    return Modular.to.pushNamed('/payment/');
+  }
+  static Future<Object?> navAddPayment() async {
+    return Modular.to.pushNamed('/payment/add');
+  }
+
+  static Future<Object?> navAddAddress() async {
+    return Modular.to.pushNamed(
+      '/address/add',
+    );
+  }
+
   static Future<Object?> navRegister() async {
     return Modular.to.pushNamed('/auth/register');
   }

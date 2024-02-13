@@ -21,7 +21,53 @@ class ProTiendasUiValues {
   static const String icBells = 'assets/svg/ic_bells.svg';
   static const String icMyProfile = 'assets/svg/ic_myprofile.svg';
   static const String icDelete = 'assets/svg/ic_delete.svg';
+  static const String circleGrey = 'assets/svg/circle_grey.svg';
+  static const String icUbicationDelivery =
+      'assets/svg/ic_ubication_delivery.svg';
+  static const String icTimeDelivery = 'assets/svg/ic_time_delivery.svg';
+  static const String icCheck = 'assets/image/ic_check.png';
+  static const String icEdit = 'assets/svg/ic_edit.svg';
+  static const String icTarjet = 'assets/svg/ic_tarjet.svg';
+  static const String icEfecty = 'assets/svg/ic_efecty.svg';
+  static const String icBank = 'assets/svg/ic_bank.svg';
 
+  static final String efecty = S.current.efecty;
+  static final String bankTransferWithPse = S.current.bankTransferWithPse;
+  static final String newDebitCard = S.current.newDebitCard;
+  static final String newCreditCard = S.current.newCreditCard;
+  static final String paymentMethod = S.current.paymentMethod;
+  static final String howWantPay = S.current.howWantPay;
+  static final String theDataAnotherPersonCompany =
+      S.current.theDataAnotherPersonCompany;
+  static final String theSameShippingInformation =
+      S.current.theSameShippingInformation;
+  static final String whatInformationShouldAppearInvoice =
+      S.current.whatInformationShouldAppearInvoice;
+  static final String billingInformation = S.current.billingInformation;
+  static final String saveShippingAddress = S.current.saveShippingAddress;
+  static final String neighborhood = S.current.neighborhood;
+  static final String addressBuildingApartment =
+      S.current.addressBuildingApartment;
+  static final String city = S.current.city;
+  static final String department = S.current.department;
+  static final String number = S.current.number;
+  static final String type = S.current.type;
+  static final String editData = S.current.editData;
+  static final String yourData = S.current.yourData;
+  static final String viewMapChooseAnotherCollectionPoint =
+      S.current.viewMapChooseAnotherCollectionPoint;
+  static final String shippingAddress = S.current.shippingAddress;
+  static final String officeHours = S.current.officeHours;
+  static final String addressOffice = S.current.addressOffice;
+  static final String pickUpDeliveryPoint = S.current.pickUpDeliveryPoint;
+  static final String sendHome = S.current.sendHome;
+  static final String addShippingAddress = S.current.addShippingAddress;
+  static final String delivery = S.current.delivery;
+  static final String chooseDeliveryMethod = S.current.chooseDeliveryMethod;
+  static final String continueShopping = S.current.continueShopping;
+  static final String total = S.current.total;
+  static final String shipment = S.current.shipment;
+  static final String products = S.current.products;
   static final String shoppingCart = S.current.shoppingCart;
   static final String myProfile = S.current.myProfile;
   static final String notifications = S.current.notifications;
@@ -73,6 +119,16 @@ class ProTiendasUiValues {
     return S.current.weHaveAErrorContactSuport(fieldName);
   }
 
+  static String productsUnits(int fieldName) {
+    return '${S.current.products} ($fieldName)';
+  }
+
+  static const List<String> addressList = [
+    'Calle',
+    'Carrera',
+    'Diagonal',
+    'Avenida',
+  ];
   static const String siiLogo =
       'https://sii-group.com/themes/custom/sii/logo.svg';
   static const String archetypes = 'arquetipos';
@@ -87,7 +143,6 @@ class ProTiendasUiValues {
   static const String atribute = 'Attribute';
   static const String prices = 'Prices';
   static const String info = 'Info';
-  static const String type = 'Tipo';
   static const String cardMarket = 'Card Market';
   static const String tcgPlayer = 'TCG Player';
   static const String ebayPrice = 'Ebay';

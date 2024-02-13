@@ -1,10 +1,12 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:protiendas/app/screen/addresses/module.dart';
 import 'package:protiendas/app/screen/auth/module.dart';
 import 'package:protiendas/app/screen/detail/page.dart' as detail;
 import 'package:protiendas/app/screen/dashboard/page.dart' as dashboard;
 import 'package:protiendas/app/screen/cart/page.dart' as cart;
 import 'package:protiendas/app/screen/home/page.dart' as home;
 import 'package:protiendas/app/screen/init/page.dart' as init;
+import 'package:protiendas/app/screen/payment_method/module.dart';
 
 class GlobalModule extends Module {
   @override
@@ -41,6 +43,8 @@ class GlobalModule extends Module {
         transition: TransitionType.fadeIn,
       ),
       ModuleRoute('/auth', module: AuthModule()),
+      ModuleRoute('/address', module: AddressesModule()),
+      ModuleRoute('/payment', module: PaymentMethodModule()),
     ];
   }
 }
