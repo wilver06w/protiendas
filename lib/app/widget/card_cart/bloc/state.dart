@@ -1,18 +1,18 @@
 part of 'bloc.dart';
 
-abstract class CardFavoriteState extends Equatable {
+abstract class CardCartState extends Equatable {
   final Model model;
-  const CardFavoriteState(this.model);
+  const CardCartState(this.model);
 
   @override
   List<Object?> get props => [model];
 }
 
-class InitialState extends CardFavoriteState {
+class InitialState extends CardCartState {
   const InitialState(Model model) : super(model);
 }
 
-class ChangedQuantityState extends CardFavoriteState {
+class ChangedQuantityState extends CardCartState {
   const ChangedQuantityState(Model model) : super(model);
 }
 

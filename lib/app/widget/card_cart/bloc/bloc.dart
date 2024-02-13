@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'event.dart';
 part 'state.dart';
 
-class BlocCardFavorite extends Bloc<CardFavoriteEvent, CardFavoriteState> {
-  BlocCardFavorite({
+class BlocCardCart extends Bloc<CardCartEvent, CardCartState> {
+  BlocCardCart({
     required this.quantity,
   }) : super(InitialState(Model(quantity: quantity))) {
     on<OnChangeQuantityEvent>(_onOnChangeQuantityEvent);
@@ -15,7 +15,7 @@ class BlocCardFavorite extends Bloc<CardFavoriteEvent, CardFavoriteState> {
 
   Future<void> _onOnChangeQuantityEvent(
     OnChangeQuantityEvent event,
-    Emitter<CardFavoriteState> emit,
+    Emitter<CardCartState> emit,
   ) async {
     emit(
       ChangedQuantityState(

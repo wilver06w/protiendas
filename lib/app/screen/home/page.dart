@@ -40,6 +40,7 @@ class Page extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBarGlobal(
+            havIconLeft: false,
             icon: const Icon(
               Icons.menu_outlined,
               color: ProTiendasUiColors.secondaryColor,

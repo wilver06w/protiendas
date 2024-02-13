@@ -15,17 +15,19 @@ class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
       color: ProTiendasUiColors.secondaryColor,
       size: 20,
     ),
-    required this.onTapIcon,
+    this.onTapIcon,
     this.haveSearch = true,
     this.title = '',
     this.havCart = true,
+    this.havIconLeft = true,
   });
 
   final Widget icon;
-  final VoidCallback onTapIcon;
+  final VoidCallback? onTapIcon;
   final bool haveSearch;
   final String title;
   final bool havCart;
+  final bool havIconLeft;
 
   @override
   Widget build(BuildContext context) {
@@ -69,10 +71,12 @@ class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
           const Gap(YuGiOhSpacing.md),
         ]
       ],
-      leading: InkWell(
-        onTap: onTapIcon,
-        child: icon,
-      ),
+      leading: havIconLeft
+          ? InkWell(
+              onTap: onTapIcon,
+              child: icon,
+            )
+          : null,
     );
   }
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart'
+    hide ModularWatchExtension;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:protiendas/app/screen/dashboard/bloc/bloc.dart';
 import 'package:protiendas/app/utils/colors.dart';
@@ -20,11 +23,22 @@ class Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => BlocDashboard(),
-      child: const Scaffold(
-        bottomNavigationBar: BottomNavigator(),
-        body: Body(),
+    return BlocProvider.value(
+      value: Modular.get<BlocDashboard>(),
+      child: Scaffold(
+        bottomNavigationBar: const BottomNavigator(),
+        body: PopScope(
+          canPop: false,
+          onPopInvoked: (didPop) async {
+            if (Modular.get<BlocDashboard>().state.model.position == 0) {
+              SystemNavigator.pop();
+              return;
+            }
+            Modular.get<BlocDashboard>()
+                .add(const ChangePositionEvent(position: 0));
+          },
+          child: const Body(),
+        ),
       ),
     );
   }

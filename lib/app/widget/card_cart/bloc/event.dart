@@ -1,13 +1,13 @@
 part of 'bloc.dart';
 
-abstract class CardFavoriteEvent extends Equatable {
-  const CardFavoriteEvent();
+abstract class CardCartEvent extends Equatable {
+  const CardCartEvent();
 
   @override
   List<Object> get props => [];
 }
 
-class OnChangeQuantityEvent extends CardFavoriteEvent {
+class OnChangeQuantityEvent extends CardCartEvent {
   const OnChangeQuantityEvent({
     required this.quantity,
   });
