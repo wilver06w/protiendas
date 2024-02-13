@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
-import 'package:protiendas/app/widget/card_product_favorite.dart';
+import 'package:protiendas/app/widget/card_favorite/card_product_favorite.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -19,12 +19,19 @@ class Page extends StatelessWidget {
         children: [
           ...List.generate(
             3,
-            (index) => const Padding(
-              padding: EdgeInsets.symmetric(
+            (index) => Padding(
+              padding: const EdgeInsets.symmetric(
                 horizontal: YuGiOhSpacing.sl,
                 vertical: YuGiOhSpacing.sm,
               ),
               child: CardProductFavorite(
+                onChangeValue: (value) {
+                  //TODO: aqui manda a actualizar el endpoint de favoritos.
+                },
+                onTapDelete: () {
+                  //TODO: aqui manda a eliminar ael endpoint de favoritos.
+                },
+                quantity: 2,
                 priceBefore: '\$480.000',
                 price: '\$450.000',
                 titleFeatures: 'Color',

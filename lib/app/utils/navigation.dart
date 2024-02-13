@@ -14,11 +14,9 @@ class YuGiOhRoute {
       (_) => false,
     );
   }
+
   static Future<Object?> navCart() async {
-    return Modular.to.pushNamedAndRemoveUntil(
-      '/cart',
-      (_) => false,
-    );
+    return Modular.to.pushNamed('/cart');
   }
 
   static Future<Object?> navLogin() async {
