@@ -18,6 +18,12 @@ class ProTiendasUiColors {
   ///secondaryColor
   static const Color secondaryColor = Color(0xFF18DD98);
 
+  ///philippineGray
+  static const Color philippineGray = Color(0xFF8F8F8F);
+
+  ///cultured
+  static const Color cultured = Color(0xFFF5F5F5);
+
   ///lightSilver
   static const Color lightSilver = Color(0xFFD9D9D9);
 

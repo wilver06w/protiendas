@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("e-mail"),
         "enterEmailUsername":
             MessageLookupByLibrary.simpleMessage("Ingresa tu email o usuario"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Favoritos"),
         "hello": MessageLookupByLibrary.simpleMessage("Hola!"),
         "iAmNotRegistered":
             MessageLookupByLibrary.simpleMessage("No estoy registrado"),
@@ -55,8 +56,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginWith": MessageLookupByLibrary.simpleMessage("Ingresa con"),
         "mayInterest":
             MessageLookupByLibrary.simpleMessage("Te puede interesar"),
+        "myProfile": MessageLookupByLibrary.simpleMessage("Mi Perfil"),
         "name": MessageLookupByLibrary.simpleMessage("Nombre"),
         "next": MessageLookupByLibrary.simpleMessage("Siguiente"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notificaciones"),
         "nowYouCanLogIn":
             MessageLookupByLibrary.simpleMessage("Ahora puedes iniciar sesión"),
         "numberPhoneNoValid": MessageLookupByLibrary.simpleMessage(
@@ -74,7 +77,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchProtiendas":
             MessageLookupByLibrary.simpleMessage("Buscar en Protiendas"),
         "sendFree": MessageLookupByLibrary.simpleMessage("Envio Gratis"),
+        "shoppingCart":
+            MessageLookupByLibrary.simpleMessage("Carrito de Compras"),
         "sigIn": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
+        "start": MessageLookupByLibrary.simpleMessage("Inicio"),
         "theNew": MessageLookupByLibrary.simpleMessage("Lo Nuevo"),
         "userRegisterSuccesful": MessageLookupByLibrary.simpleMessage(
             "Usuario registrado correctamente"),

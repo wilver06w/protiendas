@@ -5,6 +5,7 @@ class ProTiendasUiValues {
   static const String logoHomeSvg = 'assets/svg/logo_home.svg';
   static const String iconSearch = 'assets/svg/ic_search.svg';
   static const String iconNotification = 'assets/svg/ic_notification.svg';
+  static const String icCart = 'assets/svg/ic_cart.svg';
   static const String iconHeartSvg = 'assets/svg/heart.svg';
   static const String bannerTest = 'assets/image/banner_test.png';
   static const String icPersonSvg = 'assets/svg/ic_person.svg';
@@ -16,7 +17,16 @@ class ProTiendasUiValues {
   static const String starEmpty = 'assets/svg/star_empty.svg';
   static const String startFilled = 'assets/svg/start_filled.svg';
   static const String starFilled = 'assets/svg/star_filled.svg';
+  static const String icHome = 'assets/svg/ic_home.svg';
+  static const String icBells = 'assets/svg/ic_bells.svg';
+  static const String icMyProfile = 'assets/svg/ic_myprofile.svg';
+  static const String icDelete = 'assets/svg/ic_delete.svg';
 
+  static final String shoppingCart = S.current.shoppingCart;
+  static final String myProfile = S.current.myProfile;
+  static final String notifications = S.current.notifications;
+  static final String favorites = S.current.favorites;
+  static final String start = S.current.start;
   static final String mayInterest = S.current.mayInterest;
   static final String leaveOpinion = S.current.leaveOpinion;
   static final String opinions = S.current.opinions;

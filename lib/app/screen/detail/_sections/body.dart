@@ -11,28 +11,35 @@ class Body extends StatelessWidget {
     return ListView(
       children: [
         const Gap(YuGiOhSpacing.md),
-        BodySeparated(
+        const BodySeparated(
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const XigoTextHeading4(
+              XigoTextHeading4(
                 ProTiendasUiValues.amazon,
                 color: Colors.black,
                 weight: FontWeight.w600,
               ),
-              const Gap(YuGiOhSpacing.md),
-              ImagenWidget(
-                image:
-                    'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
-                height: YuGiOhResponsive.heightSizeByContext(
-                  context,
-                  pixels: size.height * 0.3,
-                ),
-                width: YuGiOhResponsive.withSizeByContext(
-                  context,
-                  pixels: size.width * 0.3,
-                ),
-              ),
+              Gap(YuGiOhSpacing.md),
+            ],
+          ),
+        ),
+        ImagenWidget(
+          image:
+              'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
+          height: YuGiOhResponsive.heightSizeByContext(
+            context,
+            pixels: size.height * 0.3,
+          ),
+          width: YuGiOhResponsive.withSizeByContext(
+            context,
+            pixels: size.width * 0.3,
+          ),
+        ),
+        BodySeparated(
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
               const Gap(YuGiOhSpacing.md),
               const XigoTextHeading6(
                 '\$3.000.000',
@@ -169,7 +176,7 @@ class Body extends StatelessWidget {
           ],
         )),
         Container(
-          color: ProTiendasUiColors.primaryColor,
+          color: ProTiendasUiColors.cultured,
           child: Padding(
             padding: const EdgeInsets.all(YuGiOhSpacing.xl),
             child: Container(

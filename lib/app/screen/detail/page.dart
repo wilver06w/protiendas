@@ -8,7 +8,6 @@ import 'package:protiendas/app/screen/detail/bloc/bloc.dart';
 import 'package:protiendas/app/screen/detail/repository.dart';
 import 'package:protiendas/app/utils/button/btn.dart';
 import 'package:protiendas/app/utils/colors.dart';
-import 'package:protiendas/app/utils/config/client_config.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';
 import 'package:protiendas/app/utils/responsive.dart';
 import 'package:protiendas/app/utils/spacing.dart';
@@ -21,7 +20,6 @@ import 'package:protiendas/app/widget/imagen_widget.dart';
 import 'package:protiendas/app/widget/title_sections.dart';
 
 part 'package:protiendas/app/screen/detail/_sections/body.dart';
-part 'package:protiendas/app/screen/detail/_sections/bottom.dart';
 part 'package:protiendas/app/screen/detail/_sections/item_card_detail.dart';
 
 class Page extends StatelessWidget {
@@ -34,7 +32,6 @@ class Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final app = Modular.get<AppConfig>();
     final xigoHttpClient = Modular.get<XigoHttpClient>();
     return BlocProvider<BlocDetail>(
       create: (context) => BlocDetail(
@@ -49,7 +46,6 @@ class Page extends StatelessWidget {
             Modular.to.pop();
           },
         ),
-        bottomNavigationBar: BodyBottom(app: app),
         body: const SafeArea(
           child: Body(),
         ),

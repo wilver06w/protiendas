@@ -87,7 +87,7 @@ Future<void> _listener(BuildContext context, LoginState state) async {
     YuGiOhLoading.show(context);
   } else if (state is LoadedLoginState) {
     Navigator.pop(context);
-    YuGiOhRoute.navHome();
+    YuGiOhRoute.navDashboard();
   } else if (state is ErrorLoginState) {
     Navigator.pop(context);
     showToast(

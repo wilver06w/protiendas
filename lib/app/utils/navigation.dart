@@ -1,9 +1,22 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
 class YuGiOhRoute {
+  static Future<Object?> navDashboard() async {
+    return Modular.to.pushNamedAndRemoveUntil(
+      '/dashboard',
+      (_) => false,
+    );
+  }
+
   static Future<Object?> navHome() async {
     return Modular.to.pushNamedAndRemoveUntil(
       '/home',
+      (_) => false,
+    );
+  }
+  static Future<Object?> navCart() async {
+    return Modular.to.pushNamedAndRemoveUntil(
+      '/cart',
       (_) => false,
     );
   }

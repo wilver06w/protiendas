@@ -40,5 +40,10 @@
     "productDescription":"Descripción del producto",
     "opinions":"Opiniones",
     "leaveOpinion":"Deja tu opinión",
-    "mayInterest":"Te puede interesar"
+    "mayInterest":"Te puede interesar",
+    "start":"Inicio",
+    "favorites":"Favoritos",
+    "notifications":"Notificaciones",
+    "myProfile":"Mi Perfil",
+    "shoppingCart":"Carrito de Compras"
 }

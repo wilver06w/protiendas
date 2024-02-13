@@ -93,7 +93,7 @@ Future<void> _listener(BuildContext context, RegisterState state) async {
       ),
       duration: const Duration(seconds: 10),
     );
-    YuGiOhRoute.navHome();
+    YuGiOhRoute.navDashboard();
   } else if (state is ErrorRegisterState) {
     Navigator.pop(context);
   }
