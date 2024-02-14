@@ -12,8 +12,70 @@ class Body extends StatelessWidget {
       padding: const EdgeInsets.all(YuGiOhSpacing.lg),
       children: [
         const Gap(YuGiOhSpacing.lg),
-        Image.asset(
-          ProTiendasUiValues.icBackgroundTarjet,
+        BlocBuilder<BlocPaymentAdd, PaymentAddState>(
+          builder: (context, state) {
+            return Center(
+              child: Stack(
+                children: [
+                  Image.asset(ProTiendasUiValues.icBackgroundTarjet),
+                  Positioned(
+                    top: 40,
+                    left: 20,
+                    right: 20,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: XigoTextCustom(
+                                state.model.cVV,
+                                color: ProTiendasUiColors.white,
+                                fontStyle: GoogleFonts.lato().fontStyle,
+                                letterSpacing: 2,
+                                fontSize: 18,
+                                textOverflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            Image.asset(state.model.imageIcSelected),
+                          ],
+                        ),
+                        XigoTextCustom(
+                          state.model.mmAA,
+                          color: ProTiendasUiColors.white,
+                          fontStyle: GoogleFonts.lato().fontStyle,
+                          letterSpacing: 2,
+                          fontSize: 14,
+                          textOverflow: TextOverflow.ellipsis,
+                        ),
+                        XigoTextCustom(
+                          state.model.name,
+                          color: ProTiendasUiColors.white,
+                          fontStyle: GoogleFonts.lato().fontStyle,
+                          letterSpacing: 2,
+                          fontSize: 18,
+                          textOverflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 40,
+                    left: 20,
+                    right: 20,
+                    child: XigoTextCustom(
+                      state.model.numberCard,
+                      color: ProTiendasUiColors.white,
+                      fontStyle: GoogleFonts.lato().fontStyle,
+                      letterSpacing: 2,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
         ),
         const Gap(YuGiOhSpacing.lg),
         FormDataTarjet(formKey: formDataTarjet),

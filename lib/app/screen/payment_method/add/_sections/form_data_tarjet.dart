@@ -42,7 +42,13 @@ class FormDataTarjet extends StatelessWidget {
               }
               return null;
             },
-            onChanged: (value) {},
+            onChanged: (value) {
+              context.read<BlocPaymentAdd>().add(
+                    OnChangeNumberCardEvent(
+                      number: value,
+                    ),
+                  );
+            },
           ),
           const Gap(YuGiOhSpacing.sl),
           XigoTextField(
@@ -61,7 +67,13 @@ class FormDataTarjet extends StatelessWidget {
               }
               return null;
             },
-            onChanged: (value) {},
+            onChanged: (value) {
+              context.read<BlocPaymentAdd>().add(
+                    OnChangeHolderNameEvent(
+                      name: value,
+                    ),
+                  );
+            },
           ),
           const Gap(YuGiOhSpacing.sl),
           Row(
@@ -90,7 +102,13 @@ class FormDataTarjet extends StatelessWidget {
                     }
                     return null;
                   },
-                  onChanged: (value) {},
+                  onChanged: (value) {
+                    context.read<BlocPaymentAdd>().add(
+                          OnChangemMaaEvent(
+                            mmAA: value,
+                          ),
+                        );
+                  },
                 ),
               ),
               const Gap(YuGiOhSpacing.md),
@@ -118,7 +136,13 @@ class FormDataTarjet extends StatelessWidget {
                     }
                     return null;
                   },
-                  onChanged: (value) {},
+                  onChanged: (value) {
+                    context.read<BlocPaymentAdd>().add(
+                          OnChangecVVEvent(
+                            cVV: value,
+                          ),
+                        );
+                  },
                 ),
               ),
             ],

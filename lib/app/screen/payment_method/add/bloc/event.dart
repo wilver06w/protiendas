@@ -7,32 +7,34 @@ abstract class PaymentAddEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadBannerEvent extends PaymentAddEvent {}
-
-class LoadDataCategoriasEvent extends PaymentAddEvent {}
-
-class OnChangeSelectedArchetypeEvent extends PaymentAddEvent {
-  const OnChangeSelectedArchetypeEvent({
-    required this.value,
-    required this.archetype,
+class OnChangeNumberCardEvent extends PaymentAddEvent {
+  const OnChangeNumberCardEvent({
+    required this.number,
   });
 
-  final bool value;
-  final Archetype archetype;
+  final String number;
 }
 
-class DeletedByArchetypeEvent extends PaymentAddEvent {
-  const DeletedByArchetypeEvent({
-    required this.archetype,
+class OnChangeHolderNameEvent extends PaymentAddEvent {
+  const OnChangeHolderNameEvent({
+    required this.name,
   });
 
-  final Archetype archetype;
+  final String name;
 }
 
-class SearchItemEvent extends PaymentAddEvent {
-  const SearchItemEvent({required this.archetype});
+class OnChangemMaaEvent extends PaymentAddEvent {
+  const OnChangemMaaEvent({
+    required this.mmAA,
+  });
 
-  final Archetype archetype;
+  final String mmAA;
 }
 
-class LoadBanItemsEvent extends PaymentAddEvent {}
+class OnChangecVVEvent extends PaymentAddEvent {
+  const OnChangecVVEvent({
+    required this.cVV,
+  });
+
+  final String cVV;
+}

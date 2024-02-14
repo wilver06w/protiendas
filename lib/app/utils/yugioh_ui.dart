@@ -104,6 +104,7 @@ class ProTiendasUiValues {
     'Diagonal',
     'Avenida',
   ];
+  static const String icVisa = 'assets/image/ic_visa.png';
   static const String acacomproLogo = 'assets/image/logogi.gif';
   static const String logoHomeSvg = 'assets/svg/logo_home.svg';
   static const String iconSearch = 'assets/svg/ic_search.svg';
