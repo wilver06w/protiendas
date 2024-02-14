@@ -18,6 +18,7 @@ class CardProductHorizontal extends StatelessWidget {
     required this.isFreeSend,
     this.widthImage = 150,
     this.heightImage = 120,
+    required this.isFavorite,
   });
   final String image;
   final String title;
@@ -28,6 +29,7 @@ class CardProductHorizontal extends StatelessWidget {
 
   final double widthImage;
   final double heightImage;
+  final bool isFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,9 @@ class CardProductHorizontal extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SvgPicture.asset(
-              ProTiendasUiValues.iconHeartSvg,
+              isFavorite
+                  ? ProTiendasUiValues.iconHeartSvg
+                  : ProTiendasUiValues.icHeartNoSelected,
               height: 20,
               width: 30,
             ),

@@ -209,6 +209,7 @@ class Body extends StatelessWidget {
                         vertical: YuGiOhSpacing.sm,
                       ),
                       child: CardProductHorizontal(
+                        isFavorite: false,
                         priceBefore: '\$480.000',
                         price: '\$450.000',
                         desct: '10% Dto',
