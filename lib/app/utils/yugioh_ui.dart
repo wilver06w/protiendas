@@ -1,36 +1,11 @@
 import 'package:protiendas/generated/l10n.dart';
 
 class ProTiendasUiValues {
-  static const String acacomproLogo = 'assets/image/logogi.gif';
-  static const String logoHomeSvg = 'assets/svg/logo_home.svg';
-  static const String iconSearch = 'assets/svg/ic_search.svg';
-  static const String iconNotification = 'assets/svg/ic_notification.svg';
-  static const String icCart = 'assets/svg/ic_cart.svg';
-  static const String iconHeartSvg = 'assets/svg/heart.svg';
-  static const String bannerTest = 'assets/image/banner_test.png';
-  static const String icPersonSvg = 'assets/svg/ic_person.svg';
-  static const String icFacebook = 'assets/image/ic_facebook.png';
-  static const String icGoogle = 'assets/image/ic_google.png';
-  static const String icIos = 'assets/image/ic_ios.png';
-  static const String icMicrosoft = 'assets/image/ic_microsoft.png';
-  static const String icOpinions = 'assets/image/ic_opinions.png';
-  static const String starEmpty = 'assets/svg/star_empty.svg';
-  static const String startFilled = 'assets/svg/start_filled.svg';
-  static const String starFilled = 'assets/svg/star_filled.svg';
-  static const String icHome = 'assets/svg/ic_home.svg';
-  static const String icBells = 'assets/svg/ic_bells.svg';
-  static const String icMyProfile = 'assets/svg/ic_myprofile.svg';
-  static const String icDelete = 'assets/svg/ic_delete.svg';
-  static const String circleGrey = 'assets/svg/circle_grey.svg';
-  static const String icUbicationDelivery =
-      'assets/svg/ic_ubication_delivery.svg';
-  static const String icTimeDelivery = 'assets/svg/ic_time_delivery.svg';
-  static const String icCheck = 'assets/image/ic_check.png';
-  static const String icEdit = 'assets/svg/ic_edit.svg';
-  static const String icTarjet = 'assets/svg/ic_tarjet.svg';
-  static const String icEfecty = 'assets/svg/ic_efecty.svg';
-  static const String icBank = 'assets/svg/ic_bank.svg';
-
+  static final String saveConfirm = S.current.saveConfirm;
+  static final String cardHolderName = S.current.cardHolderName;
+  static const String mmAA = 'MM/AA';
+  static const String cVV = 'CVV';
+  static final String cardNumber = S.current.cardNumber;
   static final String efecty = S.current.efecty;
   static final String bankTransferWithPse = S.current.bankTransferWithPse;
   static final String newDebitCard = S.current.newDebitCard;
@@ -129,6 +104,39 @@ class ProTiendasUiValues {
     'Diagonal',
     'Avenida',
   ];
+  static const String acacomproLogo = 'assets/image/logogi.gif';
+  static const String logoHomeSvg = 'assets/svg/logo_home.svg';
+  static const String iconSearch = 'assets/svg/ic_search.svg';
+  static const String iconNotification = 'assets/svg/ic_notification.svg';
+  static const String icCart = 'assets/svg/ic_cart.svg';
+  static const String iconHeartSvg = 'assets/svg/heart.svg';
+  static const String bannerTest = 'assets/image/banner_test.png';
+  static const String icPersonSvg = 'assets/svg/ic_person.svg';
+  static const String icFacebook = 'assets/image/ic_facebook.png';
+  static const String icGoogle = 'assets/image/ic_google.png';
+  static const String icIos = 'assets/image/ic_ios.png';
+  static const String icMicrosoft = 'assets/image/ic_microsoft.png';
+  static const String icOpinions = 'assets/image/ic_opinions.png';
+  static const String starEmpty = 'assets/svg/star_empty.svg';
+  static const String startFilled = 'assets/svg/start_filled.svg';
+  static const String starFilled = 'assets/svg/star_filled.svg';
+  static const String icHome = 'assets/svg/ic_home.svg';
+  static const String icBells = 'assets/svg/ic_bells.svg';
+  static const String icMyProfile = 'assets/svg/ic_myprofile.svg';
+  static const String icDelete = 'assets/svg/ic_delete.svg';
+  static const String circleGrey = 'assets/svg/circle_grey.svg';
+  static const String icUbicationDelivery =
+      'assets/svg/ic_ubication_delivery.svg';
+  static const String icTimeDelivery = 'assets/svg/ic_time_delivery.svg';
+  static const String icCheck = 'assets/image/ic_check.png';
+  static const String icEdit = 'assets/svg/ic_edit.svg';
+  static const String icTarjet = 'assets/svg/ic_tarjet.svg';
+  static const String icEfecty = 'assets/svg/ic_efecty.svg';
+  static const String icBank = 'assets/svg/ic_bank.svg';
+  static const String icTarjetBackground =
+      'assets/svg/ic_tarjet_background.svg';
+  static const String icBackgroundTarjet = 'assets/image/background_tarjet.png';
+
   static const String siiLogo =
       'https://sii-group.com/themes/custom/sii/logo.svg';
   static const String archetypes = 'arquetipos';

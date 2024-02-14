@@ -8,10 +8,9 @@ import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
-import 'package:protiendas/app/widget/container_circle_color.dart';
 
-part 'package:protiendas/app/screen/payment_method/home/_sections/item_payment.dart';
 part 'package:protiendas/app/screen/payment_method/home/_sections/bottom.dart';
+part 'package:protiendas/app/screen/payment_method/home/_sections/item_payment.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});

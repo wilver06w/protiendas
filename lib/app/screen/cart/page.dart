@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gap/gap.dart';
-import 'package:meta/meta.dart';
-import 'package:protiendas/app/models/list_yugioh.dart';
 import 'package:protiendas/app/utils/button/btn.dart';
 import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/navigation.dart';
-import 'package:protiendas/app/utils/responsive.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/card_cart/card_product_cart.dart';
-import 'package:protiendas/app/widget/imagen_widget.dart';
 
-part 'package:protiendas/app/screen/cart/_sections/bottom.dart';
 part 'package:protiendas/app/screen/cart/_sections/body.dart';
+part 'package:protiendas/app/screen/cart/_sections/bottom.dart';
 part 'package:protiendas/app/screen/cart/_sections/item_resum.dart';
 part 'package:protiendas/app/screen/cart/_sections/item_total.dart';
 

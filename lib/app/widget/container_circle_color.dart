@@ -1,8 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/spacing.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
 
 class ContainerCircleColor extends StatelessWidget {
   const ContainerCircleColor({

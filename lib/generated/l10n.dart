@@ -829,6 +829,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Número de la tarjeta`
+  String get cardNumber {
+    return Intl.message(
+      'Número de la tarjeta',
+      name: 'cardNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nombre del títular de la tarjeta`
+  String get cardHolderName {
+    return Intl.message(
+      'Nombre del títular de la tarjeta',
+      name: 'cardHolderName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guardar y confirmar`
+  String get saveConfirm {
+    return Intl.message(
+      'Guardar y confirmar',
+      name: 'saveConfirm',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

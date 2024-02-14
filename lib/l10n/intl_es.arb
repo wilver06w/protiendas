@@ -77,5 +77,8 @@
     "newCreditCard":"Nueva tarjeta de crédito",
     "newDebitCard":"Nueva tarjeta de débito",
     "bankTransferWithPse":"Transferencia bancaria con PSE",
-    "efecty":"Efecty"
+    "efecty":"Efecty",
+    "cardNumber":"Número de la tarjeta",
+    "cardHolderName":"Nombre del títular de la tarjeta",
+    "saveConfirm":"Guardar y confirmar"
 }

@@ -39,6 +39,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "buyEnterAccount": MessageLookupByLibrary.simpleMessage(
             "Para comprar ingresa tu cuenta"),
         "buyNow": MessageLookupByLibrary.simpleMessage("Comprar ahora"),
+        "cardHolderName": MessageLookupByLibrary.simpleMessage(
+            "Nombre del títular de la tarjeta"),
+        "cardNumber":
+            MessageLookupByLibrary.simpleMessage("Número de la tarjeta"),
         "cellPhone": MessageLookupByLibrary.simpleMessage("Celular"),
         "characteristics":
             MessageLookupByLibrary.simpleMessage("Características"),
@@ -107,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "products": MessageLookupByLibrary.simpleMessage("Productos"),
         "register": MessageLookupByLibrary.simpleMessage("Registrate"),
         "save": MessageLookupByLibrary.simpleMessage("Guardar"),
+        "saveConfirm":
+            MessageLookupByLibrary.simpleMessage("Guardar y confirmar"),
         "saveShippingAddress":
             MessageLookupByLibrary.simpleMessage("Guardar dirección de envío"),
         "searchProtiendas":
