@@ -10,10 +10,10 @@ import 'package:protiendas/app/utils/yugioh_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/card_cart/card_product_cart.dart';
 
-part 'package:protiendas/app/screen/cart/_sections/body.dart';
-part 'package:protiendas/app/screen/cart/_sections/bottom.dart';
-part 'package:protiendas/app/screen/cart/_sections/item_resum.dart';
-part 'package:protiendas/app/screen/cart/_sections/item_total.dart';
+part 'package:protiendas/app/screen/cart/_childrens/home/_sections/body.dart';
+part 'package:protiendas/app/screen/cart/_childrens/home/_sections/bottom.dart';
+part 'package:protiendas/app/screen/cart/_childrens/home/_sections/item_resum.dart';
+part 'package:protiendas/app/screen/cart/_childrens/home/_sections/item_total.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});

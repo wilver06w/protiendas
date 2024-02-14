@@ -16,7 +16,11 @@ class YuGiOhRoute {
   }
 
   static Future<Object?> navCart() async {
-    return Modular.to.pushNamed('/cart');
+    return Modular.to.pushNamed('/cart/');
+  }
+
+  static Future<Object?> navCartResum() async {
+    return Modular.to.pushNamed('/cart/resum');
   }
 
   static Future<Object?> navLogin() async {
@@ -33,6 +37,7 @@ class YuGiOhRoute {
   static Future<Object?> navPayment() async {
     return Modular.to.pushNamed('/payment/');
   }
+
   static Future<Object?> navAddPayment() async {
     return Modular.to.pushNamed('/payment/add');
   }

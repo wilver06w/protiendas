@@ -4,12 +4,12 @@ import 'package:flutter_modular/flutter_modular.dart'
     hide ModularWatchExtension;
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:protiendas/app/screen/auth/_childrens/register/bloc/bloc.dart';
 import 'package:protiendas/app/screen/payment_method/add/bloc/bloc.dart';
 import 'package:protiendas/app/utils/button/btn.dart';
 import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/helpers/formatter.dart';
 import 'package:protiendas/app/utils/input/input.dart';
+import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/yugioh_ui.dart';

@@ -52,9 +52,8 @@ class BlocAddAddress extends Bloc<AddAddressEvent, AddAddressState> {
     try {
       emit(LoadingDepartamentState(state.model));
 
-      final dataCitys = await repository.getCitys(
-        event.departamentSelected.id,
-      );
+      final dataCitys =
+          await repository.getCitys(state.model.departamentSelected?.id ?? 0);
 
       emit(
         LoadedDepartamentState(
@@ -77,18 +76,25 @@ class BlocAddAddress extends Bloc<AddAddressEvent, AddAddressState> {
     ChangedDepartamentSelectedEvent event,
     Emitter<AddAddressState> emit,
   ) async {
-    emit(ChangedDepartamentSelectedState(
-      state.model.copyWith(
-        departamentSelected: event.departamentSelected,
+    emit(
+      ChangedDepartamentSelectedState(
+        state.model.copyWith(
+          departamentSelected: event.departamentSelected,
+          citySelected: City(
+            id: 0,
+            nombre: '',
+            departamentoId: 0,
+          ),
+        ),
       ),
-    ));
+    );
   }
 
   Future<void> _onChangedCitySelectedEvent(
     ChangedCitySelectedEvent event,
     Emitter<AddAddressState> emit,
   ) async {
-    emit(ChangedDepartamentSelectedState(
+    emit(ChangedCitySelectedState(
       state.model.copyWith(
         citySelected: event.citySelected,
       ),

@@ -25,7 +25,4 @@ class ChangedCitySelectedEvent extends AddAddressEvent {
   final City citySelected;
 }
 
-class LoadCityEvent extends AddAddressEvent {
-  const LoadCityEvent({required this.departamentSelected});
-  final Datum departamentSelected;
-}
+class LoadCityEvent extends AddAddressEvent {}

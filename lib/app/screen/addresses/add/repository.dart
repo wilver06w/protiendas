@@ -1,5 +1,3 @@
-import 'package:protiendas/app/models/data_banner.dart';
-import 'package:protiendas/app/models/data_categoria.dart';
 import 'package:protiendas/app/models/data_citys.dart';
 import 'package:protiendas/app/models/data_departament.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';

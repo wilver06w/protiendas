@@ -90,12 +90,22 @@ class Body extends StatelessWidget {
           onChanged: (value) {},
         ),
         const Gap(YuGiOhSpacing.xxl),
-        XigoBtnPrimary(
-          label: ProTiendasUiValues.saveConfirm,
-          backgroundColor: ProTiendasUiColors.secondaryColor,
-          btnSize: XigoBtnSize.big,
-          labelColor: ProTiendasUiColors.primaryColor,
-          onTap: () {},
+        BlocBuilder<BlocPaymentAdd, PaymentAddState>(
+          builder: (context, state) {
+            bool isFormValidate = state.model.isFormFilled;
+            
+            return XigoBtnPrimary(
+              label: ProTiendasUiValues.saveConfirm,
+              backgroundColor: ProTiendasUiColors.secondaryColor,
+              btnSize: XigoBtnSize.big,
+              labelColor: ProTiendasUiColors.primaryColor,
+              onTap: isFormValidate
+                  ? () {
+                      YuGiOhRoute.navCartResum();
+                    }
+                  : null,
+            );
+          },
         ),
       ],
     );

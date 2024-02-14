@@ -1,4 +1,4 @@
-part of 'package:protiendas/app/screen/cart/page.dart';
+part of 'package:protiendas/app/screen/cart/_childrens/home/page.dart';
 
 class Body extends StatelessWidget {
   const Body({

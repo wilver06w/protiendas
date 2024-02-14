@@ -33,6 +33,10 @@ class ChangedDepartamentSelectedState extends AddAddressState {
   const ChangedDepartamentSelectedState(Model model) : super(model);
 }
 
+class ChangedCitySelectedState extends AddAddressState {
+  const ChangedCitySelectedState(Model model) : super(model);
+}
+
 class Model extends Equatable {
   const Model({
     this.dataDepartament,

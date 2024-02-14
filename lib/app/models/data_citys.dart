@@ -1,6 +1,6 @@
 class DataCitys {
   String message;
-  Map<String, City> data;
+  List<City> data;
 
   DataCitys({
     required this.message,
@@ -9,14 +9,12 @@ class DataCitys {
 
   factory DataCitys.fromJson(Map<String, dynamic> json) => DataCitys(
         message: json["message"],
-        data: Map.from(json["data"])
-            .map((k, v) => MapEntry<String, City>(k, City.fromJson(v))),
+        data: List<City>.from(json["data"].map((x) => City.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "message": message,
-        "data": Map.from(data)
-            .map((k, v) => MapEntry<String, dynamic>(k, v.toJson())),
+        "data": List<dynamic>.from(data.map((x) => x.toJson())),
       };
 }
 

@@ -77,6 +77,12 @@ class Model extends Equatable {
     );
   }
 
+  bool get isFormFilled =>
+      numberCard.isNotEmpty &&
+      name.isNotEmpty &&
+      mmAA.isNotEmpty &&
+      cVV.isNotEmpty;
+
   String get imageIcSelected => ProTiendasUiValues.icVisa;
 
   @override
