@@ -1,6 +1,7 @@
 import 'package:protiendas/generated/l10n.dart';
 
 class ProTiendasUiValues {
+  static final String makePurchase = S.current.makePurchase;
   static final String saveConfirm = S.current.saveConfirm;
   static final String cardHolderName = S.current.cardHolderName;
   static const String mmAA = 'MM/AA';

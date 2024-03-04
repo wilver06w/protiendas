@@ -12,6 +12,7 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
   BlocHome({
     required this.repository,
   }) : super(const InitialState(Model())) {
+    on<LoadBannerEvent>(_onLoadBannerEvent);
     on<LoadDataCategoriasEvent>(_onLoadDataCategoriasEvent);
   }
   final Repository repository;
@@ -41,4 +42,32 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
       );
     }
   }
+
+
+  Future<void> _onLoadBannerEvent(
+    LoadBannerEvent event,
+    Emitter<HomeState> emit,
+  ) async {
+    try {
+      emit(LoadingBannerState(state.model));
+
+      final dataBanner = await repository.getBanner();
+
+      emit(
+        LoadedBannerState(
+          state.model.copyWith(
+            dataBanner: dataBanner,
+          ),
+        ),
+      );
+    } catch (error) {
+      emit(
+        ErrorBannerState(
+          model: state.model,
+          message: error.toString(),
+        ),
+      );
+    }
+  }
+
 }

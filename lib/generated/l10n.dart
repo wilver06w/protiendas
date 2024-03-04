@@ -859,6 +859,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Realizar compra`
+  String get makePurchase {
+    return Intl.message(
+      'Realizar compra',
+      name: 'makePurchase',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
