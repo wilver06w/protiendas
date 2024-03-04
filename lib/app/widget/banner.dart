@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:protiendas/app/utils/spacing.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 
 class ViewBanner extends StatelessWidget {
   const ViewBanner({

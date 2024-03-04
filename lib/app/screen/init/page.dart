@@ -8,7 +8,7 @@ import 'package:protiendas/app/utils/http/http_client.dart';
 import 'package:protiendas/app/utils/http/token.dart';
 import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/preferences.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 
 part 'package:protiendas/app/screen/init/listeners/core.dart';
 

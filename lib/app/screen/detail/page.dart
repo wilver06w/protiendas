@@ -12,7 +12,7 @@ import 'package:protiendas/app/utils/http/http_client.dart';
 import 'package:protiendas/app/utils/responsive.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/card_product_horizontal.dart';
 import 'package:protiendas/app/widget/card_product_vertical.dart';

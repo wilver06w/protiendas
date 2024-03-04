@@ -34,10 +34,9 @@ class BottomNavigator extends StatelessWidget {
                         ),
                       );
                 },
-                isSelected: true,
                 title: ProTiendasUiValues.start,
                 routeImage: ProTiendasUiValues.icHome,
-                routeIconSelected: ProTiendasUiValues.icMyProfile,
+                routeIconSelected: ProTiendasUiValues.icHomeSelected,
               ),
               ItemDashboard(
                 position: 1,
@@ -49,8 +48,8 @@ class BottomNavigator extends StatelessWidget {
                       );
                 },
                 title: ProTiendasUiValues.favorites,
-                routeImage: ProTiendasUiValues.icBells,
-                routeIconSelected: ProTiendasUiValues.icMyProfile,
+                routeImage: ProTiendasUiValues.icHeartNoSelectDashb,
+                routeIconSelected: ProTiendasUiValues.icFavoriteSelected,
               ),
               ItemDashboard(
                 position: 2,
@@ -63,7 +62,7 @@ class BottomNavigator extends StatelessWidget {
                 },
                 title: ProTiendasUiValues.notifications,
                 routeImage: ProTiendasUiValues.icBells,
-                routeIconSelected: ProTiendasUiValues.icMyProfile,
+                routeIconSelected: ProTiendasUiValues.icNotificationSelected,
               ),
               ItemDashboard(
                 position: 3,
@@ -76,7 +75,7 @@ class BottomNavigator extends StatelessWidget {
                 },
                 title: ProTiendasUiValues.myProfile,
                 routeImage: ProTiendasUiValues.icMyProfile,
-                routeIconSelected: ProTiendasUiValues.icMyProfile,
+                routeIconSelected: ProTiendasUiValues.icProfileSelected,
               ),
             ],
           ),

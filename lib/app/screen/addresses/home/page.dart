@@ -6,7 +6,7 @@ import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/container_circle_color.dart';
 

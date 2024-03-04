@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Completa tus datos para crear tu cuenta"),
         "completeTheData":
             MessageLookupByLibrary.simpleMessage("Completa los datos"),
+        "confirmationPurchase":
+            MessageLookupByLibrary.simpleMessage("Confirmación de tu compra"),
         "continu": MessageLookupByLibrary.simpleMessage("Continuar"),
         "continueShopping":
             MessageLookupByLibrary.simpleMessage("Continuar compra"),

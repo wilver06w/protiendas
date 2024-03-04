@@ -80,5 +80,6 @@
     "efecty":"Efecty",
     "cardNumber":"Número de la tarjeta",
     "cardHolderName":"Nombre del títular de la tarjeta",
-    "saveConfirm":"Guardar y confirmar"
+    "saveConfirm":"Guardar y confirmar",
+    "confirmationPurchase":"Confirmación de tu compra"
 }

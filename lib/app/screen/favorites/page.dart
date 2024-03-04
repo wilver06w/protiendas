@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:protiendas/app/utils/spacing.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/card_favorite/card_product_favorite.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 
 class Page extends StatelessWidget {

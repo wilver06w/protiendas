@@ -7,14 +7,31 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final app = Modular.get<AppConfig>();
     return ListView(
+      padding: const EdgeInsets.all(YuGiOhSpacing.xl),
       children: [
+        XigoTextXl(
+          ProTiendasUiValues.yourData,
+          color: ProTiendasUiColors.primaryColor,
+          weight: FontWeight.w500,
+        ),
+        const Gap(YuGiOhSpacing.md),
+        ItemClientAddress(
+          name: '${app.clien?.nombre} ${app.clien?.apellido}',
+          address:
+              'Calle 5ta norte #26-59 Centro Barrio Nuevo\nAguachica, Cesar, Colombia',
+        ),
+        const ItemPaymentMethod(
+          numberTarjet: '6589 5496 5255 6652',
+          icPaymentMethod: ProTiendasUiValues.icVisa,
+        ),
         const Gap(YuGiOhSpacing.md),
         ...List.generate(
           3,
           (index) => Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: YuGiOhSpacing.lg,
+              // horizontal: YuGiOhSpacing.lg,
               vertical: YuGiOhSpacing.sm,
             ),
             child: CardProductCart(
@@ -38,6 +55,104 @@ class Body extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class ItemPaymentMethod extends StatelessWidget {
+  const ItemPaymentMethod({
+    super.key,
+    required this.numberTarjet,
+    required this.icPaymentMethod,
+  });
+
+  final String numberTarjet;
+  final String icPaymentMethod;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: YuGiOhSpacing.xs),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          XigoTextHeading6(
+            ProTiendasUiValues.paymentMethod,
+            color: ProTiendasUiColors.primaryColor,
+            weight: FontWeight.w400,
+          ),
+          const Gap(YuGiOhSpacing.sm),
+          Row(
+            children: [
+              Image.asset(
+                icPaymentMethod,
+                height: 30,
+                width: 30,
+              ),
+              const Gap(YuGiOhSpacing.sm),
+              XigoTextHeading6(
+                numberTarjet,
+                color: ProTiendasUiColors.primaryColor,
+                weight: FontWeight.w400,
+              ),
+            ],
+          ),
+          const Gap(YuGiOhSpacing.xs),
+          const Divider(
+            thickness: 0.5,
+            color: ProTiendasUiColors.silverFoil,
+            indent: 0,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ItemClientAddress extends StatelessWidget {
+  const ItemClientAddress({
+    super.key,
+    required this.name,
+    required this.address,
+  });
+
+  final String name;
+  final String address;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: YuGiOhSpacing.xs),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              XigoTextHeading6(
+                name,
+                color: ProTiendasUiColors.primaryColor,
+                weight: FontWeight.w400,
+              ),
+              SvgPicture.asset(
+                ProTiendasUiValues.icEdit,
+              ),
+            ],
+          ),
+          const Gap(YuGiOhSpacing.sm),
+          XigoTextHeading6(
+            address,
+            color: ProTiendasUiColors.primaryColor,
+            weight: FontWeight.w400,
+          ),
+          const Gap(YuGiOhSpacing.xs),
+          const Divider(
+            thickness: 0.5,
+            color: ProTiendasUiColors.silverFoil,
+            indent: 0,
+          ),
+        ],
+      ),
     );
   }
 }

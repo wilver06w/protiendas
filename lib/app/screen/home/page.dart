@@ -11,7 +11,7 @@ import 'package:protiendas/app/utils/loading.dart';
 import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/banner.dart';
 import 'package:protiendas/app/widget/card_product_vertical.dart';

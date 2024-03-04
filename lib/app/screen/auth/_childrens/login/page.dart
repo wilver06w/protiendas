@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:protiendas/app/screen/auth/_childrens/login/bloc/bloc.dart';
 import 'package:protiendas/app/screen/auth/_childrens/login/repository.dart';
+import 'package:protiendas/app/screen/init/repository.dart' as repository_init;
 import 'package:protiendas/app/utils/button/btn.dart';
 import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/config/client_config.dart';
@@ -18,7 +19,7 @@ import 'package:protiendas/app/utils/preferences.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/validations_inputs.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/item_sigin_register.dart';
 
 part 'package:protiendas/app/screen/auth/_childrens/login/_sections/body.dart';
@@ -38,6 +39,10 @@ class Page extends StatelessWidget {
         repository: Repository(
           xigoHttpClient: xigoHttp,
         ),
+        repositoryInit: repository_init.Repository(
+          xigoHttpClient: xigoHttp,
+        ),
+        app: app,
         prefs: Modular.get<Preferences>(),
         httpClient: xigoHttp,
       ),

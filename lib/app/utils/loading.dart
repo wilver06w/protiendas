@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:protiendas/app/utils/responsive.dart';
 import 'package:protiendas/app/utils/spacing.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 
 class YuGiOhLoading {
   static void show(

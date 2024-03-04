@@ -4,11 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart'
     hide ModularWatchExtension;
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:protiendas/app/screen/dashboard/bloc/bloc.dart';
 import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/screen/home/page.dart' as home;
 import 'package:protiendas/app/screen/notifications/page.dart' as notifications;
 import 'package:protiendas/app/screen/favorites/page.dart' as favorites;

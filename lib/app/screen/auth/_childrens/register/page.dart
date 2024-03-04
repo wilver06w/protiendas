@@ -18,7 +18,7 @@ import 'package:protiendas/app/utils/preferences.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
 import 'package:protiendas/app/utils/validations_inputs.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/item_sigin_register.dart';
 
 part 'package:protiendas/app/screen/auth/_childrens/register/_sections/body.dart';

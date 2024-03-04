@@ -2,7 +2,7 @@ import 'package:protiendas/app/utils/http/error_format.dart';
 import 'package:protiendas/app/utils/http/http_client.dart';
 import 'package:protiendas/app/utils/preferences.dart';
 import 'package:protiendas/app/utils/toast.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 
 class ErrorsInterceptor extends Interceptor {
   final Preferences prefs;

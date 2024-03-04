@@ -6,7 +6,7 @@ import 'package:protiendas/app/screen/detail/page.dart';
 import 'package:protiendas/app/utils/colors.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/card_favorite/bloc/bloc.dart';
 import 'package:protiendas/app/widget/imagen_widget.dart';
 

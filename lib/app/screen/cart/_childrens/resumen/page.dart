@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:protiendas/app/utils/button/btn.dart';
 import 'package:protiendas/app/utils/colors.dart';
+import 'package:protiendas/app/utils/config/client_config.dart';
 import 'package:protiendas/app/utils/navigation.dart';
 import 'package:protiendas/app/utils/spacing.dart';
 import 'package:protiendas/app/utils/text/text.dart';
-import 'package:protiendas/app/utils/yugioh_ui.dart';
+import 'package:protiendas/app/utils/protiendas_ui.dart';
 import 'package:protiendas/app/widget/app_global.dart';
 import 'package:protiendas/app/widget/card_cart/card_product_cart.dart';
 
@@ -27,7 +29,7 @@ class Page extends StatelessWidget {
           Modular.to.pop();
         },
         haveSearch: false,
-        title: ProTiendasUiValues.shoppingCart,
+        title: ProTiendasUiValues.confirmationPurchase,
         havCart: false,
       ),
       bottomNavigationBar: const Bottom(),

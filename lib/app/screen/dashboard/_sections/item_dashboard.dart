@@ -8,30 +8,41 @@ class ItemDashboard extends StatelessWidget {
     required this.routeImage,
     required this.routeIconSelected,
     required this.onTap,
-    this.isSelected = false,
   });
 
   final int position;
   final String title;
   final String routeImage;
   final String routeIconSelected;
-  final bool isSelected;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Column(
-        children: [
-          SvgPicture.asset(
-            isSelected ? routeIconSelected : routeImage,
+    return BlocBuilder<BlocDashboard, DashboardState>(
+      builder: (context, state) {
+        final isSelected = state.model.position == position;
+        return GestureDetector(
+          onTap: onTap,
+          child: Column(
+            children: [
+              SvgPicture.asset(
+                isSelected ? routeIconSelected : routeImage,
+              ),
+              if (!isSelected) ...[
+                const Gap(
+                  YuGiOhSpacing.xs,
+                )
+              ],
+              XigoTextSmall(
+                title,
+                color: isSelected
+                    ? ProTiendasUiColors.crayolaGreen
+                    : ProTiendasUiColors.philippineGray,
+              ),
+            ],
           ),
-          XigoTextMedium(
-            title,
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

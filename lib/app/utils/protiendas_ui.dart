@@ -1,6 +1,7 @@
 import 'package:protiendas/generated/l10n.dart';
 
 class ProTiendasUiValues {
+  static final String confirmationPurchase = S.current.confirmationPurchase;
   static final String saveConfirm = S.current.saveConfirm;
   static final String cardHolderName = S.current.cardHolderName;
   static const String mmAA = 'MM/AA';
@@ -104,6 +105,11 @@ class ProTiendasUiValues {
     'Diagonal',
     'Avenida',
   ];
+  static const String icNotificationSelected =
+      'assets/svg/ic_notification_selected.svg';
+  static const String icFavoriteSelected =
+      'assets/svg/ic_favorite_selected.svg';
+  static const String icHomeSelected = 'assets/svg/ic_home_selected.svg';
   static const String icHeartNoSelected = 'assets/svg/ic_heart_no_selected.svg';
   static const String icVisa = 'assets/image/ic_visa.png';
   static const String acacomproLogo = 'assets/image/logogi.gif';
@@ -124,6 +130,8 @@ class ProTiendasUiValues {
   static const String starFilled = 'assets/svg/star_filled.svg';
   static const String icHome = 'assets/svg/ic_home.svg';
   static const String icBells = 'assets/svg/ic_bells.svg';
+  static const String icHeartNoSelectDashb = 'assets/svg/ic_heart_noselect_dashb.svg';
+  static const String icProfileSelected = 'assets/svg/ic_profile_selected.svg';
   static const String icMyProfile = 'assets/svg/ic_myprofile.svg';
   static const String icDelete = 'assets/svg/ic_delete.svg';
   static const String circleGrey = 'assets/svg/circle_grey.svg';
