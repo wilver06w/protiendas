@@ -12,18 +12,12 @@ class Body extends StatelessWidget {
         const Gap(YuGiOhSpacing.md),
         ...List.generate(
           3,
-          (index) => Padding(
-            padding: const EdgeInsets.symmetric(
+          (index) =>const Padding(
+            padding:  EdgeInsets.symmetric(
               horizontal: YuGiOhSpacing.lg,
               vertical: YuGiOhSpacing.sm,
             ),
             child: CardProductCart(
-              onChangeValue: (value) {
-                //TODO: aqui manda a actualizar el endpoint de favoritos.
-              },
-              onTapDelete: () {
-                //TODO: aqui manda a eliminar ael endpoint de favoritos.
-              },
               quantity: 2,
               priceBefore: '\$480.000',
               price: '\$450.000',

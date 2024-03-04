@@ -61,28 +61,6 @@ class Preferences {
   bool get isLogged => _prefs?.getBool(_isLoggedKey) ?? false;
   set isLogged(bool value) => _prefs?.setBool(_isLoggedKey, value);
 
-//TODO: revisar para crearlo.
-  // final String _userKey = 'user';
-  // User? get user {
-  //   final value = _prefs?.getString(_userKey);
-
-  //   if (value != null) {
-  //     final userData = json.decode(value);
-  //     final user = User.fromJson(userData);
-
-  //     return user;
-  //   }
-
-  //   return null;
-  // }
-
-  // set user(User? value) {
-  //   final token = json.encode(value?.toJson() ?? {});
-
-  //   _prefs?.setString(_userKey, token);
-
-  //   return;
-  // }W
 
   Future<void> reload() async {
     await _prefs?.reload();
@@ -92,8 +70,6 @@ class Preferences {
     await _prefs?.clear();
     token = '';
     msToken = null;
-    //TODO: descomentar mas adelante.
-    // user = null;
     country = '';
     isLogged = false;
   }
