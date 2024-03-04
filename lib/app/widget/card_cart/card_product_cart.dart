@@ -19,11 +19,9 @@ class CardProductCart extends StatelessWidget {
     required this.price,
     required this.titleFeatures,
     required this.descriptionFeature,
-    required this.onTapDelete,
     required this.quantity,
     this.widthImage = 150,
     this.heightImage = 120,
-    required this.onChangeValue,
   });
   final String image;
   final String title;
@@ -35,8 +33,6 @@ class CardProductCart extends StatelessWidget {
   final double widthImage;
   final double heightImage;
   final int quantity;
-  final VoidCallback onTapDelete;
-  final Function(int) onChangeValue;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +41,6 @@ class CardProductCart extends StatelessWidget {
       child: BlocListener<BlocCardFavorite, CardFavoriteState>(
         listener: (context, state) {
           if (state is ChangedQuantityState) {
-            onChangeValue(state.model.quantity);
           }
         },
         child: Container(
@@ -156,7 +151,7 @@ class CardProductCart extends StatelessWidget {
                 ],
               ),
               InkWell(
-                onTap: onTapDelete,
+                onTap: (){},
                 child: SvgPicture.asset(
                   ProTiendasUiValues.icDelete,
                   height: 20,

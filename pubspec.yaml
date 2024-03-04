@@ -41,6 +41,7 @@ dependencies:
   styled_text: ^8.1.0
   gap: ^3.0.1
   carousel_slider: ^4.2.1
+  collection: ^1.18.0
 
 flutter_intl:
   main_locale: es
