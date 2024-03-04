@@ -1,46 +1,37 @@
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:protiendas/src/features/addresses/module.dart';
-import 'package:protiendas/src/features/auth/module.dart';
-import 'package:protiendas/src/features/cart/module.dart';
-import 'package:protiendas/src/features/dashboard/page.dart' as dashboard;
-import 'package:protiendas/src/features/detail/page.dart' as detail;
-import 'package:protiendas/src/features/home/page.dart' as home;
-import 'package:protiendas/src/features/init/page.dart' as init;
-import 'package:protiendas/src/features/payment_method/module.dart';
+import 'package:flutter/material.dart';
+import 'package:protiendas/src/core/config/app.dart';
+import 'package:protiendas/src/shared/module.dart';
+import 'package:protiendas/src/features/dashboard/bloc/bloc.dart';
+import 'package:protiendas/src/core/utils/config/client_config.dart';
+import 'package:protiendas/src/core/network/http_client.dart';
+import 'package:protiendas/src/core/utils/preferences.dart';
 
-class GlobalModule extends Module {
+class AppModule extends Module {
   @override
-  final List<Bind> binds = [];
+  List<Bind> get binds {
+    return [
+      Bind((i) => Preferences()),
+      Bind<XigoHttpClient>(
+        (i) => XigoHttpClient().getInstance(i<AppConfig>()),
+      ),
+      Bind(
+        (i) {
+          return AppConfig(
+            environment: App.instance.environment,
+            config: App.instance.config,
+          )..version = App.instance.version;
+        },
+        isLazy: false,
+      ),
+      Bind.lazySingleton((i) => BlocDashboard()),
+      Bind((i) => GlobalKey<NavigatorState>()),
+    ];
+  }
 
   @override
   List<ModularRoute> get routes {
     return [
-      ChildRoute(
-        Modular.initialRoute,
-        child: (_, args) => const init.Page(),
-        transition: TransitionType.fadeIn,
-      ),
-      ChildRoute(
-        '/dashboard',
-        child: (_, args) => const dashboard.Page(),
-        transition: TransitionType.fadeIn,
-      ),
-      ChildRoute(
-        '/home',
-        child: (_, args) => const home.Page(),
-        transition: TransitionType.fadeIn,
-      ),
-      ChildRoute(
-        '/detail',
-        child: (_, args) => detail.Page(
-          product: (args.data ?? {})['product'] ?? {},
-        ),
-        transition: TransitionType.fadeIn,
-      ),
-      ModuleRoute('/auth', module: AuthModule()),
-      ModuleRoute('/address', module: AddressesModule()),
-      ModuleRoute('/payment', module: PaymentMethodModule()),
-      ModuleRoute('/cart', module: CartModule()),
+      ModuleRoute('/', module: GlobalModule()),
     ];
   }
 }

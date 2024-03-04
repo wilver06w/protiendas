@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:protiendas/src/core/config/app.dart';
-import 'package:protiendas/src/shared/module.dart';
+import 'package:protiendas/src/core/config/module.dart';
 import 'package:protiendas/src/core/utils/load_file.dart';
 import 'package:protiendas/generated/l10n.dart';
 

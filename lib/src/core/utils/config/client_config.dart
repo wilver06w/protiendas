@@ -7,7 +7,7 @@ import 'package:protiendas/src/shared/models/clien.dart';
 import 'package:protiendas/src/shared/models/client.dart';
 import 'package:protiendas/src/shared/models/country/country.dart';
 import 'package:protiendas/src/core/utils/config/bloc/bloc.dart';
-import 'package:protiendas/src/core/utils/config/countries.dart';
+import 'package:protiendas/src/core/config/countries.dart';
 import 'package:protiendas/src/core/utils/config/environment.dart';
 import 'package:protiendas/src/core/utils/config/main/bloc/bloc.dart';
 import 'package:protiendas/src/core/network/http_client.dart';
