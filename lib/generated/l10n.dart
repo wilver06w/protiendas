@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Confirmación de tu compra`
+  String get confirmationPurchase {
+    return Intl.message(
+      'Confirmación de tu compra',
+      name: 'confirmationPurchase',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Error {code} \nSi el error persiste, contacta a soporte`
   String weHaveAErrorContactSuport(Object code) {
     return Intl.message(

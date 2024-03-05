@@ -25,7 +25,7 @@ class ProTiendasRoute {
 
   static Future<Object?> navLogin() async {
     return Modular.to.pushNamedAndRemoveUntil(
-      '/auth',
+      '/auth/',
       (_) => false,
     );
   }

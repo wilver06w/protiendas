@@ -6,7 +6,7 @@ void listener(BuildContext context, bloc.State state) {
       ProTiendasRoute.navDashboard();
     });
   } else if (state is bloc.UnLoggedState) {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 5), () {
       ProTiendasRoute.navLogin();
     });
   }

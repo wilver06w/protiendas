@@ -131,8 +131,7 @@ class ProTiendasUiValues {
   static const String starFilled = 'assets/svg/star_filled.svg';
   static const String icHome = 'assets/svg/ic_home.svg';
   static const String icBells = 'assets/svg/ic_bells.svg';
-  static const String icHeartNoSelectDashb =
-      'assets/svg/ic_heart_noselect_dashb.svg';
+  static const String icHeartNoSelectDashb = 'assets/svg/ic_heart_noselect_dashb.svg';
   static const String icProfileSelected = 'assets/svg/ic_profile_selected.svg';
   static const String icMyProfile = 'assets/svg/ic_myprofile.svg';
   static const String icDelete = 'assets/svg/ic_delete.svg';

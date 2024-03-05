@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+
 import 'package:protiendas/src/core/utils/constant/colors.dart';
 import 'package:protiendas/src/core/utils/constant/spacing.dart';
 import 'package:protiendas/src/core/utils/helpers/text/text.dart';

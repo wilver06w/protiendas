@@ -1,11 +1,17 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:protiendas/src/core/network/http_client.dart';
+import 'package:protiendas/src/core/utils/config/client_config.dart';
+
+import 'package:protiendas/src/features/auth/_childrens/login/repository.dart';
+import 'package:protiendas/src/core/utils/preferences.dart';
+
+import 'package:protiendas/src/features/init/repository.dart'
+    as repository_init;
+import 'package:protiendas/src/shared/models/clien.dart';
 import 'package:protiendas/src/shared/models/data_login.dart';
 import 'package:protiendas/src/shared/models/token.dart';
-import 'package:protiendas/src/features/auth/_childrens/login/repository.dart';
-import 'package:protiendas/src/core/network/http_client.dart';
-import 'package:protiendas/src/core/utils/preferences.dart';
 
 part 'event.dart';
 part 'state.dart';
@@ -15,6 +21,8 @@ class BlocLogin extends Bloc<LoginEvent, LoginState> {
     required this.prefs,
     required this.httpClient,
     required this.repository,
+    required this.repositoryInit,
+    required this.app,
   }) : super(const InitialState(Model())) {
     on<ChangeEmailEvent>(_onChangeEmailEvent);
     on<ChangePasswordEvent>(_onChangePasswordEvent);
@@ -22,7 +30,9 @@ class BlocLogin extends Bloc<LoginEvent, LoginState> {
   }
   final XigoHttpClient httpClient;
   final Repository repository;
+  final repository_init.Repository repositoryInit;
   final Preferences prefs;
+  final AppConfig app;
 
   void _onChangeEmailEvent(
     ChangeEmailEvent event,
@@ -71,6 +81,9 @@ class BlocLogin extends Bloc<LoginEvent, LoginState> {
       prefs.msToken = token;
 
       httpClient.updateHeadersWithToken(token);
+
+      Clien client = await repositoryInit.getClient();
+      app.clien = client;
 
       emit(
         LoadedLoginState(

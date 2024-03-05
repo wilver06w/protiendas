@@ -90,15 +90,16 @@ class Body extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                             vertical: ProTiendaSpacing.xxs,
                           ),
-                          margin:
-                              const EdgeInsets.only(left: ProTiendaSpacing.sl),
-                          child: const CardProductVertical(
+                          margin: const EdgeInsets.only(left: ProTiendaSpacing.sl),
+                          child: CardProductVertical(
+                            id: (index + 30),
                             priceBefore: '\$480.000',
                             price: '\$450.000',
                             desct: '10% Dto',
                             image:
                                 'https://img.freepik.com/foto-gratis/gato-rojo-o-blanco-i-estudio-blanco_155003-13189.jpg?w=360&t=st=1707431887~exp=1707432487~hmac=4f842955cc47805a82701a1de5cce2c5c3ce945c432ee45d645aeaa38e85eb98',
-                            title: ProTiendasUiValues.balonFutbol,
+                            title:
+                                '${ProTiendasUiValues.balonFutbol} ${(index + 30)}',
                             isFreeSend: true,
                           ),
                         );
