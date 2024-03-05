@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:protiendas/src/features/addresses/home/page.dart' as address;
+import 'package:protiendas/src/features/addresses/home/presentation/page.dart' as address;
 import 'package:protiendas/src/features/addresses/add/page.dart' as add;
 
 class AddressesModule extends Module {

@@ -1,4 +1,4 @@
-part of 'package:protiendas/src/features/dashboard/page.dart';
+part of 'package:protiendas/src/features/dashbo/dashboard/page.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
       builder: (context, state) {
         switch (state) {
           case 0:
-            return const home.Page();
+          return const home.Page();
           case 1:
             return const favorites.Page();
           case 2:

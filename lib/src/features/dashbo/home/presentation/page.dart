@@ -2,34 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:oktoast/oktoast.dart';
+import 'package:protiendas/src/core/network/http_client.dart'
+    hide ModularWatchExtension;
+import 'package:protiendas/src/core/utils/constant/colors.dart';
 import 'package:protiendas/src/core/utils/constant/navigation.dart';
 import 'package:protiendas/src/core/utils/constant/protienda_ui.dart';
 import 'package:protiendas/src/core/utils/constant/spacing.dart';
 import 'package:protiendas/src/core/utils/helpers/text/text.dart';
 import 'package:protiendas/src/core/utils/loading.dart';
-import 'package:protiendas/src/features/home/bloc/bloc.dart';
-import 'package:protiendas/src/features/home/repository.dart';
-import 'package:protiendas/src/core/utils/constant/colors.dart';
-import 'package:protiendas/src/core/network/http_client.dart'
-    hide ModularWatchExtension;
+import 'package:protiendas/src/features/dashbo/home/presentation/bloc/bloc.dart';
+import 'package:protiendas/src/features/dashbo/repository.dart';
 import 'package:protiendas/src/shared/widget/app_global.dart';
 import 'package:protiendas/src/shared/widget/banner.dart';
 import 'package:protiendas/src/shared/widget/card_product_vertical.dart';
 import 'package:protiendas/src/shared/widget/imagen_widget.dart';
 import 'package:protiendas/src/shared/widget/title_sections.dart';
 
-part 'package:protiendas/src/features/home/_sections/body.dart';
+part 'package:protiendas/src/features/dashbo/home/presentation/_sections/body.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final yuGiOhHttpClient = Modular.get<XigoHttpClient>();
+    final xigoHttpClient = Modular.get<XigoHttpClient>();
+    // final listBanUseCase = Modular.get<ListBanUseCase>();
+    // final bannerUseCase = Modular.get<BannerUseCase>();
+    // final categoriesUseCase = Modular.get<CategoriesUseCase>();
     return BlocProvider<BlocHome>(
       create: (context) => BlocHome(
+        // listBanUseCase: listBanUseCase,
+        // bannerUseCase: bannerUseCase,
+        // categoriesUseCase: categoriesUseCase,
         repository: Repository(
-          yuGiOhHttpClient: yuGiOhHttpClient,
+          yuGiOhHttpClient: xigoHttpClient,
         ),
       )
         ..add(LoadBannerEvent())

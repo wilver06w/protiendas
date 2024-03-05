@@ -42,7 +42,8 @@ dependencies:
   gap: ^3.0.1
   carousel_slider: ^4.2.1
   collection: ^1.18.0
-
+  dartz: ^0.10.1
+  
 flutter_intl:
   main_locale: es
   enabled: true

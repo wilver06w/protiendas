@@ -27,7 +27,7 @@ class Page extends StatelessWidget {
           Modular.to.pop();
         },
         haveSearch: false,
-        title: ProTiendasUiValues.shoppingCart,
+        title: ProTiendasUiValues.confirmationPurchase,
         havCart: false,
       ),
       bottomNavigationBar: const Bottom(),

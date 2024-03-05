@@ -84,18 +84,22 @@ class Model extends Equatable {
   const Model({
     this.dataCategoria,
     this.dataBanner,
+    this.banList,
   });
 
   final DataCategoria? dataCategoria;
   final DataBanner? dataBanner;
+  final List<int>? banList;
 
   Model copyWith({
     DataCategoria? dataCategoria,
     DataBanner? dataBanner,
+    List<int>? banList,
   }) {
     return Model(
       dataCategoria: dataCategoria ?? this.dataCategoria,
       dataBanner: dataBanner ?? this.dataBanner,
+      banList: banList ?? this.banList,
     );
   }
 
@@ -104,6 +108,7 @@ class Model extends Equatable {
     return [
       dataCategoria,
       dataBanner,
+      banList,
     ];
   }
 }

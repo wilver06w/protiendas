@@ -1,4 +1,4 @@
-part of 'package:protiendas/src/features/home/page.dart';
+part of 'package:protiendas/src/features/dashbo/home/presentation/page.dart';
 
 class Body extends StatelessWidget {
   const Body({

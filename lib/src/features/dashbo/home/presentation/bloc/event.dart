@@ -10,3 +10,5 @@ abstract class HomeEvent extends Equatable {
 class LoadBannerEvent extends HomeEvent {}
 
 class LoadDataCategoriasEvent extends HomeEvent {}
+
+class BanListEvent extends HomeEvent {}

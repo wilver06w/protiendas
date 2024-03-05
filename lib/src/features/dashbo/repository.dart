@@ -1,6 +1,6 @@
-import 'package:protiendas/src/shared/models/data_banner.dart';
-import 'package:protiendas/src/shared/models/data_categoria.dart';
 import 'package:protiendas/src/core/network/http_client.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/models/data_banner.dart';
+import 'package:protiendas/src/shared/models/data_categoria.dart';
 
 class Repository {
   Repository({

@@ -1,4 +1,4 @@
-part of 'package:protiendas/src/features/dashboard/page.dart';
+part of 'package:protiendas/src/features/dashbo/dashboard/page.dart';
 
 class BottomNavigator extends StatelessWidget {
   const BottomNavigator({
