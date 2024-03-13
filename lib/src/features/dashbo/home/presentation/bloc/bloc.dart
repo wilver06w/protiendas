@@ -30,51 +30,51 @@ class BlocHome extends Bloc<HomeEvent, HomeState> {
     LoadBannerEvent event,
     Emitter<HomeState> emit,
   ) async {
-    try {
-      emit(LoadingBannerState(state.model));
+    emit(LoadingBannerState(state.model));
 
-      final dataBanner = await repository.getBanner();
+    final dataBanner = await bannerUseCase.call();
 
-      emit(
-        LoadedBannerState(
-          state.model.copyWith(
-            dataBanner: dataBanner,
-          ),
-        ),
-      );
-    } catch (error) {
+    dataBanner.fold((l) {
       emit(
         ErrorBannerState(
           model: state.model,
-          message: error.toString(),
+          message: l.errorMessage,
         ),
       );
-    }
+    }, (r) {
+      emit(
+        LoadedBannerState(
+          state.model.copyWith(
+            dataBanner: r,
+          ),
+        ),
+      );
+    });
   }
 
   Future<void> _onLoadDataCategoriasEvent(
     LoadDataCategoriasEvent event,
     Emitter<HomeState> emit,
   ) async {
-    try {
-      emit(LoadingDataCategoriasState(state.model));
+    emit(LoadingDataCategoriasState(state.model));
 
-      final dataCategoria = await repository.getCategorias();
+    final dataCategoria = await categoriesUseCase.call();
 
-      emit(
-        LoadedDataCategoriasState(
-          state.model.copyWith(
-            dataCategoria: dataCategoria,
-          ),
-        ),
-      );
-    } catch (error) {
+    dataCategoria.fold((l) {
       emit(
         ErrorDataCategoriasState(
           model: state.model,
-          message: error.toString(),
+          message: l.toString(),
         ),
       );
-    }
+    }, (r) {
+      emit(
+        LoadedDataCategoriasState(
+          state.model.copyWith(
+            dataCategoria: r,
+          ),
+        ),
+      );
+    });
   }
 }
