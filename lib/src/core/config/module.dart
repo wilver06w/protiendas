@@ -3,8 +3,8 @@ import 'package:protiendas/src/core/config/app.dart';
 import 'package:protiendas/src/core/network/http_client.dart';
 import 'package:protiendas/src/core/utils/config/client_config.dart';
 import 'package:protiendas/src/core/utils/preferences.dart';
-import 'package:protiendas/src/features/dashbo/dashboard/bloc/bloc.dart';
-import 'package:protiendas/src/features/dashbo/inject.dart';
+import 'package:protiendas/src/features/dashbo/dashboard/presentation/bloc/bloc.dart';
+import 'package:protiendas/src/features/dashbo/home/inject.dart';
 import 'package:protiendas/src/shared/module.dart';
 import 'package:protiendas/src/shared/widget/favorite/bloc/bloc.dart';
 

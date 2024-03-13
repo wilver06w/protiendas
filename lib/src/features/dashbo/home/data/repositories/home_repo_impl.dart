@@ -6,10 +6,10 @@ import 'package:protiendas/src/features/dashbo/home/domain/repositories/abstract
 import 'package:protiendas/src/features/dashbo/home/domain/models/data_banner.dart';
 import 'package:protiendas/src/shared/models/data_categoria.dart';
 
-class ArticlesRepositoryImpl extends AbstractHomeRepository {
-  final ArticlesImplApi articlesApi;
+class HomeRepositoryImpl extends AbstractHomeRepository {
+  final HomeImplApi articlesApi;
 
-  ArticlesRepositoryImpl({
+  HomeRepositoryImpl({
     required this.articlesApi,
   });
 

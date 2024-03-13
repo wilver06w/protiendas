@@ -9,13 +9,13 @@ import 'package:protiendas/src/features/dashbo/home/domain/usecases/categorias_u
 class InjectHomeUseCase {
   final List<Bind> binds = [
     Bind.lazySingleton(
-      (i) => ArticlesImplApi(
+      (i) => HomeImplApi(
         xigoHttpClient: i<XigoHttpClient>(),
       ),
     ),
     Bind.lazySingleton(
-      (i) => ArticlesRepositoryImpl(
-        articlesApi: i<ArticlesImplApi>(),
+      (i) => HomeRepositoryImpl(
+        articlesApi: i<HomeImplApi>(),
       ),
     ),
     Bind.lazySingleton((i) => AbstractHomeRepository),

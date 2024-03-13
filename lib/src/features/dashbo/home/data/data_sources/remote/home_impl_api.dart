@@ -3,8 +3,8 @@ import 'package:protiendas/src/features/dashbo/home/data/data_sources/remote/abs
 import 'package:protiendas/src/features/dashbo/home/domain/models/data_banner.dart';
 import 'package:protiendas/src/shared/models/data_categoria.dart';
 
-class ArticlesImplApi extends AbstractHomeApi {
-  ArticlesImplApi({
+class HomeImplApi extends AbstractHomeApi {
+  HomeImplApi({
     required this.xigoHttpClient,
   });
   final XigoHttpClient xigoHttpClient;

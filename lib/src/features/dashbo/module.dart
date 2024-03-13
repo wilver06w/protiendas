@@ -1,5 +1,5 @@
 import 'package:protiendas/src/core/network/http_client.dart';
-import 'package:protiendas/src/features/dashbo/dashboard/page.dart'
+import 'package:protiendas/src/features/dashbo/dashboard/presentation/page.dart'
     as dashboard;
 import 'package:protiendas/src/features/dashbo/home/presentation/page.dart'
     as home;
@@ -7,7 +7,7 @@ import 'package:protiendas/src/features/dashbo/home/presentation/page.dart'
 class DashboardModule extends Module {
   @override
   final List<Bind> binds = [
-    
+
   ];
 
   @override

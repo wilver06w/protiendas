@@ -6,7 +6,8 @@ import 'package:flutter_modular/flutter_modular.dart'
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:protiendas/src/core/utils/helpers/text/text.dart';
-import 'package:protiendas/src/features/dashbo/home/presentation/page.dart' as home;
+import 'package:protiendas/src/features/dashbo/home/presentation/page.dart'
+    as home;
 import 'package:protiendas/src/features/notifications/page.dart'
     as notifications;
 import 'package:protiendas/src/features/favorites/page.dart' as favorites;
@@ -14,11 +15,11 @@ import 'package:protiendas/src/features/profile/page.dart' as profile;
 import 'package:protiendas/src/core/utils/constant/colors.dart';
 import 'package:protiendas/src/core/utils/constant/protienda_ui.dart';
 import 'package:protiendas/src/core/utils/constant/spacing.dart';
-import 'package:protiendas/src/features/dashbo/dashboard/bloc/bloc.dart';
+import 'package:protiendas/src/features/dashbo/dashboard/presentation/bloc/bloc.dart';
 
-part 'package:protiendas/src/features/dashbo/dashboard/_sections/body.dart';
-part 'package:protiendas/src/features/dashbo/dashboard/_sections/item_dashboard.dart';
-part 'package:protiendas/src/features/dashbo/dashboard/_sections/bottom_navigator.dart';
+part 'package:protiendas/src/features/dashbo/dashboard/presentation/_sections/body.dart';
+part 'package:protiendas/src/features/dashbo/dashboard/presentation/_sections/item_dashboard.dart';
+part 'package:protiendas/src/features/dashbo/dashboard/presentation/_sections/bottom_navigator.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
