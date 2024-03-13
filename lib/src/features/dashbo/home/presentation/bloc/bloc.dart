@@ -2,6 +2,9 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:protiendas/src/features/dashbo/home/domain/models/data_banner.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/usecases/banlist_usecase.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/usecases/banner_usecase.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/usecases/categorias_usecase.dart';
 import 'package:protiendas/src/features/dashbo/repository.dart';
 import 'package:protiendas/src/shared/models/data_categoria.dart';
 
@@ -11,11 +14,17 @@ part 'state.dart';
 class BlocHome extends Bloc<HomeEvent, HomeState> {
   BlocHome({
     required this.repository,
+    required this.listBanUseCase,
+    required this.bannerUseCase,
+    required this.categoriesUseCase,
   }) : super(const InitialState(Model())) {
     on<LoadBannerEvent>(_onLoadBannerEvent);
     on<LoadDataCategoriasEvent>(_onLoadDataCategoriasEvent);
   }
   final Repository repository;
+  final ListBanUseCase listBanUseCase;
+  final BannerUseCase bannerUseCase;
+  final CategoriesUseCase categoriesUseCase;
 
   Future<void> _onLoadBannerEvent(
     LoadBannerEvent event,

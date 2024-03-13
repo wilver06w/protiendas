@@ -9,9 +9,9 @@ import 'package:protiendas/src/shared/models/data_categoria.dart';
 class ArticlesRepositoryImpl extends AbstractHomeRepository {
   final ArticlesImplApi articlesApi;
 
-  ArticlesRepositoryImpl(
-    this.articlesApi,
-  );
+  ArticlesRepositoryImpl({
+    required this.articlesApi,
+  });
 
   @override
   Future<Either<Failure, List<int>>> getListBan() async {

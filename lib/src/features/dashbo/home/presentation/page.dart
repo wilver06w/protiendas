@@ -10,6 +10,9 @@ import 'package:protiendas/src/core/utils/constant/protienda_ui.dart';
 import 'package:protiendas/src/core/utils/constant/spacing.dart';
 import 'package:protiendas/src/core/utils/helpers/text/text.dart';
 import 'package:protiendas/src/core/utils/loading.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/usecases/banlist_usecase.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/usecases/banner_usecase.dart';
+import 'package:protiendas/src/features/dashbo/home/domain/usecases/categorias_usecase.dart';
 import 'package:protiendas/src/features/dashbo/home/presentation/bloc/bloc.dart';
 import 'package:protiendas/src/features/dashbo/repository.dart';
 import 'package:protiendas/src/shared/widget/app_global.dart';
@@ -26,14 +29,14 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final xigoHttpClient = Modular.get<XigoHttpClient>();
-    // final listBanUseCase = Modular.get<ListBanUseCase>();
-    // final bannerUseCase = Modular.get<BannerUseCase>();
-    // final categoriesUseCase = Modular.get<CategoriesUseCase>();
+    final listBanUseCase = Modular.get<ListBanUseCase>();
+    final bannerUseCase = Modular.get<BannerUseCase>();
+    final categoriesUseCase = Modular.get<CategoriesUseCase>();
     return BlocProvider<BlocHome>(
       create: (context) => BlocHome(
-        // listBanUseCase: listBanUseCase,
-        // bannerUseCase: bannerUseCase,
-        // categoriesUseCase: categoriesUseCase,
+        listBanUseCase: listBanUseCase,
+        bannerUseCase: bannerUseCase,
+        categoriesUseCase: categoriesUseCase,
         repository: Repository(
           yuGiOhHttpClient: xigoHttpClient,
         ),

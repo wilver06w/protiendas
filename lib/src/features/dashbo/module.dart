@@ -6,7 +6,9 @@ import 'package:protiendas/src/features/dashbo/home/presentation/page.dart'
 
 class DashboardModule extends Module {
   @override
-  final List<Bind> binds = [];
+  final List<Bind> binds = [
+    
+  ];
 
   @override
   List<ModularRoute> get routes {

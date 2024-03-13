@@ -1,24 +1,15 @@
+import 'package:equatable/equatable.dart';
+
 /// Exception occur when server failure
-class ServerException implements Exception {
+class ServerException extends Equatable implements Exception {
   final String message;
   final int? statusCode;
 
-  ServerException(this.message, this.statusCode);
+  const ServerException(this.message, this.statusCode);
 
   @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other.runtimeType != runtimeType) {
-      return false;
-    }
-    if (other is ServerException) {
-      return other.message == message && other.statusCode == statusCode;
-    }
+  List<Object?> get props => [message, statusCode];
 
-    return false;
-  }
 }
 
 /// Exception occur when call api over on time
