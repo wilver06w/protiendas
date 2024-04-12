@@ -7,6 +7,7 @@ import 'package:protiendas/src/core/config/app.dart';
 import 'package:protiendas/src/core/config/module.dart';
 import 'package:protiendas/src/core/utils/load_file.dart';
 import 'package:protiendas/generated/l10n.dart';
+import 'package:protiendas/src/core/utils/protiendas_keyboard.dart';
 import 'package:protiendas/src/shared/widget/internet_conection.dart';
 
 void main() async {
@@ -44,7 +45,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return OKToast(
+    return
+     GestureDetector(
+      onTap: ProtiendasKeyboard.close,
+      child: OKToast(
       child: MaterialApp.router(
         title: 'ProTiendas!',
         theme: ThemeData(
@@ -73,6 +77,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           );
         },
       ),
+    ),
     );
   }
 }
