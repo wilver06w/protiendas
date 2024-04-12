@@ -50,6 +50,26 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Sin conexión`
+  String get noConection {
+    return Intl.message(
+      'Sin conexión',
+      name: 'noConection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirmación de tu compra`
+  String get confirmationPurchase {
+    return Intl.message(
+      'Confirmación de tu compra',
+      name: 'confirmationPurchase',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Error {code} \nSi el error persiste, contacta a soporte`
   String weHaveAErrorContactSuport(Object code) {
     return Intl.message(
@@ -860,11 +880,11 @@ class S {
     );
   }
 
-  /// `Confirmación de tu compra`
-  String get confirmationPurchase {
+  /// `Realizar compra`
+  String get makePurchase {
     return Intl.message(
-      'Confirmación de tu compra',
-      name: 'confirmationPurchase',
+      'Realizar compra',
+      name: 'makePurchase',
       desc: '',
       args: [],
     );

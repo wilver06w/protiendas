@@ -3,6 +3,7 @@
 
 Algunas caracteristicas implementadas:
 
+- Clean Architecture.
 - Manejador de estado: BLOC.
 - Modular.
 - Singleton.
