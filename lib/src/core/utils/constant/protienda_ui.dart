@@ -1,6 +1,7 @@
 import 'package:protiendas/generated/l10n.dart';
 
 class ProTiendasUiValues {
+  static final String noConection = S.current.noConection;
   static final String makePurchase = S.current.makePurchase;
   static final String confirmationPurchase = S.current.confirmationPurchase;
   static final String saveConfirm = S.current.saveConfirm;

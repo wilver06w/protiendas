@@ -1,3 +1,4 @@
+import 'package:protiendas/src/core/network/exceptions.dart';
 import 'package:protiendas/src/core/network/http_client.dart';
 import 'package:protiendas/src/features/dashbo/home/data/data_sources/remote/abstract_home_api.dart';
 import 'package:protiendas/src/features/dashbo/home/domain/models/data_banner.dart';
@@ -39,8 +40,14 @@ class HomeImplApi extends AbstractHomeApi {
 
   @override
   Future<DataCategoria> getCategorias() async {
-    final response = await xigoHttpClient.msDio.get(categorias);
+    try {
+      final response = await xigoHttpClient.msDio.get(categorias);
 
-    return DataCategoria.fromJson(response.data);
+      return DataCategoria.fromJson(response.data);
+    } on ServerException catch (e) {
+      throw ServerException(e.message, e.statusCode);
+    } catch (e) {
+      throw ServerException(e.toString(), 500);
+    }
   }
 }

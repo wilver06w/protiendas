@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Sin conexión`
+  String get noConection {
+    return Intl.message(
+      'Sin conexión',
+      name: 'noConection',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Confirmación de tu compra`
   String get confirmationPurchase {
     return Intl.message(

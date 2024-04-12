@@ -129,7 +129,7 @@ class XigoTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (title != null)
+        if ((title ?? '').isNotEmpty) ...[
           _TextFieldTitle(
             title: title!,
             titleStyle: titleStyle,
@@ -137,6 +137,7 @@ class XigoTextField extends StatelessWidget {
             errorText: errorText,
             toolTipRequiredOptionalText: toolTipRequiredOptionalText,
           ),
+        ],
         TextFormField(
           cursorColor: cursorColor ?? ProTiendasUiColors.ufoGreen,
           obscureText: obscureText,
@@ -184,8 +185,8 @@ class XigoTextField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius:
                   borderRadius ?? const BorderRadius.all(Radius.circular(10.0)),
-              borderSide: const BorderSide(
-                color: ProTiendasUiColors.primaryColor,
+              borderSide: BorderSide(
+                color: Theme.of(context).primaryColor,
               ),
             ),
             focusedBorder: focusedBorder ??
@@ -201,7 +202,7 @@ class XigoTextField extends StatelessWidget {
                   borderRadius: borderRadius ??
                       const BorderRadius.all(Radius.circular(10.0)),
                   borderSide: const BorderSide(
-                    color: ProTiendasUiColors.silverFoil,
+                    color: ProTiendasUiColors.whiteSecundary,
                   ),
                 ),
             disabledBorder: disabledBorder,

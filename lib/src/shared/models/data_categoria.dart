@@ -30,9 +30,9 @@ class Datum {
   });
 
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
-        id: json["id"],
-        nombre: json["nombre"],
-        slug: json["slug"],
+        id: json["id"] ?? 0,
+        nombre: json["nombre"] ?? '',
+        slug: json["slug"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {

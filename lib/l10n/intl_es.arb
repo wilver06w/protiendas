@@ -1,4 +1,6 @@
 {
+
+    "noConection":"Sin conexión",
     "confirmationPurchase":"Confirmación de tu compra",
     "weHaveAErrorContactSuport": "Error {code} \nSi el error persiste, contacta a soporte",
     "iAmNotRegistered":"No estoy registrado",

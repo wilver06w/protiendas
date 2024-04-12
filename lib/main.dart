@@ -7,6 +7,7 @@ import 'package:protiendas/src/core/config/app.dart';
 import 'package:protiendas/src/core/config/module.dart';
 import 'package:protiendas/src/core/utils/load_file.dart';
 import 'package:protiendas/generated/l10n.dart';
+import 'package:protiendas/src/shared/widget/internet_conection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -66,7 +67,9 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             data: MediaQuery.of(context).copyWith(
               textScaler: const TextScaler.linear(1.0),
             ),
-            child: child ?? const SizedBox.shrink(),
+            child: InternetConnectionWidget(
+              child: child ?? const SizedBox.shrink(),
+            ),
           );
         },
       ),

@@ -6,6 +6,7 @@ import 'package:protiendas/src/core/utils/constant/navigation.dart';
 import 'package:protiendas/src/core/utils/constant/spacing.dart';
 import 'package:protiendas/src/core/utils/helpers/text/text.dart';
 import 'package:protiendas/src/core/utils/constant/protienda_ui.dart';
+import 'package:protiendas/src/shared/widget/search_separated.dart';
 
 class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
   const AppBarGlobal({
@@ -20,6 +21,7 @@ class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
     this.title = '',
     this.havCart = true,
     this.havIconLeft = true,
+     this.onChanged,
   });
 
   final Widget icon;
@@ -28,6 +30,7 @@ class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool havCart;
   final bool havIconLeft;
+  final Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -36,22 +39,25 @@ class AppBarGlobal extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: ProTiendasUiColors.primaryColor,
       title: Center(
         child: haveSearch
-            ? Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Colors.white,
-                  border: const Border(
-                    left: BorderSide(
-                      color: ProTiendasUiColors.secondaryColor,
-                      width: 3,
-                    ),
-                  ),
-                ),
-                padding: const EdgeInsets.all(ProTiendaSpacing.sl),
-                child: XigoTextMedium(
-                  ProTiendasUiValues.searchProtiendas,
-                ))
+            ? SearchSeparated(onChanged: onChanged)
+            // Container(
+            //     width: double.infinity,
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(30),
+            //       color: Colors.white,
+            //       border: const Border(
+            //         left: BorderSide(
+            //           color: ProTiendasUiColors.secondaryColor,
+            //           width: 3,
+            //         ),
+            //       ),
+            //     ),
+            //     padding: const EdgeInsets.all(ProTiendaSpacing.sl),
+            //     child: XigoTextMedium(
+            //       ProTiendasUiValues.searchProtiendas,
+            //     ),
+            //   )
+
             : XigoTextLarge(
                 title,
                 color: ProTiendasUiColors.white,

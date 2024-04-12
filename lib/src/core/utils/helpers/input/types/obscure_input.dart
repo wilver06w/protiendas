@@ -13,6 +13,8 @@ class XigoObscureInput extends StatefulWidget {
     this.onChanged,
     this.prefixIcon,
     this.hintText,
+    this.focusedBorder,
+    this.borderRadius,
   }) : super(key: key);
 
   final TextEditingController controller;
@@ -25,6 +27,8 @@ class XigoObscureInput extends StatefulWidget {
   final FormFieldValidator<String>? validator;
   final ValueChanged<String>? onChanged;
   final String? hintText;
+  final InputBorder? focusedBorder;
+  final BorderRadius? borderRadius;
   @override
   State<XigoObscureInput> createState() => _XigoObscureInputState();
 }
@@ -100,6 +104,14 @@ class _XigoObscureInputState extends State<XigoObscureInput> {
                 color: ProTiendasUiColors.whiteSecundary,
               ),
             ),
+            focusedBorder: widget.focusedBorder ??
+                OutlineInputBorder(
+                  borderRadius: widget.borderRadius ??
+                      const BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: const BorderSide(
+                    color: ProTiendasUiColors.primaryColor,
+                  ),
+                ),
             errorBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
               borderSide: BorderSide(
