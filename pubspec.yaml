@@ -42,7 +42,9 @@ dependencies:
   gap: ^3.0.1
   carousel_slider: ^4.2.1
   collection: ^1.18.0
-
+  dartz: ^0.10.1
+  internet_connection_checker: ^1.0.0+1
+  connectivity_plus: ^2.3.9
 flutter_intl:
   main_locale: es
   enabled: true

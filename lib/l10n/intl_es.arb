@@ -1,5 +1,7 @@
 {
 
+    "noConection":"Sin conexión",
+    "confirmationPurchase":"Confirmación de tu compra",
     "weHaveAErrorContactSuport": "Error {code} \nSi el error persiste, contacta a soporte",
     "iAmNotRegistered":"No estoy registrado",
     "wantRegister":"Quiero registrarme.",
@@ -81,5 +83,5 @@
     "cardNumber":"Número de la tarjeta",
     "cardHolderName":"Nombre del títular de la tarjeta",
     "saveConfirm":"Guardar y confirmar",
-    "confirmationPurchase":"Confirmación de tu compra"
-}
+    "makePurchase":"Realizar compra"
+  }
